@@ -1,3 +1,192 @@
-h1{
-	color: blue;
+section header h2, p{ 
+	text-align: center; 
 }
+
+.button{
+	text-align: center; 
+}
+
+#footer-wrapper{
+	background: black;
+}
+ 
+a:link{ 
+	color: white;
+}
+
+/* Social Media Buttoin */
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.6;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}  
+
+/* Facebook */
+.fa-google-plus {
+    background: #da2713; 
+    color: white;
+} 
+
+.banner-p{
+	background: #000000 url("../../static/images/car.jpg");;	
+	background-size: auto ;
+	background-repeat: no-repeat;
+	height: 200px;
+	background-position: center;	
+}
+
+#intro{
+	height: 40vh;
+}
+
+/* Button */
+
+			input[type="button"],
+			input[type="submit"],
+			input[type="reset"],
+			button, 
+			.button {
+				font-size: 1.1;
+				padding: 0.65em 1.5em 0.65em 1.5em;
+			}
+
+				input[type="button"].big,
+				input[type="submit"].big,
+				input[type="reset"].big,
+				button.big,
+				.button.big {
+					font-size: 15px;
+					padding: 0.75em 1.5em 0.75em 1.5em;
+				}
+
+
+/* Button */
+
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;		
+		cursor: pointer;
+		border: 0; 
+		border-radius: 5px;
+		background: #20AADE;
+		color: #fff !important;
+		font-weight: 700;
+		outline: 0;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		button:hover,
+		.button:hover {
+			background: #3CB6C2;
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background: #25C9D9;
+		}
+
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		button.alt,
+		.button.alt {
+			background: #252122;
+		}
+
+			input[type="button"].alt:hover,
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover,
+			button.alt:hover,
+			.button.alt:hover {
+				background: #353132;
+			}
+
+			input[type="button"].alt:active,
+			input[type="submit"].alt:active,
+			input[type="reset"].alt:active,
+			button.alt:active,
+			.button.alt:active {
+				background: #151112;
+			}
+
+		input[type="button"].icon:before,
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			opacity: 0.35;
+			position: relative;
+			top: 0.05em;
+			margin-right: 0.75em;
+		}
+
+input[type="button"].alt2,
+		input[type="submit"].alt2,
+		input[type="reset"].alt2,
+		button.alt2,
+		.button.alt2 {
+			background: #252122;
+		}
+
+			input[type="button"].alt2:hover,
+			input[type="submit"].alt2:hover,
+			input[type="reset"].alt2:hover,
+			button.alt2:hover,
+			.button.alt2:hover {
+				background: #353132;
+			}
+
+			input[type="button"].alt2:active,
+			input[type="submit"].alt2:active,
+			input[type="reset"].alt2:active,
+			button.alt2:active,
+			.button.alt2:active {
+				background: #151112;
+			}
+
+		input[type="button"].icon:before,
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			opacity: 0.35;
+			position: relative;
+			top: 0.05em;
+			margin-right: 0.75em;
+		}

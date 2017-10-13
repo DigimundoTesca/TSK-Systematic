@@ -1716,7 +1716,7 @@ input[type="button"].alt2,
 /* Wrappers */
 
 	#header-wrapper {
-		position: relative;
+		position: auto;
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
 	}
@@ -1745,6 +1745,7 @@ input[type="button"].alt2,
 	#footer-wrapper {
 		position: relative;
 		color: #858484;
+		background-color: black;
 	}
 
 		#footer-wrapper:before {

@@ -1,5 +1,9 @@
-section header h2, p{ 
+section h2, p{ 
 	text-align: center; 
+}
+
+section header{
+	 background-color:#8E9296;
 }
 
 .button{

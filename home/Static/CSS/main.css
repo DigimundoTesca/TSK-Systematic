@@ -1319,7 +1319,7 @@
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #3CB6C2;
+			background: #FFF;
 		}
 
 		input[type="button"]:active,

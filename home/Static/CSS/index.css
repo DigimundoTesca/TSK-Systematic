@@ -3,15 +3,25 @@ section h2, p{
 }
 
 section header{
-	 background-color:#8E9296;
+	 background-color:#000;
+	 color:#fff;
+	 
+}
+
+.BotonesPresentacion{
+	margin-top: 2% !important;
 }
 
 .button{
 	text-align: center; 
 }
 
-#footer-wrapper{
-	background: black;
+.card-heade{
+	text-align: center !important;
+}
+
+.bg-dark{
+	background-color: black !important;
 }
  
 a:link{ 
@@ -74,6 +84,7 @@ a:link{
 			.button {
 				font-size: 1.1;
 				padding: 0.65em 1.5em 0.65em 1.5em;
+
 			}
 
 				input[type="button"].big,
@@ -98,7 +109,7 @@ a:link{
 		text-decoration: none;		
 		cursor: pointer;
 		border: 0; 
-		border-radius: 5px;
+		border-radius: 10px;
 		background: #20AADE;
 		color: #fff !important;
 		font-weight: 700;
@@ -166,6 +177,8 @@ input[type="button"].alt2,
 		button.alt2,
 		.button.alt2 {
 			background: #252122;
+
+
 		}
 
 			input[type="button"].alt2:hover,
@@ -194,3 +207,44 @@ input[type="button"].alt2,
 			top: 0.05em;
 			margin-right: 0.75em;
 		}
+
+
+/* A darle Stylos nene */
+
+
+.hido{
+	visibility: hidden;
+	display: none;
+	padding-top: 6%;
+}
+
+.py-5 {
+    padding-top: 2rem!important;
+    padding-bottom: 2rem!important;
+}
+
+
+
+.FooterTitle{
+	color: white;
+}
+
+.FooterUl{
+	list-style-type: none;
+}
+
+.NoPadding{
+	padding: 0;
+}
+
+.FooterLinks a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+.FooterLinks a:hover{
+	text-decoration: none;
+	color: white;
+}

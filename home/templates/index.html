@@ -6,246 +6,290 @@ html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>TSK Mobility</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="../static/CSS/index.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	</head>
-	<body class="homepage">
-		<!-- AQUI VA EL BANNER -->
-		<section id="banner" style="background-color: black; color:white;">
-			
-			<h2>Bienvenido a TSK Mobility</h2>
-			<p>Encontrarás un viaje cómodo y seguro con nosotros</p>
-			<div class="banner-p">
-				
-			</div>
-		</section>
-		<!-- CONTENIDO -->
-		<div class="container BotonesPresentacion">
-			<!-- TARJETITAS SHIDORIS -->
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100">
-						<a class=" button" onclick="topo()" >Inicio</a>
-						<div class="card-body">
-							<p class="card-text">Empresa dedicada al transporte privado con seguridad, comodidad y lujo</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100">
-						<a class="button"  onclick="mido()">Misión/Visión</a>
-						<div class="card-body">
-							<p class="card-text">¿Quieres saber más de nuestro objetivo?</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100">
-						<a class="button" onclick='boto()'>Cuanto puedes ganar</a>
-						<div class="card-body">
-							<p class="card-text">¿Quieres poner a trabajar un auto? <br > ¿Quieres ponerte a trabajar?</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- CONTROLES DINAMICOS WOOOO -->
-			<div class="container">
-				<div clas="row">
-					<div clas="col-md-12">
-						<!-- Evento Inicio -->
-						<div id='inicio'>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</div>
-						<!-- Evento Mision/Vision -->
-						<div id='mis'>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-						<!-- Evento Ganer (Calculadora) -->
-						<div id='calc' class="row col-md-12">
-							<div class=" col-lg-3 col-md-12">
-								<label  for="id_name" align="left">Marca:</label>
-								<input class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
-								<br>
-								<label  for="id_comment">Modelo:</label>
-								<input class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
-							</div>
-							<div class=" col-lg-3 col-md-12">
-								<label  for="id_phone">Año:</label>
-								<input class=" form-control" type="text" name="phone" maxlength="10" id="id_phone" required />
-								<br>
-								<label  for="id_address">Km:</label>
-								<input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
-							</div>
-							<div class="col-lg-3 col-md-12">
-								<a onclick='calcular()' class="button big">Calcular</a>
-								<br>
-								<label id="MuestraTotal">
-									
-								</label>
-								
-							</div>
-							<div clas="col-lg-3 col-md-12 text-center">
-								<center><a onclick='formb()' class="button big hido" id="EnvioDeDatos">Envíanos tus datos</a></center>
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			
-			<!-- Footer -->
-			<footer class="py-5 bg-dark" style="background-color: black !important; margin-top: 3%;">
-				<div class="container row col-md-12">
-					<div class="col-md-8">
-						<h3 class="FooterTitle">
-							Otras páginas que te pueden interesar
-						</h3>
-						<br>
-						<ul class="divided FooterUl FooterLinks">
-									<li><a href="#" target="_blank">Tesca Corporation</a></li>
-									<li><a href="#" target="_blank">Digimundo</a></li>
-									<li><a href="#" target="_blank">DabaWala</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<h3 class="FooterTitle">Nuestras redes sociales</h3>
-								<ul class="social FooterUl NoPadding">
-									<li><a class="fa fa-facebook" href="#"><span class="label"></span></a></li>
-									<li><a class="fa fa-twitter" href="#"><span class="label"></span></a></li>
-									<li><a class="fa fa-google-plus" href="#"><span class="label"></span></a></li>
-								</ul>
-					</div>
-				</div>
-
-
-				<!-- /.container -->
-			</footer>
-			
-			
-			
-			<!-- Scripts -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.js"></script>
-			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-			
-			<script type="text/javascript">
-			var inicio = document.getElementById('inicio')
-			inicio.style.visibility='hidden';
-			inicio.style.height='0px';
-			var mis = document.getElementById('mis')
-			mis.style.visibility='hidden';
-			mis.style.height='0px';
-			var calc = document.getElementById('calc')
-			calc.style.visibility='hidden';
-			calc.style.height='0px';
-			function topo() {
-			inicio.style.visibility='visible';
-			inicio.style.height='100px';
-			mis.style.visibility='hidden';
-			mis.style.height='0px';
-			calc.style.visibility='hidden';
-			calc.style.height='0px';
-			}
-			function mido() {
-			mis.style.visibility='visible';
-			mis.style.height='100px';
-			inicio.style.visibility='hidden';
-			inicio.style.height='0px';
-			calc.style.visibility='hidden';
-			calc.style.height='0px';
-			}
-			function boto() {
-			calc.style.visibility='visible';
-			calc.style.height='auto';
-			inicio.style.visibility='hidden';
-			inicio.style.height='0px';
-			mis.style.visibility='hidden';
-			mis.style.height='0px';
-			}
-			function forma(){
-			swal({
-			title: 'Error!',
-			text: 'Do you want to continue',
-			type: 'error',
-			confirmButtonText: 'Cool'
-			})
-			
-			}
-			function formb(){
-			swal({
-			title: 'Por favor, llena los campos con la información correspondiente <hr />',
-			type: 'info',
-			width: '1000px',
-			html:
-			'<div class="row col-md-12 justify-content-md-center"><div class="col-md-9 col-md-offset-3"><label for="id_name">Nombre:<br/></label> <input type="text" class="form-control" name="name" maxlength="50" id="id_name" required />'+
-			'<label for="id_email">Email:<br/></label> <input type="email" class="form-control" name="email" maxlength="50" id="id_email" required />'+
-			'<label for="id_phone">Teléfono o WhatsApp:<br/></label> <input type="text" class="form-control" name="phone" maxlength="10" id="id_phone" required /'+
-			'<label for="id_address">Zona de la ciudad:<br/></label> <input type="text" class="form-control"name="address" maxlength="100" id="id_address" required />'+
-			'<label for="id_comment">¿A qué hora nos podemos comunicar contigo?:<br/></label> <input type="text" class="form-control" name="comment" maxlength="40" id="id_comment" required /></div> </div>',
-			showCloseButton: true,
-			showCancelButton: true,
-			focusConfirm: false,
-			confirmButtonText:
-			' Enviar',
-			confirmButtonAriaLabel: 'Thumbs up, great!',
-			cancelButtonText:
-			'Cancelar',
-			cancelButtonAriaLabel: 'Thumbs down',
-			})
-			}
-			function calcular(){
-			//Variables del formulario
-	             let Marca = document.getElementById('id_name').value;  
-	             let Modelo = document.getElementById('id_comment').value;  
-
-	             let Año = document.getElementById('id_phone').value;  
-	             let KM = document.getElementById('id_address').value;  
-
-	             //año Actual
-	             let Actual = (new Date()).getFullYear()
-
-	             //Valor Inicial 
-	             const ValorBase = 4800;
-
-	             let DifA = Actual - Año; 
-
-
-				 let Total = ValorBase + (5*(80-(2 * DifA))) + (10*(20000/KM));
-
-
-
-
-					
-
-			 document.getElementById("MuestraTotal").innerHTML = Total;
-
-
-				let h =document.getElementById("EnvioDeDatos");	
-				h.classList.remove("hido");
-			}
-			</script>
-		</body>
-	</html>
-
-
-
-
+    <head>
+        <title>TSK Mobility</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="../static/CSS/index.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../static/CSS/demo.css">
+        <link rel="stylesheet" href="../static/CSS/footer-basic-centered.css">
+    </head>
+    <body id="homepage">
+        <!-- AQUI VA EL BANNER -->
+        <section class="banner-p">
+            
+            <h2>Bienvenido a TSK Mobility</h2>
+            <p>Encontrarás un viaje cómodo y seguro con nosotros</p>
+            <!-- <div class="banner-p"> -->
+            
+        </div>
+    </section>
+    <!-- CONTENIDO -->
+    <div class="container BotonesPresentacion">
+        <!-- TARJETITAS SHIDORIS -->
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <a class=" button" onclick="topo()" >Inicio</a>
+                    <div class="card-body">
+                        <p class="card-text">Empresa dedicada al transporte privado con seguridad, comodidad y lujo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <a class="button"  onclick="mido()">Misión/Visión</a>
+                    <div class="card-body">
+                        <p class="card-text">¿Quieres saber más de nuestro objetivo?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <a class="button" onclick='boto()'>Cuanto puedes ganar</a>
+                    <div class="card-body">
+                        <p class="card-text">¿Quieres poner a trabajar un auto? <br > ¿Quieres ponerte a trabajar?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTROLES DINAMICOS WOOOO -->
+        <div class="container">
+            <div clas="row">
+                <div clas="col-md-12">
+                    <!-- Evento Inicio -->
+                    <div id='inicio'>
+                        <p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataformas como Uber. Nuestro trabajo se centra en darle el mejor uso al automóvil de nuestros socios y así generar ganancias mensuales para ellos, al mismo tiempo que generamos ingresos para nuestros choferes. </br>
+                        </p>
+                    </div>
+                    <!-- Evento Mision/Vision -->
+                    <div id='mis'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <!-- Evento Ganer (Calculadora) -->
+                    <div id='calc' class="row col-md-12">
+                        <div class=" col-lg-3 col-md-12">
+                            <label  for="id_name" align="left">Marca:</label>
+                            <input class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
+                            <br>
+                            <label  for="id_comment">Modelo:</label>
+                            <input class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
+                        </div>
+                        <div class=" col-lg-3 col-md-12">
+                            <label  for="id_phone">Año:</label>
+                            <input class=" form-control" type="text" name="phone" maxlength="10" id="id_phone" required />
+                            <br>
+                            <label  for="id_address">Km:</label>
+                            <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
+                        </div>
+                        <div class="col-lg-3 col-md-12">
+                            <a onclick='calcular()' class="button big">Calcular</a>
+                            <br>
+                            <label id="MuestraTotal">
+                                $ MXN
+                            </label>
+                            
+                        </div>
+                        <div clas="col-lg-3 col-md-12 text-center">
+                            <center><a onclick='formb()' class="button big hido" id="EnvioDeDatos">Envíanos tus datos</a></center>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!-- Footer -->
+        <!-- <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <h3 class="footertext">About Us:</h3>
+                    <br>
+                    <div class="col-md-4">
+                        <center>
+                        <img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
+                        <br>
+                        <h4 class="footertext">Programmer</h4>
+                        <p class="footertext">You can thank all the crazy programming here to this guy.<br>
+                            </center>
+                        </div>
+                        <div class="col-md-4">
+                            <center>
+                            <img src="http://oi60.tinypic.com/2z7enpc.jpg" class="img-circle" alt="...">
+                            <br>
+                            <h4 class="footertext">Artist</h4>
+                            <p class="footertext">All the images here are hand drawn by this man.<br>
+                                </center>
+                            </div>
+                            <div class="col-md-4">
+                                <center>
+                                <img src="http://oi61.tinypic.com/307n6ux.jpg" class="img-circle" alt="...">
+                                <br>
+                                <h4 class="footertext">Designer</h4>
+                                <p class="footertext">This pretty site and the copy it holds are all thanks to this guy.<br>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p><center><a href="#">Contact Stuff Here</a> <p class="footertext">Copyright 2014</p></center></p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <footer class="py-5 bg-dark" style="background-color: black !important; margin-top: 5%; max-width: 1300px;">
+                        <div class="container row col-md-12">
+                            <div class="col-md-8">
+                                <br>
+                                <ul class="divided FooterUl FooterLinks">
+                                    <li><a class="fa fa-star" href="http://www.tescacorporation.com/" target="_blank">Tesca Corporation</a></li>
+                                    <li><a class="fa fa-briefcase" href="https://www.facebook.com/digimundotech/?ref=br_rs" target="_blank">Digimundo</a></li>
+                                    <li><a class="fa fa-coffee" href="https://www.dabbawala.com.mx/" target="_blank">Dabbawala</a></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    /<br>
+                                    /<br>
+                                </ul>
+                                <ul class="social FooterUl NoPadding">
+                                    <li><a class="fa fa-facebook" href="https://www.facebook.com/TSKmobility/" target="_blank"><span class="label"></span></a>
+                                    <a class="fa fa-twitter" href="#"><span class="label"></span></a>
+                                    <a class="fa fa-google-plus" href="#"><span class="label"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.container -->
+                        <footer class="footer-distributed">
+                            <div class="footer-right">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                            </div>
+                            <div class="footer-left">
+                                <p class="footer-links">
+                                    <a href="#">Home</a>
+                                    ·
+                                    <a href="#">Blog</a>
+                                    ·
+                                    <a href="#">Pricing</a>
+                                    ·
+                                    <a href="#">About</a>
+                                    ·
+                                    <a href="#">Faq</a>
+                                    ·
+                                    <a href="#">Contact</a>
+                                </p>
+                                <p>TSK Mobility &copy; 2017</p>
+                            </div>
+                        </footer>
+                        
+                        
+                        
+                        <!-- Scripts -->
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.js"></script>
+                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+                        
+                        <script type="text/javascript">
+                        var inicio = document.getElementById('inicio')
+                        inicio.style.visibility='hidden';
+                        inicio.style.height='0px';
+                        var mis = document.getElementById('mis')
+                        mis.style.visibility='hidden';
+                        mis.style.height='0px';
+                        var calc = document.getElementById('calc')
+                        calc.style.visibility='hidden';
+                        calc.style.height='0px';
+                        function topo() {
+                        inicio.style.visibility='visible';
+                        inicio.style.height='100px';
+                        mis.style.visibility='hidden';
+                        mis.style.height='0px';
+                        calc.style.visibility='hidden';
+                        calc.style.height='0px';
+                        }
+                        function mido() {
+                        mis.style.visibility='visible';
+                        mis.style.height='100px';
+                        inicio.style.visibility='hidden';
+                        inicio.style.height='0px';
+                        calc.style.visibility='hidden';
+                        calc.style.height='0px';
+                        }
+                        function boto() {
+                        calc.style.visibility='visible';
+                        calc.style.height='auto';
+                        inicio.style.visibility='hidden';
+                        inicio.style.height='0px';
+                        mis.style.visibility='hidden';
+                        mis.style.height='0px';
+                        }
+                        function forma(){
+                        swal({
+                        title: 'Error!',
+                        text: 'Do you want to continue',
+                        type: 'error',
+                        confirmButtonText: 'Cool'
+                        })
+                        
+                        }
+                        function formb(){
+                        swal({
+                        title: 'Por favor, llena los campos con la información correspondiente <hr />',
+                        type: 'info',
+                        width: '1000px',
+                        html:
+                        '<div class="row col-md-12 justify-content-md-center"><div class="col-md-9 col-md-offset-3"><label for="id_name">Nombre:<br/></label> <input type="text" class="form-control" name="name" maxlength="50" id="id_name" required />'+
+                        '<label for="id_email">Email:<br/></label> <input type="email" class="form-control" name="email" maxlength="50" id="id_email" required />'+
+                        '<label for="id_phone">Teléfono o WhatsApp:<br/></label> <input type="text" class="form-control" name="phone" maxlength="10" id="id_phone" required /'+
+                        '<label for="id_address">Zona de la ciudad:<br/></label> <input type="text" class="form-control"name="address" maxlength="100" id="id_address" required />'+
+                        '<label for="id_comment">¿A qué hora nos podemos comunicar contigo?:<br/></label> <input type="text" class="form-control" name="comment" maxlength="40" id="id_comment" required /></div> </div>',
+                        showCloseButton: true,
+                        showCancelButton: true,
+                        focusConfirm: false,
+                        confirmButtonText:
+                        ' Enviar',
+                        confirmButtonAriaLabel: 'Thumbs up, great!',
+                        cancelButtonText:
+                        'Cancelar',
+                        cancelButtonAriaLabel: 'Thumbs down',
+                        })
+                        }
+                        function calcular(){
+                        //Variables del formulario
+                        let Marca = document.getElementById('id_name').value;
+                        let Modelo = document.getElementById('id_comment').value;
+                        let Año = document.getElementById('id_phone').value;
+                        let KM = document.getElementById('id_address').value;
+                        //año Actual
+                        let Actual = (new Date()).getFullYear()
+                        //Valor Inicial
+                        const ValorBase = 4800;
+                        let DifA = 0;
+                        DifA = Actual - Año;
+                        let Total = 0;
+                        let MuA = (5*80-(2 * DifA));
+                        let MuK = (10*(20000/KM));
+                        //Total = ValorBase + (5*(80-(2 * DifA))) + (10*(20000/KM)) + '$ MXN';
+                        Total = ValorBase + MuA + MuK;
+                        if (KM == '' || Año == ''){
+                        Total = 0.0;
+                        }
+                        
+                        document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
+                        let h =document.getElementById("EnvioDeDatos");
+                        h.classList.remove("hido");
+                        }
+                        </script>
+                    </body>
+                </html>

@@ -1,0 +1,121 @@
+a{
+	color:#e6da3b;transition:all .3s ease
+}
+a:hover{color:rgba(230,218,59,0.9) !important;
+		box-shadow:0px 1px 0px 0px rgba(230,218,59,0.9)
+	}
+body{background-color:#101010;
+	font-size:18px;
+	font-family:'Oswald', sans-serif;
+	display:flex;
+	flex-direction:column;
+	min-height:100vh
+	}
+header{
+	font-family:'Righteous', cursive
+}
+main{
+	flex:1 0 auto
+}
+.black{
+	background:#050505 !important
+}
+.who{
+	text-align: right;
+}
+.mis{
+	
+}
+
+#car{
+	background-color:rgba(0,0,0,0.8);
+	padding: 100px, 0px, 20px, 0px;
+
+}
+.parallax-container{
+	height:calc(100vh - 64px);
+			color:rgba(255,255,255,0.9)
+		}
+.section{background-color:rgba(0,0,0,0.8);
+	color:white;
+	padding-top:3rem;
+		padding-bottom:3rem;
+		width:100%;
+		margin: 200px 0px 0px 0px;
+		align-self:flex-end}
+.section.container{align-self:center}
+.section-header{font-size:5rem;font-weight:bold}
+.section-subtitle{font-size:3rem}
+.section-content{font-size:1.5rem}
+	index-banner{display:flex;
+		justify-content:center}
+#index-banner 
+.subtitle{font-style:italic}
+/*# sourceMappingURL=master.css.map */
+
+#id_name,#id_comment,#id_phone,#id_address{
+	color: white;
+}
+
+
+input[type="button"],
+			input[type="submit"],
+			input[type="reset"],
+			button, 
+			.button {
+				font-size: 1.1;
+				padding: 0.65em 1.5em 0.65em 1.5em;
+
+			}
+
+				input[type="button"].big,
+				input[type="submit"].big,
+				input[type="reset"].big,
+				button.big,
+				.button.big {
+					font-size: 15px;
+					padding: 0.75em 1.5em 0.75em 1.5em;
+				}
+input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+.button {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;		
+		cursor: pointer;
+		border: 0; 
+		border-radius: 10px;
+		background: rgba(0,0,0,0.5);
+		color: #0,0,0,0.5 !important;
+		font-weight: 700;
+		outline: 0;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		button:hover,
+		.button:hover {
+			background: rgba(0,0,0,0.5);
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background: rgba(0,0,0,0.5);
+		}
+#MuestraTotal{
+	font-size: 6rem;
+	color: white;
+	border: 0; 
+	border-radius: 10px;
+	background: rgba(0,0,0,0.5);
+}

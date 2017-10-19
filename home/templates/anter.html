@@ -1,0 +1,250 @@
+{%load static%}
+<!DOCTYPE HTML>
+<!--
+Dopetrope by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>TSK Mobility</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="../static/CSS/index.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body class="homepage">
+        <div id="page-wrapper">
+            <!-- Header -->
+            <div id="header-wrapper">
+                <div id="header">
+                    <!-- Logo -->                    
+                    <!-- Banner -->
+                    <section id="banner">
+                        <header >
+                            <h2>Bienvenido a TSK Mobility</h2>
+                            <p>Encontrarás un viaje cómodo y seguro con nosotros</p>
+                        </header>
+                        <div class="banner-p">
+                            
+                        </div>                        
+                    </section>
+                    <!-- Intro -->
+                    <section id="intro" class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <section class="first">
+                                    <i class="icon featured fa-cog"></i>    
+                                    <header>
+                                        <a onclick="topo()" class="button col-md-12">Inicio</a>
+                                    </header>
+                                    <p>Empresa dedicada al transporte privado con seguridad, comodidad y lujo.</p>
+                                </section>
+                            </div>
+                            <div class="col-md-4">
+                                <section class="middle">
+                                    <i class="icon featured alt fa-flash"></i>
+                                    <header>
+                                        <a onclick="mido()" class="button col-md-12">Misión/Visión</a>
+                                    </header>
+                                    <p>¿Quieres saber más de nuestro objetivo?</p>
+                                </section>
+                            </div>
+                            <div class="col-md-4">
+                                <section class="last">
+                                    <i class="icon featured alt2 fa-star"></i>
+                                    <header>
+                                        <a onclick='boto()' class="button col-md-12">Pon de tu trabajo</a>
+                                    </header>
+                                    <p>¿Quieres poner a trabajar un auto? </hr> ¿Quieres ponerte a trabajar?</p>
+                                </div>
+                            </section>
+                            <div id='inicio'>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div id='mis'>
+                                <a href="" class="email"></a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div id='calc'>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <p><label class="col-3" for="id_name">Marca:</label>
+                                                <input class="col-8" type="text" name="name" maxlength="50" id="id_name" required /></p>
+                                            <p><label class="col-3" for="id_comment">Modelo:</label>
+                                                <input class="col-8" type="text" name="comment" maxlength="40" id="id_comment" required /></p>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <p><label class="col-3" for="id_phone">Año:</label>
+                                                <input class="col-8" type="text" name="phone" maxlength="10" id="id_phone" required /></p>
+                                            <p><label class="col-3" for="id_address">Km:</label>
+                                                <input class="col-8" type="text" name="address" maxlength="100" id="id_address" required /></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a onclick='calcular()' class="button big">Calcular</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a onclick='formb()' class="button big">Envíanos tus datos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                    </section>
+                </div>
+            </div>            
+            <!-- Footer -->
+            <div id="footer-wrapper" >
+                <section id="footer" class="container">                    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <section>
+                                <header>
+                                    <h2>Ipsum et phasellus</h2>
+                                </header>
+                                <ul class="divided">
+                                    <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+                                    <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+                                    <li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+                                    <li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+                                    <li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+                                    <li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="col-md-4">
+                            <section>
+                                <header>
+                                    <h2>Vitae tempor lorem</h2>
+                                </header>
+                                <ul class="social">
+                                    <li><a class="fa fa-facebook" href="#"><span class="label"></span></a></li>
+                                    <li><a class="fa fa-twitter" href="#"><span class="label"></span></a></li>                                    
+                                    <li><a class="fa fa-google-plus" href="#"><span class="label"></span></a></li>
+                                </ul>
+                                <ul class="contact">
+                                    <li>
+                                        <h3>Address</h3>
+                                        <p>
+                                            Untitled Incorporated<br />
+                                            1234 Somewhere Road Suite<br />
+                                            Nashville, TN 00000-0000
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h3>Mail</h3>
+                                        <p><a href="#">someone@untitled.tld</a></p>
+                                    </li>
+                                    <li>
+                                        <h3>Phone</h3>
+                                        <p>(800) 000-0000</p>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="12u">
+                            <!-- Copyright -->
+                            <div id="copyright">
+                                <ul class="links">
+                                    <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+        var inicio = document.getElementById('inicio')
+        inicio.style.visibility='hidden';
+        inicio.style.height='0px';
+        var mis = document.getElementById('mis')
+        mis.style.visibility='hidden';
+        mis.style.height='0px';
+        var calc = document.getElementById('calc')
+        calc.style.visibility='hidden';
+        calc.style.height='0px';
+        function topo() {
+        inicio.style.visibility='visible';
+        inicio.style.height='100px';
+        mis.style.visibility='hidden';
+        mis.style.height='0px';
+        calc.style.visibility='hidden';
+        calc.style.height='0px';
+        }
+        function mido() {
+        mis.style.visibility='visible';
+        mis.style.height='100px';
+        inicio.style.visibility='hidden';
+        inicio.style.height='0px';
+        calc.style.visibility='hidden';
+        calc.style.height='0px';
+        }
+        function boto() {
+        calc.style.visibility='visible';
+        calc.style.height='auto';
+        inicio.style.visibility='hidden';
+        inicio.style.height='0px';
+        mis.style.visibility='hidden';
+        mis.style.height='0px';
+        }
+        function forma(){
+        swal({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        type: 'error',
+        confirmButtonText: 'Cool'
+        })
+        
+        }
+        function formb(){
+        swal({
+        title: 'Por favor, llena los campos con la información correspondiente <hr />',
+        type: 'info',
+        width: '1000px',
+        html:
+        '<p><label for="id_name">Nombre:<br/></label> <input type="text" name="name" maxlength="50" id="id_name" required /></p>'+
+        '<p><label for="id_email">Email:<br/></label> <input type="email" name="email" maxlength="50" id="id_email" required /></p>'+
+        '<p><label for="id_phone">Teléfono o WhatsApp:<br/></label> <input type="text" name="phone" maxlength="10" id="id_phone" required /></p>'+
+        '<p><label for="id_address">Zona de la ciudad:<br/></label> <input type="text" name="address" maxlength="100" id="id_address" required /></p>'+
+        '<p><label for="id_comment">¿A qué hora nos podemos comunicar contigo?:<br/></label> <input type="text" name="comment" maxlength="40" id="id_comment" required /></p>',
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText:
+        ' Enviar',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+        cancelButtonText:
+        'Cancelar',
+        cancelButtonAriaLabel: 'Thumbs down',
+        })
+        }
+        function calcular(){
+        }
+        </script>
+    </body>
+</html>

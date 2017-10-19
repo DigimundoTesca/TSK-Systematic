@@ -1,92 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <meta charset="utf-8">
-    <!-- Icon -->
-    <link rel="icon" href="./assets/images/tesca-ojo.png">
-    <!--Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Materialize.css-->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="./assets/css/master.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
-    <title>TSKMobility</title>
-  </head>
-  <body>
-    <header>
-      <nav class="black">
-        <div class="container">
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo">TSKMobility</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a onclick="topo()">Quienes somos</a></li>
-              <li><a onclick="mido()">Misión/Visión</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div id="index-banner" class="parallax-container">
-          <div class="section">
-            <div class="container BotonesPresentacion">
-              <a id="car" onclick='ncalc()' style="font-size:24px" class="fa">&#xf1b9;</a>
-              <div id='calc' class="row">
-                <div class=" col-sm-6">
-                  <label  for="id_name" align="left">Marca:</label>
-                  <input class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
-                  <br>
-                  <label  for="id_comment">Modelo:</label>
-                  <input class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
+    <head>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta charset="utf-8">
+        <!-- Icon -->
+        <link rel="icon" href="../Static/images/tesca-ojo.png">
+        <!--Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Materialize.css-->
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="../static/css/master.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
+        <title>TSKMobility</title>
+    </head>
+    <body>
+        <header>
+            <nav class="black">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">TSKMobility</a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a onclick="topo()">Quienes somos</a></li>
+                            <li><a onclick="boto()">Descubre cuánto puedes ganar</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class=" col-sm-6">
-                  <label  for="id_phone">Año:</label>
-                  <input class=" form-control" type="text" name="phone" maxlength="10" id="id_phone" required />
-                  <br>
-                  <label  for="id_address">Km:</label>
-                  <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div id="index-banner" class="parallax-container">
+                    <div class="section">
+                        <div class="container">
+                            <div id='inicio'>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="container BotonesPresentacion">
+                        <div id='calc'>
+                        <a id="car" onclick='ncalc()' style="font-size:24px" class="fa">&#xf1b9;</a>
+                            <div class="row">
+                                <div class=" col-sm-6">
+                                    <label  for="id_name" align="left">Marca:</label>
+                                    <input class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
+                                    <br>
+                                    <label  for="id_comment">Modelo:</label>
+                                    <input class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
+                                </div>
+                                <div class=" col-sm-6">
+                                    <label  for="id_phone">Año:</label>
+                                    <input class=" form-control" type="text" name="phone" maxlength="10" id="id_phone" required />
+                                    <br>
+                                    <label  for="id_address">Km:</label>
+                                    <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
+                                </div>
+                                <div class=" col-sm-6">
+                                    <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
+                                    <br>
+                                </div>
+                                <div class=" col-sm-6">
+                                    <a onclick='formb()' class="button big hido" id="EnvioDeDatos">Envíanos tus datos</a>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <label style="text-align: center" class="col-12" id="MuestraTotal">
+                                    $ MXN
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class=" col-sm-6">
-                  <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
-                  <br>
+                <div class="parallax">
+                    <img src="../static/images/CarroAmarillo.png">
                 </div>
-                <div class=" col-sm-6">
-                  <a onclick='formb()' class="button big hido" id="EnvioDeDatos">Envíanos tus datos</a>
-                </div>
-              </div>
-              <div class="row">
-                <label style="text-align: center" class="col-12" id="MuestraTotal">
-                  $ MXN
-                </label>
-              </div>
             </div>
-          </div>
-          <div class="parallax">
-            <img src="./assets/images/CarroAmarillo.png">
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
     <footer class="page-footer black">
-      <div class="container">
-        <div class="row">
-          <div class="center">
-            <p class="grey-text text-lighten-4">Una empresa de <a href="http://www.tescacorporation.com">Tesca Corporation</a></p>
-            <img src="./assets/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
         <div class="container">
-          © 2017 TSKMobility.
-          <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
+            <div class="row">
+                <div class="center">
+                    <p class="grey-text text-lighten-4">Una empresa de <a href="http://www.tescacorporation.com">Tesca Corporation</a></p>
+                    <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 TSKMobility.
+                <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
+            </div>
+        </div>
     </footer>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -98,31 +113,26 @@
     $('.parallax').parallax();
     });</script>
     <script type="text/javascript">
-    var calc = document.getElementById('calc')
+    var inicio = document.getElementById('inicio')
+    inicio.style.visibility='hidden';
+    inicio.style.height='0px';
     
+    var calc = document.getElementById('calc')    
+    
+
     function topo() {
     inicio.style.visibility='visible';
     inicio.style.height='100px';
-    mis.style.visibility='hidden';
-    mis.style.height='0px';
+    
     calc.style.visibility='hidden';
     calc.style.height='0px';
     }
-    function mido() {
-    mis.style.visibility='visible';
-    mis.style.height='100px';
-    inicio.style.visibility='hidden';
-    inicio.style.height='0px';
-    calc.style.visibility='hidden';
-    calc.style.height='0px';
-    }
+    
     function boto() {
     calc.style.visibility='visible';
     calc.style.height='auto';
     inicio.style.visibility='hidden';
-    inicio.style.height='0px';
-    mis.style.visibility='hidden';
-    mis.style.height='0px';
+    inicio.style.height='0px';    
     }
     function forma(){
     swal({
@@ -181,5 +191,5 @@
     h.classList.remove("hido");
     }
     </script>
-  </body>
+</body>
 </html>

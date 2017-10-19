@@ -1,13 +1,35 @@
-section header h2, p{ 
+#homepage{
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+section h2, p{ 
 	text-align: center; 
+	display: block;
+	width: 100%;
+}
+
+section header{
+	 background-color:#000;
+	 color:#fff;
+	 
+}
+
+.BotonesPresentacion{
+	margin-top: 2% !important;
 }
 
 .button{
 	text-align: center; 
 }
 
-#footer-wrapper{
-	background: black;
+.card-heade{
+	text-align: center !important;
+}
+
+.bg-dark{
+	background-color: black !important;
 }
  
 a:link{ 
@@ -33,28 +55,43 @@ a:link{
 
 /* Facebook */
 .fa-facebook {
-    background: #3B5998;
+    background: #0,0,0,0.0;
     color: white;
 }
 
 /* Twitter */
 .fa-twitter {
-    background: #55ACEE;
+    background: #0,0,0,0.0;
     color: white;
 }  
 
 /* Facebook */
 .fa-google-plus {
-    background: #da2713; 
+    background: #0,0,0,0.0; 
     color: white;
 } 
 
 .banner-p{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background: #000000 url("../../static/images/car.jpg");;	
-	background-size: auto ;
+	background-size: cover;
 	background-repeat: no-repeat;
-	height: 200px;
+	height: 500px;
+	width: 100%;
 	background-position: center;	
+}
+.banner-p > * {
+	display: block;
+	background-color: rgba(0,0,0,0.5);
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+.banner-p h2 {
+	font-size: 25px;
 }
 
 #intro{
@@ -70,6 +107,7 @@ a:link{
 			.button {
 				font-size: 1.1;
 				padding: 0.65em 1.5em 0.65em 1.5em;
+
 			}
 
 				input[type="button"].big,
@@ -94,7 +132,7 @@ a:link{
 		text-decoration: none;		
 		cursor: pointer;
 		border: 0; 
-		border-radius: 5px;
+		border-radius: 10px;
 		background: #20AADE;
 		color: #fff !important;
 		font-weight: 700;
@@ -162,6 +200,8 @@ input[type="button"].alt2,
 		button.alt2,
 		.button.alt2 {
 			background: #252122;
+
+
 		}
 
 			input[type="button"].alt2:hover,
@@ -190,3 +230,125 @@ input[type="button"].alt2,
 			top: 0.05em;
 			margin-right: 0.75em;
 		}
+
+
+/* A darle Stylos nene */
+
+/*
+.hido{
+	visibility: hidden;
+	display: none;
+	padding-top: 6%;
+}
+
+.py-5 {
+	width:100%;
+    padding-top: 2rem!important;
+    padding-bottom: 2rem!important;
+}
+
+
+
+.FooterTitle{
+	color: white;
+}
+
+.FooterUl{
+	list-style-type: none;
+}
+
+.NoPadding{
+	padding: 0;
+}
+
+.FooterLinks a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+.FooterLinks a:hover{
+	text-decoration: none;
+	color: white;
+}*/
+
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+
+	padding: 45px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #0,0,0;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+@media (max-width: 800px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}

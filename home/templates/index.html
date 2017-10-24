@@ -16,7 +16,6 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
-
         <title>TSKMobility</title>
     </head>
     <body>
@@ -46,50 +45,94 @@
                                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                             
+                            
                         </div>
                         
                         <div class="container BotonesPresentacion">
-                        <div id='calc'>
-                        <a id="car" onclick='ncalc()' style="font-size:24px" class="fa">&#xf1b9;</a>
-                            <div class="row">
-                                <div class=" col-sm-6">
-                                    <label  for="id_name" align="left">Marca:</label>
-                                    <input class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
-                                    <br>
-                                    <label  for="id_comment">Modelo:</label>
-                                    <input class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
+                            <div id='calc'>
+                                <a id="car" onclick='ncalc()' style="font-size:24px" class="fa">&#xf1b9;</a>
+                                <div class="row">
+                                    <div class=" col-sm-6">
+                                        <label  for="id_name" align="left">Marca:</label>
+                                        <input class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
+                                        <br>
+                                        <label  for="id_comment">Modelo:</label>
+                                        <input class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
+                                    </div>
+                                    <div class=" col-sm-6">
+                                        <label  for="id_phone">Año:</label>
+                                        <input class=" form-control" type="text" name="phone" maxlength="10" id="id_phone" required />
+                                        <br>
+                                        <label  for="id_address">Km:</label>
+                                        <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
+                                    </div>
+                                    <div class=" col-sm-6">
+                                        <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
+                                        <br>
+                                    </div>
+                                    
                                 </div>
-                                <div class=" col-sm-6">
-                                    <label  for="id_phone">Año:</label>
-                                    <input class=" form-control" type="text" name="phone" maxlength="10" id="id_phone" required />
-                                    <br>
-                                    <label  for="id_address">Km:</label>
-                                    <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
+                                <div class="row">
+                                    <label style="text-align: center" class="col-12" id="MuestraTotal">
+                                        $ MXN
+                                    </label>
                                 </div>
-                                <div class=" col-sm-6">
-                                    <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
-                                    <br>
+                                <div class ="row">
+                                    <div class=" col-sm-6">
+                                        <div class="buttonshido">
+                                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class=" col-sm-6">
-                                    <a onclick='formb()' class="button big hido" id="EnvioDeDatos">Envíanos tus datos</a>
-                                </div>
-                                
-                            </div>
-                            <div class="row">
-                                <label style="text-align: center" class="col-12" id="MuestraTotal">
-                                    $ MXN
-                                </label>
                             </div>
                         </div>
                     </div>
+                    <div class="parallax">
+                        <img src="../static/images/CarroAmarillo.png">
+                    </div>
                 </div>
-                <div class="parallax">
-                    <img src="../static/images/CarroAmarillo.png">
-                </div>
+            </section>
+        </main>
+        <!--Seccion Modale -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                <label for="first_name">Nombre Completo</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="input-field col s12">
+                                <input id="email" type="text" class="validate">
+                                <label for="email">Zona de la ciudad</label>
+                            </div>
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Teléfono o Whatsapp</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">¿A qué hora nos podemos comunicar contigo?</label>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </section>
-    </main>
+            
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        </div>
+    </div>
+    <!-- Fin Seccion Modale -->
     <footer class="page-footer black">
         <div class="container">
             <div class="row">
@@ -114,23 +157,20 @@
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" 
-    crossorigin="anonymous"></script>    
     
-
-
     <script type="text/javascript">
     $(document).ready(function(){
     $('.parallax').parallax();
-    });</script>
-    <script type="text/javascript">
+    $('.modal').modal();
+    
+    });
     var inicio = document.getElementById('inicio')
     inicio.style.visibility='hidden';
     inicio.style.height='0px';
     
-    var calc = document.getElementById('calc')    
+    var calc = document.getElementById('calc')
+    $('#modal1').modal('open');
     
-
     function topo() {
     inicio.style.visibility='visible';
     inicio.style.height='100px';
@@ -143,7 +183,7 @@
     calc.style.visibility='visible';
     calc.style.height='auto';
     inicio.style.visibility='hidden';
-    inicio.style.height='0px';    
+    inicio.style.height='0px';
     }
     function forma(){
     swal({
@@ -201,6 +241,7 @@
     let h =document.getElementById("EnvioDeDatos");
     h.classList.remove("hido");
     }
+    $('#modal1').modal('open');
     </script>
 </body>
 </html>

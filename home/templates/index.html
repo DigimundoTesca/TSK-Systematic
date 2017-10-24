@@ -190,9 +190,9 @@
     DifA = Actual - Año;
     let Total = 0;
     let MuA = (5*80-(2 * DifA));
-    let MuK = (10*(20000/KM));
+    let MuK = (10*(KM/20000));
     //Total = ValorBase + (5*(80-(2 * DifA))) + (10*(20000/KM)) + '$ MXN';
-    Total = ValorBase + MuA + MuK;
+    Total = parseInt(ValorBase + MuA + MuK);
     if (KM == '' || Año == ''){
     Total = 0.0;
     }

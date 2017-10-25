@@ -14,6 +14,7 @@ class marca(models.Model):
 	nombreMarca=models.CharField(max_length=50)
 
 class modelo(models.Model):
+	marca=models.ForeignKey(marca,default=1, on_delete=models.CASCADE)
 	nombreModelo=models.CharField(max_length=50)
 	UBERX = 'UX'
 	UBERBLACK = 'UB'

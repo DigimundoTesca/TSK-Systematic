@@ -19,7 +19,7 @@ class modelo(models.Model):
 	UBERX = 'UX'
 	UBERBLACK = 'UB'
 	UBERSUV = 'US'
-	UBERXL = 'UX'
+	UBERXL = 'UXL'
 	TIPO_UBER = (
 		(UBERX, 'Uberx'),
 		(UBERBLACK, 'UberBlack'),

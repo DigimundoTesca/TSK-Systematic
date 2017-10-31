@@ -14,7 +14,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="../static/css/easy-autocomplete.css"> 
+        <link rel="stylesheet" href="../static/css/easy-autocomplete.css">
         <title>TSKMobility</title>
     </head>
     <body>
@@ -51,35 +51,35 @@
                             <div id='calc'>
                                 <a id="car" onclick='ncalc()' style="font-size:24px" class="fa">&#xf1b9;</a>
                                 <div class="row">
-                                    <div class=" col-sm-6">
+                                    <div class="col s12 m6 l6">
                                         <label  for="id_name" align="left">Marca:</label>
                                         <input autocomplete="off" class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
                                         <br>
                                         <label  for="id_comment">Modelo:</label>
                                         <input autocomplete="off" class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
                                     </div>
-                                    <div class=" col-sm-6">
+                                    <div class="col s12 m6 l6">
                                         <label  for="id_phone">Año:</label>
-                                        <input class=" form-control" type="text" name="phone" maxlength="10" id="id_phone" required />
+                                        <input class=" form-control" type="text" name="phone" maxlength="4" id="id_phone" required />
+                                        <br>
                                         <br>
                                         <label  for="id_address">Km:</label>
                                         <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
                                     </div>
-                                    <div class=" col-sm-6">
+                                    <div class="col s12 m12 l12">
                                         <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
                                         <br>
                                     </div>
-                                    
                                 </div>
-                                <div class="row">
-                                    <label style="text-align: center" class="col-12" id="MuestraTotal">
+                                <div class="row s12 m6 l4">
+                                    <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
                                         $ MXN
                                     </label>
                                 </div>
                                 <div class ="row">
-                                    <div class=" col-sm-6">
+                                    <div class="col s12 m6 l4">
                                         <div class="buttonshido">
-                                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                                            <a href="#modal1">Modal</a>
                                         </div>
                                     </div>
                                 </div>
@@ -95,133 +95,117 @@
         <!--Seccion Modale -->
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
-                
                 <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                                <label for="first_name">Nombre Completo</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
-                        </div>
-                        <div class="input-field col s12">
-                            <input id="email" type="text" class="validate">
-                            <label for="email">Zona de la ciudad</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input id="email" type="text" class="validate">
-                            <label for="email">Teléfono o Whatsapp</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input id="email" type="text" class="validate">
-                            <label for="email">¿A qué hora nos podemos comunicar contigo?</label>
-                        </div>
+                    <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Nombre Completo</label>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Seccion Modale -->
-    <footer class="page-footer black">
-        <div class="container">
-            <div class="row">
-                <div class="center">
-                    <p class="grey-text text-lighten-4">Una empresa de <a href="http://www.tescacorporation.com">Tesca Corporation</a></p>
-                    <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Zona de la ciudad</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="email" type="text" maxlength="10" class="validate">
+                        <label for="email">Teléfono o Whatsapp</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">¿A qué hora nos podemos comunicar contigo?</label>
+                    </div>
                 </div>
             </div>
+        </form>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2017 TSKMobility.
-                <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
-            </div>
-        </div>        
-    </footer>
+    </div>
+</div>
+</div>
+<!-- Fin Seccion Modale -->
+<footer class="page-footer black">
+<div class="container">
+    <div class="row">
+        <div class="center">
+            <p class="grey-text text-lighten-4">Una empresa de <a href="http://www.tescacorporation.com">Tesca Corporation</a></p>
+            <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+        </div>
+    </div>
+</div>
+<div class="footer-copyright">
+    <div class="container">
+        © 2017 TSKMobility.
+        <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
+    </div>
+</div>
+</footer>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="text/javascript" charset="utf-8" async>
+$(function(){
+var lista_marca = JSON.parse(('{{ marca | safe }}'));
+var lista_obj = []
+for (var i=0; i<lista_marca.length; i++){
+lista_obj[lista_marca[i]]=null;
+}
+$('#id_name').autocomplete({
+data: lista_obj,
+});
+$('.parallax').parallax();
+$('.modal').modal();
+});
+var inicio = document.getElementById('inicio')
+inicio.style.visibility='hidden';
+inicio.style.height='0px';
+var calc = document.getElementById('calc')
 
-
-    <!--Import jQuery before materialize.js-->
-    
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>        
-    <script type="text/javascript" charset="utf-8" async> 
-
-    $(function(){
-
-    var lista_marca = JSON.parse(('{{ marca | safe }}'));
-    var lista_obj = []
-    
-    for (var i=0; i<lista_marca.length; i++){                
-        lista_obj[lista_marca[i]]=null;
-    }
-
-    $('#id_name').autocomplete({
-        data: lista_obj,
-    });
-    
-    $('.parallax').parallax();
-    $('.modal').modal();    
-
-    var inicio = document.getElementById('inicio')
-    inicio.style.visibility='hidden';
-    inicio.style.height='0px';
-    
-    var calc = document.getElementById('calc')
-    
-    function topo() {
-        inicio.style.visibility='visible';
-        inicio.style.height='100px';    
-        calc.style.visibility='hidden';
-        calc.style.height='0px';
-    }
-    
-    function boto() {
-        calc.style.visibility='visible';
-        calc.style.height='auto';
-        inicio.style.visibility='hidden';
-        inicio.style.height='0px';
-    }
-    
-    function calcular(){
-    //Variables del formulario
-    let Marca = document.getElementById('id_name').value;
-    let Modelo = document.getElementById('id_comment').value;
-    let Año = document.getElementById('id_phone').value;
-    let KM = document.getElementById('id_address').value;
-    //año Actual
-    let Actual = (new Date()).getFullYear()
-    //Valor Inicial
-    const ValorBase = 4800;
-    let DifA = 0;
-    DifA = Actual - Año;
-    let Total = 0;
-    let MuA = (5*80-(2 * DifA));
-    let MuK = (10*(KM/20000));
-    //Total = ValorBase + (5*(80-(2 * DifA))) + (10*(20000/KM)) + '$ MXN';
-    Total = parseInt(ValorBase + MuA + MuK);
-    if (KM == '' || Año == ''){
-        Total = 0.0;
-    }
-    
-    document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
-        let h =document.getElementById("EnvioDeDatos");
-        h.classList.remove("hido");
-    }
-    
-    });
-
-    
-    
-    </script>
+function topo() {
+inicio.style.visibility='visible';
+inicio.style.height='100px';
+calc.style.visibility='hidden';
+calc.style.height='0px';
+}
+function boto() {
+calc.style.visibility='visible';
+calc.style.height='auto';
+inicio.style.visibility='hidden';
+inicio.style.height='0px';
+}
+function calcular(){
+//Variables del formulario
+let Marca = document.getElementById('id_name').value;
+let Modelo = document.getElementById('id_comment').value;
+//Cambiar por tipoUber
+let Año = document.getElementById('id_phone').value;
+let KM = document.getElementById('id_address').value;
+//año Actual
+let Actual = (new Date()).getFullYear()
+//Valor Inicial
+const ValorBase = 4800;
+let DifA = 0;
+DifA = Actual - Año;
+let Total = 0;
+let MuA = (5*80-(2 * DifA));
+let MuK = (10*(KM/20000));
+Total = parseInt(ValorBase + MuA + MuK);
+if (KM == '' || Año == ''){
+Total = 0.0;
+}
+document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
+let h =document.getElementById("EnvioDeDatos");
+h.classList.remove("hido");
+}
+</script>
 </body>
 </html>

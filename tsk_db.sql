@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.2
--- Dumped by pg_dump version 9.6.2
+-- Dumped from database version 10.0
+-- Dumped by pg_dump version 10.0
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -437,43 +437,6 @@ ALTER SEQUENCE home_modelo_id_seq OWNED BY home_modelo.id;
 
 
 --
--- Name: home_post; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE home_post (
-    id integer NOT NULL,
-    name character varying(50) NOT NULL,
-    email character varying(50) NOT NULL,
-    phone character varying(10) NOT NULL,
-    address character varying(100) NOT NULL,
-    comment character varying(40) NOT NULL
-);
-
-
-ALTER TABLE home_post OWNER TO postgres;
-
---
--- Name: home_post_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE home_post_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE home_post_id_seq OWNER TO postgres;
-
---
--- Name: home_post_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE home_post_id_seq OWNED BY home_post.id;
-
-
---
 -- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -551,13 +514,6 @@ ALTER TABLE ONLY home_modelo ALTER COLUMN id SET DEFAULT nextval('home_modelo_id
 
 
 --
--- Name: home_post id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY home_post ALTER COLUMN id SET DEFAULT nextval('home_post_id_seq'::regclass);
-
-
---
 -- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -566,25 +522,11 @@ COPY auth_group (id, name) FROM stdin;
 
 
 --
--- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('auth_group_id_seq', 1, false);
-
-
---
 -- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
 \.
-
-
---
--- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('auth_group_permissions_id_seq', 1, false);
 
 
 --
@@ -623,18 +565,11 @@ COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
 
 
 --
--- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('auth_permission_id_seq', 27, true);
-
-
---
 -- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
-1	pbkdf2_sha256$36000$UBYjQtNUWjtd$z0ZGZ99EFLBqNBInbGniZ5J0pAns5UX7vm/HUspoIDw=	2017-10-30 17:32:16.892017-06	t	Rich			drdr_2@hotmail.com	t	t	2017-10-30 16:10:19.953159-06
+1	pbkdf2_sha256$36000$UBYjQtNUWjtd$z0ZGZ99EFLBqNBInbGniZ5J0pAns5UX7vm/HUspoIDw=	2017-10-30 18:32:16.892017-05	t	Rich			drdr_2@hotmail.com	t	t	2017-10-30 17:10:19.953159-05
 \.
 
 
@@ -647,20 +582,6 @@ COPY auth_user_groups (id, user_id, group_id) FROM stdin;
 
 
 --
--- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('auth_user_groups_id_seq', 1, false);
-
-
---
--- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('auth_user_id_seq', 1, true);
-
-
---
 -- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -669,207 +590,193 @@ COPY auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
 
 
 --
--- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
-
-
---
 -- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
-1	2017-10-30 19:59:50.912817-06	182	modelo object	3		3	1
-2	2017-10-30 19:59:51.220512-06	181	modelo object	3		3	1
-3	2017-10-30 19:59:51.22448-06	180	modelo object	3		3	1
-4	2017-10-30 19:59:51.227472-06	179	modelo object	3		3	1
-5	2017-10-30 19:59:51.230506-06	178	modelo object	3		3	1
-6	2017-10-30 19:59:51.233455-06	177	modelo object	3		3	1
-7	2017-10-30 19:59:51.23657-06	176	modelo object	3		3	1
-8	2017-10-30 19:59:51.239499-06	175	modelo object	3		3	1
-9	2017-10-30 19:59:51.241462-06	174	modelo object	3		3	1
-10	2017-10-30 19:59:51.244472-06	173	modelo object	3		3	1
-11	2017-10-30 19:59:51.246501-06	172	modelo object	3		3	1
-12	2017-10-30 19:59:51.248468-06	171	modelo object	3		3	1
-13	2017-10-30 19:59:51.251992-06	170	modelo object	3		3	1
-14	2017-10-30 19:59:51.254502-06	169	modelo object	3		3	1
-15	2017-10-30 19:59:51.257004-06	168	modelo object	3		3	1
-16	2017-10-30 19:59:51.259001-06	167	modelo object	3		3	1
-17	2017-10-30 19:59:51.2615-06	166	modelo object	3		3	1
-18	2017-10-30 19:59:51.264002-06	165	modelo object	3		3	1
-19	2017-10-30 19:59:51.267005-06	164	modelo object	3		3	1
-20	2017-10-30 19:59:51.269524-06	163	modelo object	3		3	1
-21	2017-10-30 19:59:51.272538-06	162	modelo object	3		3	1
-22	2017-10-30 19:59:51.275529-06	161	modelo object	3		3	1
-23	2017-10-30 19:59:51.277615-06	160	modelo object	3		3	1
-24	2017-10-30 19:59:51.279532-06	159	modelo object	3		3	1
-25	2017-10-30 19:59:51.282534-06	158	modelo object	3		3	1
-26	2017-10-30 19:59:51.285542-06	157	modelo object	3		3	1
-27	2017-10-30 19:59:51.287539-06	156	modelo object	3		3	1
-28	2017-10-30 19:59:51.290542-06	155	modelo object	3		3	1
-29	2017-10-30 19:59:51.292625-06	154	modelo object	3		3	1
-30	2017-10-30 19:59:51.294545-06	153	modelo object	3		3	1
-31	2017-10-30 19:59:51.297548-06	152	modelo object	3		3	1
-32	2017-10-30 19:59:51.299591-06	151	modelo object	3		3	1
-33	2017-10-30 19:59:51.302551-06	150	modelo object	3		3	1
-34	2017-10-30 19:59:51.305563-06	149	modelo object	3		3	1
-35	2017-10-30 19:59:51.307557-06	148	modelo object	3		3	1
-36	2017-10-30 19:59:51.310577-06	147	modelo object	3		3	1
-37	2017-10-30 19:59:51.312595-06	146	modelo object	3		3	1
-38	2017-10-30 19:59:51.31556-06	145	modelo object	3		3	1
-39	2017-10-30 19:59:51.317594-06	144	modelo object	3		3	1
-40	2017-10-30 19:59:51.32058-06	143	modelo object	3		3	1
-41	2017-10-30 19:59:51.322676-06	142	modelo object	3		3	1
-42	2017-10-30 19:59:51.324568-06	141	modelo object	3		3	1
-43	2017-10-30 19:59:51.327581-06	140	modelo object	3		3	1
-44	2017-10-30 19:59:51.329576-06	139	modelo object	3		3	1
-45	2017-10-30 19:59:51.332577-06	138	modelo object	3		3	1
-46	2017-10-30 19:59:51.335621-06	137	modelo object	3		3	1
-47	2017-10-30 19:59:51.338592-06	136	modelo object	3		3	1
-48	2017-10-30 19:59:51.340587-06	135	modelo object	3		3	1
-49	2017-10-30 19:59:51.343635-06	134	modelo object	3		3	1
-50	2017-10-30 19:59:51.345597-06	133	modelo object	3		3	1
-51	2017-10-30 19:59:51.347631-06	132	modelo object	3		3	1
-52	2017-10-30 19:59:51.350614-06	131	modelo object	3		3	1
-53	2017-10-30 19:59:51.353628-06	130	modelo object	3		3	1
-54	2017-10-30 19:59:51.356112-06	129	modelo object	3		3	1
-55	2017-10-30 19:59:51.358111-06	128	modelo object	3		3	1
-56	2017-10-30 19:59:51.360612-06	127	modelo object	3		3	1
-57	2017-10-30 19:59:51.363114-06	126	modelo object	3		3	1
-58	2017-10-30 19:59:51.366113-06	125	modelo object	3		3	1
-59	2017-10-30 19:59:51.368656-06	124	modelo object	3		3	1
-60	2017-10-30 19:59:51.371684-06	123	modelo object	3		3	1
-61	2017-10-30 19:59:51.373636-06	122	modelo object	3		3	1
-62	2017-10-30 19:59:51.375632-06	121	modelo object	3		3	1
-63	2017-10-30 19:59:51.378641-06	120	modelo object	3		3	1
-64	2017-10-30 19:59:51.380719-06	119	modelo object	3		3	1
-65	2017-10-30 19:59:51.38265-06	118	modelo object	3		3	1
-66	2017-10-30 19:59:51.385694-06	117	modelo object	3		3	1
-67	2017-10-30 19:59:51.388686-06	116	modelo object	3		3	1
-68	2017-10-30 19:59:51.391663-06	115	modelo object	3		3	1
-69	2017-10-30 19:59:51.393654-06	114	modelo object	3		3	1
-70	2017-10-30 19:59:51.395719-06	113	modelo object	3		3	1
-71	2017-10-30 19:59:51.39871-06	112	modelo object	3		3	1
-72	2017-10-30 19:59:51.400655-06	111	modelo object	3		3	1
-73	2017-10-30 19:59:51.404658-06	110	modelo object	3		3	1
-74	2017-10-30 19:59:51.4077-06	109	modelo object	3		3	1
-75	2017-10-30 19:59:51.409665-06	108	modelo object	3		3	1
-76	2017-10-30 19:59:51.411664-06	107	modelo object	3		3	1
-77	2017-10-30 19:59:51.414668-06	106	modelo object	3		3	1
-78	2017-10-30 19:59:51.41667-06	105	modelo object	3		3	1
-79	2017-10-30 19:59:51.419669-06	104	modelo object	3		3	1
-80	2017-10-30 19:59:51.422716-06	103	modelo object	3		3	1
-81	2017-10-30 19:59:51.425676-06	102	modelo object	3		3	1
-82	2017-10-30 19:59:51.428685-06	101	modelo object	3		3	1
-83	2017-10-30 19:59:51.430681-06	100	modelo object	3		3	1
-84	2017-10-30 19:59:51.433681-06	99	modelo object	3		3	1
-85	2017-10-30 19:59:51.436703-06	98	modelo object	3		3	1
-86	2017-10-30 19:59:51.438733-06	97	modelo object	3		3	1
-87	2017-10-30 19:59:51.440695-06	96	modelo object	3		3	1
-88	2017-10-30 19:59:51.443693-06	95	modelo object	3		3	1
-89	2017-10-30 19:59:51.445765-06	94	modelo object	3		3	1
-90	2017-10-30 19:59:51.447697-06	93	modelo object	3		3	1
-91	2017-10-30 19:59:51.451744-06	92	modelo object	3		3	1
-92	2017-10-30 19:59:51.454254-06	91	modelo object	3		3	1
-93	2017-10-30 19:59:51.457273-06	90	modelo object	3		3	1
-94	2017-10-30 19:59:51.459765-06	89	modelo object	3		3	1
-95	2017-10-30 19:59:51.462268-06	88	modelo object	3		3	1
-96	2017-10-30 19:59:51.464783-06	87	modelo object	3		3	1
-97	2017-10-30 19:59:51.466764-06	86	modelo object	3		3	1
-98	2017-10-30 19:59:51.469783-06	85	modelo object	3		3	1
-99	2017-10-30 19:59:51.471788-06	84	modelo object	3		3	1
-100	2017-10-30 19:59:51.47478-06	83	modelo object	3		3	1
-101	2017-10-30 19:59:51.476828-06	82	modelo object	3		3	1
-102	2017-10-30 19:59:51.478785-06	81	modelo object	3		3	1
-103	2017-10-30 19:59:51.481794-06	80	modelo object	3		3	1
-104	2017-10-30 19:59:51.484833-06	79	modelo object	3		3	1
-105	2017-10-30 19:59:51.48779-06	78	modelo object	3		3	1
-106	2017-10-30 19:59:51.490793-06	77	modelo object	3		3	1
-107	2017-10-30 19:59:51.493794-06	76	modelo object	3		3	1
-108	2017-10-30 19:59:51.496805-06	75	modelo object	3		3	1
-109	2017-10-30 19:59:51.502804-06	74	modelo object	3		3	1
-110	2017-10-30 19:59:51.505809-06	73	modelo object	3		3	1
-111	2017-10-30 19:59:51.507811-06	72	modelo object	3		3	1
-112	2017-10-30 19:59:51.50981-06	71	modelo object	3		3	1
-113	2017-10-30 19:59:51.512815-06	70	modelo object	3		3	1
-114	2017-10-30 19:59:51.515816-06	69	modelo object	3		3	1
-115	2017-10-30 19:59:51.518819-06	68	modelo object	3		3	1
-116	2017-10-30 19:59:51.521848-06	67	modelo object	3		3	1
-117	2017-10-30 19:59:51.525841-06	66	modelo object	3		3	1
-118	2017-10-30 19:59:51.528861-06	65	modelo object	3		3	1
-119	2017-10-30 19:59:51.531872-06	64	modelo object	3		3	1
-120	2017-10-30 19:59:51.533835-06	63	modelo object	3		3	1
-121	2017-10-30 19:59:51.536834-06	62	modelo object	3		3	1
-122	2017-10-30 19:59:51.538864-06	61	modelo object	3		3	1
-123	2017-10-30 19:59:51.541895-06	60	modelo object	3		3	1
-124	2017-10-30 19:59:51.543893-06	59	modelo object	3		3	1
-125	2017-10-30 19:59:51.545846-06	58	modelo object	3		3	1
-126	2017-10-30 19:59:51.549849-06	57	modelo object	3		3	1
-127	2017-10-30 19:59:51.553396-06	56	modelo object	3		3	1
-128	2017-10-30 19:59:51.555378-06	55	modelo object	3		3	1
-129	2017-10-30 19:59:51.557383-06	54	modelo object	3		3	1
-130	2017-10-30 19:59:51.559883-06	53	modelo object	3		3	1
-131	2017-10-30 19:59:51.561884-06	52	modelo object	3		3	1
-132	2017-10-30 19:59:51.56439-06	51	modelo object	3		3	1
-133	2017-10-30 19:59:51.566888-06	50	modelo object	3		3	1
-134	2017-10-30 19:59:51.56881-06	49	modelo object	3		3	1
-135	2017-10-30 19:59:51.571812-06	48	modelo object	3		3	1
-136	2017-10-30 19:59:51.573817-06	47	modelo object	3		3	1
-137	2017-10-30 19:59:51.575815-06	46	modelo object	3		3	1
-138	2017-10-30 19:59:51.578841-06	45	modelo object	3		3	1
-139	2017-10-30 19:59:51.580819-06	44	modelo object	3		3	1
-140	2017-10-30 19:59:51.583823-06	43	modelo object	3		3	1
-141	2017-10-30 19:59:51.586826-06	42	modelo object	3		3	1
-142	2017-10-30 19:59:51.589827-06	41	modelo object	3		3	1
-143	2017-10-30 19:59:51.59183-06	40	modelo object	3		3	1
-144	2017-10-30 19:59:51.593833-06	39	modelo object	3		3	1
-145	2017-10-30 19:59:51.596854-06	38	modelo object	3		3	1
-146	2017-10-30 19:59:51.598836-06	37	modelo object	3		3	1
-147	2017-10-30 19:59:51.601839-06	36	modelo object	3		3	1
-148	2017-10-30 19:59:51.603844-06	35	modelo object	3		3	1
-149	2017-10-30 19:59:51.606843-06	34	modelo object	3		3	1
-150	2017-10-30 19:59:51.609846-06	33	modelo object	3		3	1
-151	2017-10-30 19:59:51.612851-06	32	modelo object	3		3	1
-152	2017-10-30 19:59:51.614877-06	31	modelo object	3		3	1
-153	2017-10-30 19:59:51.61787-06	30	modelo object	3		3	1
-154	2017-10-30 19:59:51.619858-06	29	modelo object	3		3	1
-155	2017-10-30 19:59:51.621859-06	28	modelo object	3		3	1
-156	2017-10-30 19:59:51.624858-06	27	modelo object	3		3	1
-157	2017-10-30 19:59:51.626861-06	26	modelo object	3		3	1
-158	2017-10-30 19:59:51.629863-06	25	modelo object	3		3	1
-159	2017-10-30 19:59:51.631866-06	24	modelo object	3		3	1
-160	2017-10-30 19:59:51.633866-06	23	modelo object	3		3	1
-161	2017-10-30 19:59:51.63687-06	22	modelo object	3		3	1
-162	2017-10-30 19:59:51.638875-06	21	modelo object	3		3	1
-163	2017-10-30 19:59:51.641875-06	20	modelo object	3		3	1
-164	2017-10-30 19:59:51.643881-06	19	modelo object	3		3	1
-165	2017-10-30 19:59:51.645898-06	18	modelo object	3		3	1
-166	2017-10-30 19:59:51.647906-06	17	modelo object	3		3	1
-167	2017-10-30 19:59:51.650884-06	16	modelo object	3		3	1
-168	2017-10-30 19:59:51.654393-06	15	modelo object	3		3	1
-169	2017-10-30 19:59:51.656918-06	14	modelo object	3		3	1
-170	2017-10-30 19:59:51.659416-06	13	modelo object	3		3	1
-171	2017-10-30 19:59:51.661399-06	12	modelo object	3		3	1
-172	2017-10-30 19:59:51.663903-06	11	modelo object	3		3	1
-173	2017-10-30 19:59:51.666906-06	10	modelo object	3		3	1
-174	2017-10-30 19:59:51.669704-06	9	modelo object	3		3	1
-175	2017-10-30 19:59:51.672708-06	8	modelo object	3		3	1
-176	2017-10-30 19:59:51.675711-06	7	modelo object	3		3	1
-177	2017-10-30 19:59:51.677712-06	6	modelo object	3		3	1
-178	2017-10-30 19:59:51.679713-06	5	modelo object	3		3	1
-179	2017-10-30 19:59:51.682716-06	4	modelo object	3		3	1
-180	2017-10-30 19:59:51.684718-06	3	modelo object	3		3	1
-181	2017-10-30 19:59:51.68772-06	2	modelo object	3		3	1
-182	2017-10-30 19:59:51.689722-06	1	modelo object	3		3	1
+1	2017-10-30 20:59:50.912817-05	182	modelo object	3		3	1
+2	2017-10-30 20:59:51.220512-05	181	modelo object	3		3	1
+3	2017-10-30 20:59:51.22448-05	180	modelo object	3		3	1
+4	2017-10-30 20:59:51.227472-05	179	modelo object	3		3	1
+5	2017-10-30 20:59:51.230506-05	178	modelo object	3		3	1
+6	2017-10-30 20:59:51.233455-05	177	modelo object	3		3	1
+7	2017-10-30 20:59:51.23657-05	176	modelo object	3		3	1
+8	2017-10-30 20:59:51.239499-05	175	modelo object	3		3	1
+9	2017-10-30 20:59:51.241462-05	174	modelo object	3		3	1
+10	2017-10-30 20:59:51.244472-05	173	modelo object	3		3	1
+11	2017-10-30 20:59:51.246501-05	172	modelo object	3		3	1
+12	2017-10-30 20:59:51.248468-05	171	modelo object	3		3	1
+13	2017-10-30 20:59:51.251992-05	170	modelo object	3		3	1
+14	2017-10-30 20:59:51.254502-05	169	modelo object	3		3	1
+15	2017-10-30 20:59:51.257004-05	168	modelo object	3		3	1
+16	2017-10-30 20:59:51.259001-05	167	modelo object	3		3	1
+17	2017-10-30 20:59:51.2615-05	166	modelo object	3		3	1
+18	2017-10-30 20:59:51.264002-05	165	modelo object	3		3	1
+19	2017-10-30 20:59:51.267005-05	164	modelo object	3		3	1
+20	2017-10-30 20:59:51.269524-05	163	modelo object	3		3	1
+21	2017-10-30 20:59:51.272538-05	162	modelo object	3		3	1
+22	2017-10-30 20:59:51.275529-05	161	modelo object	3		3	1
+23	2017-10-30 20:59:51.277615-05	160	modelo object	3		3	1
+24	2017-10-30 20:59:51.279532-05	159	modelo object	3		3	1
+25	2017-10-30 20:59:51.282534-05	158	modelo object	3		3	1
+26	2017-10-30 20:59:51.285542-05	157	modelo object	3		3	1
+27	2017-10-30 20:59:51.287539-05	156	modelo object	3		3	1
+28	2017-10-30 20:59:51.290542-05	155	modelo object	3		3	1
+29	2017-10-30 20:59:51.292625-05	154	modelo object	3		3	1
+30	2017-10-30 20:59:51.294545-05	153	modelo object	3		3	1
+31	2017-10-30 20:59:51.297548-05	152	modelo object	3		3	1
+32	2017-10-30 20:59:51.299591-05	151	modelo object	3		3	1
+33	2017-10-30 20:59:51.302551-05	150	modelo object	3		3	1
+34	2017-10-30 20:59:51.305563-05	149	modelo object	3		3	1
+35	2017-10-30 20:59:51.307557-05	148	modelo object	3		3	1
+36	2017-10-30 20:59:51.310577-05	147	modelo object	3		3	1
+37	2017-10-30 20:59:51.312595-05	146	modelo object	3		3	1
+38	2017-10-30 20:59:51.31556-05	145	modelo object	3		3	1
+39	2017-10-30 20:59:51.317594-05	144	modelo object	3		3	1
+40	2017-10-30 20:59:51.32058-05	143	modelo object	3		3	1
+41	2017-10-30 20:59:51.322676-05	142	modelo object	3		3	1
+42	2017-10-30 20:59:51.324568-05	141	modelo object	3		3	1
+43	2017-10-30 20:59:51.327581-05	140	modelo object	3		3	1
+44	2017-10-30 20:59:51.329576-05	139	modelo object	3		3	1
+45	2017-10-30 20:59:51.332577-05	138	modelo object	3		3	1
+46	2017-10-30 20:59:51.335621-05	137	modelo object	3		3	1
+47	2017-10-30 20:59:51.338592-05	136	modelo object	3		3	1
+48	2017-10-30 20:59:51.340587-05	135	modelo object	3		3	1
+49	2017-10-30 20:59:51.343635-05	134	modelo object	3		3	1
+50	2017-10-30 20:59:51.345597-05	133	modelo object	3		3	1
+51	2017-10-30 20:59:51.347631-05	132	modelo object	3		3	1
+52	2017-10-30 20:59:51.350614-05	131	modelo object	3		3	1
+53	2017-10-30 20:59:51.353628-05	130	modelo object	3		3	1
+54	2017-10-30 20:59:51.356112-05	129	modelo object	3		3	1
+55	2017-10-30 20:59:51.358111-05	128	modelo object	3		3	1
+56	2017-10-30 20:59:51.360612-05	127	modelo object	3		3	1
+57	2017-10-30 20:59:51.363114-05	126	modelo object	3		3	1
+58	2017-10-30 20:59:51.366113-05	125	modelo object	3		3	1
+59	2017-10-30 20:59:51.368656-05	124	modelo object	3		3	1
+60	2017-10-30 20:59:51.371684-05	123	modelo object	3		3	1
+61	2017-10-30 20:59:51.373636-05	122	modelo object	3		3	1
+62	2017-10-30 20:59:51.375632-05	121	modelo object	3		3	1
+63	2017-10-30 20:59:51.378641-05	120	modelo object	3		3	1
+64	2017-10-30 20:59:51.380719-05	119	modelo object	3		3	1
+65	2017-10-30 20:59:51.38265-05	118	modelo object	3		3	1
+66	2017-10-30 20:59:51.385694-05	117	modelo object	3		3	1
+67	2017-10-30 20:59:51.388686-05	116	modelo object	3		3	1
+68	2017-10-30 20:59:51.391663-05	115	modelo object	3		3	1
+69	2017-10-30 20:59:51.393654-05	114	modelo object	3		3	1
+70	2017-10-30 20:59:51.395719-05	113	modelo object	3		3	1
+71	2017-10-30 20:59:51.39871-05	112	modelo object	3		3	1
+72	2017-10-30 20:59:51.400655-05	111	modelo object	3		3	1
+73	2017-10-30 20:59:51.404658-05	110	modelo object	3		3	1
+74	2017-10-30 20:59:51.4077-05	109	modelo object	3		3	1
+75	2017-10-30 20:59:51.409665-05	108	modelo object	3		3	1
+76	2017-10-30 20:59:51.411664-05	107	modelo object	3		3	1
+77	2017-10-30 20:59:51.414668-05	106	modelo object	3		3	1
+78	2017-10-30 20:59:51.41667-05	105	modelo object	3		3	1
+79	2017-10-30 20:59:51.419669-05	104	modelo object	3		3	1
+80	2017-10-30 20:59:51.422716-05	103	modelo object	3		3	1
+81	2017-10-30 20:59:51.425676-05	102	modelo object	3		3	1
+82	2017-10-30 20:59:51.428685-05	101	modelo object	3		3	1
+83	2017-10-30 20:59:51.430681-05	100	modelo object	3		3	1
+84	2017-10-30 20:59:51.433681-05	99	modelo object	3		3	1
+85	2017-10-30 20:59:51.436703-05	98	modelo object	3		3	1
+86	2017-10-30 20:59:51.438733-05	97	modelo object	3		3	1
+87	2017-10-30 20:59:51.440695-05	96	modelo object	3		3	1
+88	2017-10-30 20:59:51.443693-05	95	modelo object	3		3	1
+89	2017-10-30 20:59:51.445765-05	94	modelo object	3		3	1
+90	2017-10-30 20:59:51.447697-05	93	modelo object	3		3	1
+91	2017-10-30 20:59:51.451744-05	92	modelo object	3		3	1
+92	2017-10-30 20:59:51.454254-05	91	modelo object	3		3	1
+93	2017-10-30 20:59:51.457273-05	90	modelo object	3		3	1
+94	2017-10-30 20:59:51.459765-05	89	modelo object	3		3	1
+95	2017-10-30 20:59:51.462268-05	88	modelo object	3		3	1
+96	2017-10-30 20:59:51.464783-05	87	modelo object	3		3	1
+97	2017-10-30 20:59:51.466764-05	86	modelo object	3		3	1
+98	2017-10-30 20:59:51.469783-05	85	modelo object	3		3	1
+99	2017-10-30 20:59:51.471788-05	84	modelo object	3		3	1
+100	2017-10-30 20:59:51.47478-05	83	modelo object	3		3	1
+101	2017-10-30 20:59:51.476828-05	82	modelo object	3		3	1
+102	2017-10-30 20:59:51.478785-05	81	modelo object	3		3	1
+103	2017-10-30 20:59:51.481794-05	80	modelo object	3		3	1
+104	2017-10-30 20:59:51.484833-05	79	modelo object	3		3	1
+105	2017-10-30 20:59:51.48779-05	78	modelo object	3		3	1
+106	2017-10-30 20:59:51.490793-05	77	modelo object	3		3	1
+107	2017-10-30 20:59:51.493794-05	76	modelo object	3		3	1
+108	2017-10-30 20:59:51.496805-05	75	modelo object	3		3	1
+109	2017-10-30 20:59:51.502804-05	74	modelo object	3		3	1
+110	2017-10-30 20:59:51.505809-05	73	modelo object	3		3	1
+111	2017-10-30 20:59:51.507811-05	72	modelo object	3		3	1
+112	2017-10-30 20:59:51.50981-05	71	modelo object	3		3	1
+113	2017-10-30 20:59:51.512815-05	70	modelo object	3		3	1
+114	2017-10-30 20:59:51.515816-05	69	modelo object	3		3	1
+115	2017-10-30 20:59:51.518819-05	68	modelo object	3		3	1
+116	2017-10-30 20:59:51.521848-05	67	modelo object	3		3	1
+117	2017-10-30 20:59:51.525841-05	66	modelo object	3		3	1
+118	2017-10-30 20:59:51.528861-05	65	modelo object	3		3	1
+119	2017-10-30 20:59:51.531872-05	64	modelo object	3		3	1
+120	2017-10-30 20:59:51.533835-05	63	modelo object	3		3	1
+121	2017-10-30 20:59:51.536834-05	62	modelo object	3		3	1
+122	2017-10-30 20:59:51.538864-05	61	modelo object	3		3	1
+123	2017-10-30 20:59:51.541895-05	60	modelo object	3		3	1
+124	2017-10-30 20:59:51.543893-05	59	modelo object	3		3	1
+125	2017-10-30 20:59:51.545846-05	58	modelo object	3		3	1
+126	2017-10-30 20:59:51.549849-05	57	modelo object	3		3	1
+127	2017-10-30 20:59:51.553396-05	56	modelo object	3		3	1
+128	2017-10-30 20:59:51.555378-05	55	modelo object	3		3	1
+129	2017-10-30 20:59:51.557383-05	54	modelo object	3		3	1
+130	2017-10-30 20:59:51.559883-05	53	modelo object	3		3	1
+131	2017-10-30 20:59:51.561884-05	52	modelo object	3		3	1
+132	2017-10-30 20:59:51.56439-05	51	modelo object	3		3	1
+133	2017-10-30 20:59:51.566888-05	50	modelo object	3		3	1
+134	2017-10-30 20:59:51.56881-05	49	modelo object	3		3	1
+135	2017-10-30 20:59:51.571812-05	48	modelo object	3		3	1
+136	2017-10-30 20:59:51.573817-05	47	modelo object	3		3	1
+137	2017-10-30 20:59:51.575815-05	46	modelo object	3		3	1
+138	2017-10-30 20:59:51.578841-05	45	modelo object	3		3	1
+139	2017-10-30 20:59:51.580819-05	44	modelo object	3		3	1
+140	2017-10-30 20:59:51.583823-05	43	modelo object	3		3	1
+141	2017-10-30 20:59:51.586826-05	42	modelo object	3		3	1
+142	2017-10-30 20:59:51.589827-05	41	modelo object	3		3	1
+143	2017-10-30 20:59:51.59183-05	40	modelo object	3		3	1
+144	2017-10-30 20:59:51.593833-05	39	modelo object	3		3	1
+145	2017-10-30 20:59:51.596854-05	38	modelo object	3		3	1
+146	2017-10-30 20:59:51.598836-05	37	modelo object	3		3	1
+147	2017-10-30 20:59:51.601839-05	36	modelo object	3		3	1
+148	2017-10-30 20:59:51.603844-05	35	modelo object	3		3	1
+149	2017-10-30 20:59:51.606843-05	34	modelo object	3		3	1
+150	2017-10-30 20:59:51.609846-05	33	modelo object	3		3	1
+151	2017-10-30 20:59:51.612851-05	32	modelo object	3		3	1
+152	2017-10-30 20:59:51.614877-05	31	modelo object	3		3	1
+153	2017-10-30 20:59:51.61787-05	30	modelo object	3		3	1
+154	2017-10-30 20:59:51.619858-05	29	modelo object	3		3	1
+155	2017-10-30 20:59:51.621859-05	28	modelo object	3		3	1
+156	2017-10-30 20:59:51.624858-05	27	modelo object	3		3	1
+157	2017-10-30 20:59:51.626861-05	26	modelo object	3		3	1
+158	2017-10-30 20:59:51.629863-05	25	modelo object	3		3	1
+159	2017-10-30 20:59:51.631866-05	24	modelo object	3		3	1
+160	2017-10-30 20:59:51.633866-05	23	modelo object	3		3	1
+161	2017-10-30 20:59:51.63687-05	22	modelo object	3		3	1
+162	2017-10-30 20:59:51.638875-05	21	modelo object	3		3	1
+163	2017-10-30 20:59:51.641875-05	20	modelo object	3		3	1
+164	2017-10-30 20:59:51.643881-05	19	modelo object	3		3	1
+165	2017-10-30 20:59:51.645898-05	18	modelo object	3		3	1
+166	2017-10-30 20:59:51.647906-05	17	modelo object	3		3	1
+167	2017-10-30 20:59:51.650884-05	16	modelo object	3		3	1
+168	2017-10-30 20:59:51.654393-05	15	modelo object	3		3	1
+169	2017-10-30 20:59:51.656918-05	14	modelo object	3		3	1
+170	2017-10-30 20:59:51.659416-05	13	modelo object	3		3	1
+171	2017-10-30 20:59:51.661399-05	12	modelo object	3		3	1
+172	2017-10-30 20:59:51.663903-05	11	modelo object	3		3	1
+173	2017-10-30 20:59:51.666906-05	10	modelo object	3		3	1
+174	2017-10-30 20:59:51.669704-05	9	modelo object	3		3	1
+175	2017-10-30 20:59:51.672708-05	8	modelo object	3		3	1
+176	2017-10-30 20:59:51.675711-05	7	modelo object	3		3	1
+177	2017-10-30 20:59:51.677712-05	6	modelo object	3		3	1
+178	2017-10-30 20:59:51.679713-05	5	modelo object	3		3	1
+179	2017-10-30 20:59:51.682716-05	4	modelo object	3		3	1
+180	2017-10-30 20:59:51.684718-05	3	modelo object	3		3	1
+181	2017-10-30 20:59:51.68772-05	2	modelo object	3		3	1
+182	2017-10-30 20:59:51.689722-05	1	modelo object	3		3	1
 \.
-
-
---
--- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('django_admin_log_id_seq', 182, true);
 
 
 --
@@ -890,44 +797,31 @@ COPY django_content_type (id, app_label, model) FROM stdin;
 
 
 --
--- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('django_content_type_id_seq', 9, true);
-
-
---
 -- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY django_migrations (id, app, name, applied) FROM stdin;
-1	contenttypes	0001_initial	2017-10-30 15:58:35.555466-06
-2	auth	0001_initial	2017-10-30 15:58:37.453062-06
-3	admin	0001_initial	2017-10-30 15:58:37.626353-06
-4	admin	0002_logentry_remove_auto_add	2017-10-30 15:58:37.663431-06
-5	contenttypes	0002_remove_content_type_name	2017-10-30 15:58:37.737485-06
-6	auth	0002_alter_permission_name_max_length	2017-10-30 15:58:37.756506-06
-7	auth	0003_alter_user_email_max_length	2017-10-30 15:58:37.783552-06
-8	auth	0004_alter_user_username_opts	2017-10-30 15:58:37.806584-06
-9	auth	0005_alter_user_last_login_null	2017-10-30 15:58:37.833563-06
-10	auth	0006_require_contenttypes_0002	2017-10-30 15:58:37.840569-06
-11	auth	0007_alter_validators_add_error_messages	2017-10-30 15:58:37.867629-06
-12	auth	0008_alter_user_username_max_length	2017-10-30 15:58:37.932685-06
-13	home	0001_initial	2017-10-30 15:58:37.994888-06
-14	home	0002_auto_20171012_1306	2017-10-30 15:58:38.097099-06
-15	home	0003_marca_modelo	2017-10-30 15:58:38.21325-06
-16	home	0004_modelo_marca	2017-10-30 15:58:38.343391-06
-17	home	0005_auto_20171030_1440	2017-10-30 15:58:38.681142-06
-18	sessions	0001_initial	2017-10-30 15:58:39.133284-06
-19	home	0006_auto_20171030_2005	2017-10-30 20:05:50.674554-06
+1	contenttypes	0001_initial	2017-10-30 16:58:35.555466-05
+2	auth	0001_initial	2017-10-30 16:58:37.453062-05
+3	admin	0001_initial	2017-10-30 16:58:37.626353-05
+4	admin	0002_logentry_remove_auto_add	2017-10-30 16:58:37.663431-05
+5	contenttypes	0002_remove_content_type_name	2017-10-30 16:58:37.737485-05
+6	auth	0002_alter_permission_name_max_length	2017-10-30 16:58:37.756506-05
+7	auth	0003_alter_user_email_max_length	2017-10-30 16:58:37.783552-05
+8	auth	0004_alter_user_username_opts	2017-10-30 16:58:37.806584-05
+9	auth	0005_alter_user_last_login_null	2017-10-30 16:58:37.833563-05
+10	auth	0006_require_contenttypes_0002	2017-10-30 16:58:37.840569-05
+11	auth	0007_alter_validators_add_error_messages	2017-10-30 16:58:37.867629-05
+12	auth	0008_alter_user_username_max_length	2017-10-30 16:58:37.932685-05
+13	home	0001_initial	2017-10-30 16:58:37.994888-05
+14	home	0002_auto_20171012_1306	2017-10-30 16:58:38.097099-05
+15	home	0003_marca_modelo	2017-10-30 16:58:38.21325-05
+16	home	0004_modelo_marca	2017-10-30 16:58:38.343391-05
+17	home	0005_auto_20171030_1440	2017-10-30 16:58:38.681142-05
+18	sessions	0001_initial	2017-10-30 16:58:39.133284-05
+19	home	0006_auto_20171030_2005	2017-10-30 21:05:50.674554-05
+20	home	0007_auto_20171031_1411	2017-10-31 15:37:43.077112-05
 \.
-
-
---
--- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('django_migrations_id_seq', 19, true);
 
 
 --
@@ -1171,13 +1065,6 @@ COPY home_marca (id, "nombreMarca") FROM stdin;
 225	Zotye
 226	ZXAUTO
 \.
-
-
---
--- Name: home_marca_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('home_marca_id_seq', 226, true);
 
 
 --
@@ -4077,25 +3964,80 @@ COPY home_modelo (id, "nombreModelo", tipouber, marca_id) FROM stdin;
 
 
 --
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_group_id_seq', 1, false);
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_permission_id_seq', 27, true);
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_user_groups_id_seq', 1, false);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_user_id_seq', 1, true);
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('django_admin_log_id_seq', 182, true);
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('django_content_type_id_seq', 9, true);
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('django_migrations_id_seq', 20, true);
+
+
+--
+-- Name: home_marca_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('home_marca_id_seq', 226, true);
+
+
+--
 -- Name: home_modelo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('home_modelo_id_seq', 3089, true);
-
-
---
--- Data for Name: home_post; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY home_post (id, name, email, phone, address, comment) FROM stdin;
-\.
-
-
---
--- Name: home_post_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('home_post_id_seq', 1, false);
 
 
 --
@@ -4256,14 +4198,6 @@ ALTER TABLE ONLY home_marca
 
 ALTER TABLE ONLY home_modelo
     ADD CONSTRAINT home_modelo_pkey PRIMARY KEY (id);
-
-
---
--- Name: home_post home_post_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY home_post
-    ADD CONSTRAINT home_post_pkey PRIMARY KEY (id);
 
 
 --

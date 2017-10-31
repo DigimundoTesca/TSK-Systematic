@@ -33,7 +33,7 @@ main{
 
 }
 .parallax-container{
-	height:calc(100vh - 64px);
+	height: auto;
 			color:rgba(255,255,255,0.9)
 		}
 .section{background-color:rgba(0,0,0,0.8);
@@ -55,6 +55,13 @@ main{
 
 #id_name,#id_comment,#id_phone,#id_address{
 	color: white;
+}
+
+.modal{
+	 width: 400px; 
+}
+#modal1{
+	width: 100%
 }
 
 
@@ -121,7 +128,7 @@ input[type="button"],
 }
 
 .buttonshido {
-  background-color: #004A7F;
+  background-color: #E8C206;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   border: none;
@@ -135,27 +142,27 @@ input[type="button"],
   text-decoration: none !important;
 }
 @-webkit-keyframes glowing {
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 @-moz-keyframes glowing {
-  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 @-o-keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 @keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 .buttonshido {
@@ -164,3 +171,83 @@ input[type="button"],
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
+
+.footer-distributed{		
+ -	background-color: #292c2f;		
+ -	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);		
+ -	box-sizing: border-box;		
+ -	width: 100%;		
+ -	text-align: left;		
+ -	font: normal 16px sans-serif;		
+ -		
+ -	padding: 45px 50px;		
+ -	margin-top: 80px;		
+ -}		
+ -		
+ -.footer-distributed .footer-left p{		
+ -	color:  #8f9296;		
+ -	font-size: 14px;		
+ -	margin: 0;		
+ -}		
+ -		
+ -/* Footer links */		
+ -		
+ -.footer-distributed p.footer-links{		
+ -	font-size:18px;		
+ -	font-weight: bold;		
+ -	color:  #ffffff;		
+ -	margin: 0 0 10px;		
+ -	padding: 0;		
+ -}		
+ -		
+ -.footer-distributed p.footer-links a{		
+ -	display:inline-block;		
+ -	line-height: 1.8;		
+ -	text-decoration: none;		
+ -	color:  inherit;		
+ -}		
+ -		
+ -.footer-distributed .footer-right{		
+ -	float: right;		
+ -	margin-top: 6px;		
+ -	max-width: 180px;		
+ -}		
+ -		
+ -.footer-distributed .footer-right a{		
+ -	display: inline-block;		
+ -	width: 35px;		
+ -	height: 35px;		
+ -	background-color:  #0,0,0;		
+ -	border-radius: 2px;		
+ -		
+ -	font-size: 20px;		
+ -	color: #ffffff;		
+ -	text-align: center;		
+ -	line-height: 35px;		
+ -		
+ -	margin-left: 3px;		
+ -}		
+ -		
+ -@media (max-width: 800px) {		
+ -		
+ -	.footer-basic-centered{		
+ -		padding: 35px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-company-motto{		
+ -		font-size: 18px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-company-name{		
+ -		font-size: 12px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-links{		
+ -		font-size: 14px;		
+ -		padding: 25px 0 20px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-links a{		
+ -		line-height: 1.8;		
+ -	}		
+ -} 

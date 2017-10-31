@@ -10,10 +10,11 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Materialize.css-->
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/>
-        <link rel="stylesheet" href="../static/css/master.css">        
+        <link rel="stylesheet" href="../static/css/master.css">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">        
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="../static/css/easy-autocomplete.css"> 
         <title>TSKMobility</title>
     </head>
     <body>
@@ -52,10 +53,10 @@
                                 <div class="row">
                                     <div class=" col-sm-6">
                                         <label  for="id_name" align="left">Marca:</label>
-                                        <input class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
+                                        <input autocomplete="off" class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
                                         <br>
                                         <label  for="id_comment">Modelo:</label>
-                                        <input class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
+                                        <input autocomplete="off" class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
                                     </div>
                                     <div class=" col-sm-6">
                                         <label  for="id_phone">Año:</label>
@@ -144,75 +145,55 @@
                 © 2017 TSKMobility.
                 <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
             </div>
-        </div>
+        </div>        
     </footer>
+
+
     <!--Import jQuery before materialize.js-->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="../static/js/ac_modelo.js" ></script>
-    <script type="text/javascript" src="../static/js/ac_marca.js" ></script>    
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>        
+    <script type="text/javascript" charset="utf-8" async> 
+
+    $(function(){
+
+    var lista_marca = JSON.parse(('{{ marca | safe }}'));
+    var lista_obj = []
     
-      
-    <script type="text/javascript">
-    $(document).ready(function(){
-    $('.parallax').parallax();
-    $('.modal').modal();
-    
+    for (var i=0; i<lista_marca.length; i++){                
+        lista_obj[lista_marca[i]]=null;
+    }
+
+
+    $('#id_name').autocomplete({
+        data: lista_obj,
     });
+
+    
+    $('.parallax').parallax();
+    $('.modal').modal();    
+
     var inicio = document.getElementById('inicio')
     inicio.style.visibility='hidden';
     inicio.style.height='0px';
     
-    var calc = document.getElementById('calc')    
+    var calc = document.getElementById('calc')
     
     function topo() {
-    inicio.style.visibility='visible';
-    inicio.style.height='100px';
-    
-    calc.style.visibility='hidden';
-    calc.style.height='0px';
+        inicio.style.visibility='visible';
+        inicio.style.height='100px';    
+        calc.style.visibility='hidden';
+        calc.style.height='0px';
     }
     
     function boto() {
-    calc.style.visibility='visible';
-    calc.style.height='auto';
-    inicio.style.visibility='hidden';
-    inicio.style.height='0px';
+        calc.style.visibility='visible';
+        calc.style.height='auto';
+        inicio.style.visibility='hidden';
+        inicio.style.height='0px';
     }
-    function forma(){
-    swal({
-    title: 'Error!',
-    text: 'Do you want to continue',
-    type: 'error',
-    confirmButtonText: 'Cool'
-    })
     
-    }
-    function formb(){
-    swal({
-    title: 'Por favor, llena los campos con la información correspondiente <hr />',
-    type: 'info',
-    width: '1000px',
-    html:
-    '<div class="row col-md-12 justify-content-md-center"><div class="col-md-9 col-md-offset-3"><label for="id_name">Nombre:<br/></label> <input type="text" class="form-control" name="name" maxlength="50" id="id_name" required />'+
-    '<label for="id_email">Email:<br/></label> <input type="email" class="form-control" name="email" maxlength="50" id="id_email" required />'+
-    '<label for="id_phone">Teléfono o WhatsApp:<br/></label> <input type="text" class="form-control" name="phone" maxlength="10" id="id_phone" required /'+
-    '<label for="id_address">Zona de la ciudad:<br/></label> <input type="text" class="form-control"name="address" maxlength="100" id="id_address" required />'+
-    '<label for="id_comment">¿A qué hora nos podemos comunicar contigo?:<br/></label> <input type="text" class="form-control" name="comment" maxlength="40" id="id_comment" required /></div> </div>',
-    showCloseButton: true,
-    showCancelButton: true,
-    focusConfirm: false,
-    confirmButtonText:
-    ' Enviar',
-    confirmButtonAriaLabel: 'Thumbs up, great!',
-    cancelButtonText:
-    'Cancelar',
-    cancelButtonAriaLabel: 'Thumbs down',
-    })
-    }
     function calcular(){
     //Variables del formulario
     let Marca = document.getElementById('id_name').value;
@@ -231,13 +212,17 @@
     //Total = ValorBase + (5*(80-(2 * DifA))) + (10*(20000/KM)) + '$ MXN';
     Total = parseInt(ValorBase + MuA + MuK);
     if (KM == '' || Año == ''){
-    Total = 0.0;
+        Total = 0.0;
     }
     
     document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
-    let h =document.getElementById("EnvioDeDatos");
-    h.classList.remove("hido");
+        let h =document.getElementById("EnvioDeDatos");
+        h.classList.remove("hido");
     }
+    
+    });
+
+    
     
     </script>
 </body>

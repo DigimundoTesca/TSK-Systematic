@@ -10,6 +10,6 @@ class AdminMarca(admin.ModelAdmin):
 
 @admin.register(modelo)
 class AdminModelo(admin.ModelAdmin):
-	list_display= ('nombreModelo','tipouber')
+	list_display= ('nombreModelo','marca','tipouber')
 
 

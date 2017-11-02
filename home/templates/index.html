@@ -37,12 +37,13 @@
                     <div class="section">
                         <div class="container">
                             <div id='inicio'>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataforma como Uber.
+                                Nuestro trabajo se centra en darle el mejor uso al automóvil de nuestros socios y así generar ganancias mensuales para ellos,
+                                al mismo tiempo que generamos ingresos para nuestros choferes.</p>
+                                <p>
+                                    Somos actualmente una PYME en crecimiento, contamos con un año y medio de experiencia con socios satisfechos.
+                                    Contamos actualmente con 5 activos trabajando con 5 autos activos en el área metropolitana.
+                                </p>
                             </div>
                             
                         </div>
@@ -77,9 +78,9 @@
                                     </label>
                                 </div>
                                 <div class ="row">
-                                    <div class="col s12 m6 l4">
+                                    <div class="col s12 m6 l4 offset-l5 offset-m5 offset-s6  ">
                                         <div class="buttonshido">
-                                            <a href="#modal1" class="modal-trigger">Enviar datos</a>
+                                            <a href="#modal1" class="modal-trigger letra-modal" >Enviar datos</a>
                                         </div>
                                     </div>
                                 </div>
@@ -135,9 +136,19 @@
 <footer class="page-footer black">
 <div class="container">
     <div class="row">
-        <div class="center">
-            <p class="grey-text text-lighten-4">Una empresa de <a href="http://www.tescacorporation.com">Tesca Corporation</a></p>
-            <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+        <div class="col s10">
+            <div class="center">
+                <p class="grey-text text-lighten-4">Una empresa de <a href="http://www.tescacorporation.com">Tesca Corporation</a></p>
+                <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+            </div>
+        </div>
+        <div class col s2>
+            <div class="right">
+                <a href="">Contacto Socios</a> </br>
+                <a href="">Contacto Choferes</a> </br>
+                <a href="">55-00-00-00-00</a> </br>
+                <a href="">Facebook</a>
+            </div>
         </div>
     </div>
 </div>
@@ -166,12 +177,10 @@ limit: 6,
 $('.parallax').parallax();
 $('.modal').modal();
 });
-
 var inicio = document.getElementById('inicio')
 inicio.style.visibility='hidden';
 inicio.style.height='0px';
 var calc = document.getElementById('calc')
-
 function topo() {
 inicio.style.visibility='visible';
 inicio.style.height='100px';

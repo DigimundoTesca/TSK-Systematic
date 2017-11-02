@@ -132,7 +132,7 @@ input[type="button"],
   -webkit-border-radius: 10px;
   border-radius: 10px;
   border: none;
-  color: #FFFFFF;
+  color: #000000;
   cursor: pointer;
   display: inline-block;
   font-family: Arial;
@@ -142,15 +142,15 @@ input[type="button"],
   text-decoration: none !important;
 }
 @-webkit-keyframes glowing {
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+  0% { background-color: #c6a500; -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: #ffd400; -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: #c6a500; -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 @-moz-keyframes glowing {
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+   0% { background-color: #c6a500; -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: #ffd400; -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: #c6a500; -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 @-o-keyframes glowing {
@@ -160,9 +160,9 @@ input[type="button"],
 }
 
 @keyframes glowing {
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+  0% { background-color: #c6a500; -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: #ffd400; -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: #c6a500; -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 .buttonshido {
@@ -251,3 +251,7 @@ input[type="button"],
  -		line-height: 1.8;		
  -	}		
  -} 
+ a.letra-modal{
+ 	color: #000000;
+ 	font-size: 4rem;
+ }

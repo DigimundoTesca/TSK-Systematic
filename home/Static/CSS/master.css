@@ -255,3 +255,6 @@ input[type="button"],
  	color: #000000;
  	font-size: 4rem;
  }
+ div#ddatops{
+ 	visibility: hidden;
+ }

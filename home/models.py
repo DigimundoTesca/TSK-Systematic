@@ -1,19 +1,19 @@
 from django.db import models
 
 class marca(models.Model):
-    nombreMarca=models.CharField(max_length=50, unique=True)
+    name=models.CharField(max_length=50, unique=True)
 
     def __str__(self):
-        return self.nombreMarca
+        return self.name
 
     class Meta:
-        ordering = ('nombreMarca',)
+        ordering = ('name',)
         verbose_name = 'Marca'
         verbose_name_plural = 'Marcas'
 
 class modelo(models.Model):
     marca=models.ForeignKey(marca,default=1, on_delete=models.CASCADE)
-    nombreModelo=models.CharField(max_length=50)
+    name=models.CharField(max_length=50)
     UBERX = 'UX'
     UBERBLACK = 'UB'
     UBERSUV = 'US'
@@ -28,10 +28,13 @@ class modelo(models.Model):
     tipouber = models.CharField(choices=TIPO_UBER, default=UBERX, max_length=15)
 
     def __str__(self):
-        return self.nombreModelo
+        return self.name
 
     class Meta:
-        ordering = ('nombreModelo',)
+
+        unique_together = ('marca','name')
+
+        ordering = ('name',)
         verbose_name = 'Modelo'
         verbose_name_plural = 'Modelos'
 

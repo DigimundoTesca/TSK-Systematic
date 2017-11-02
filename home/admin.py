@@ -6,10 +6,10 @@ from home.models import marca, modelo
 
 @admin.register(marca)
 class AdminMarca(admin.ModelAdmin):
-	list_display= ('nombreMarca',)
+	list_display= ('name',)
 
 @admin.register(modelo)
 class AdminModelo(admin.ModelAdmin):
-	list_display= ('nombreModelo','marca','tipouber')
+	list_display= ('name','marca','tipouber')
 
 

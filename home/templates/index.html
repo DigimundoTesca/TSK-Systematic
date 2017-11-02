@@ -14,7 +14,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="../static/css/easy-autocomplete.css">
+        
         <title>TSKMobility</title>
     </head>
     <body>
@@ -161,6 +161,7 @@ lista_obj[lista_marca[i]]=null;
 }
 $('#id_name').autocomplete({
 data: lista_obj,
+limit: 6,
 });
 $('.parallax').parallax();
 $('.modal').modal();

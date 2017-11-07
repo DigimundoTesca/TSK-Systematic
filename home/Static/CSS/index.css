@@ -1,0 +1,354 @@
+-#homepage{		
+ -	width: 100%;		
+ -	max-width: 1300px;		
+ -	margin: 0 auto;		
+ -}		
+ -		
+ -section h2, p{ 		
+ -	text-align: center; 		
+ -	display: block;		
+ -	width: 100%;		
+ -}		
+ -		
+ -section header{		
+ -	 background-color:#000;		
+ -	 color:#fff;		
+ -	 		
+ -}		
+ -		
+ -.BotonesPresentacion{		
+ -	margin-top: 2% !important;		
+ -}		
+ -		
+ -.button{		
+ -	text-align: center; 		
+ -}		
+ -		
+ -.card-heade{		
+ -	text-align: center !important;		
+ -}		
+ -		
+ -.bg-dark{		
+ -	background-color: black !important;		
+ -}		
+ - 		
+ -a:link{ 		
+ -	color: white;		
+ -}		
+ -		
+ -/* Social Media Buttoin */		
+ -/* Style all font awesome icons */		
+ -.fa {		
+ -    padding: 20px;		
+ -    font-size: 30px;		
+ -    width: 50px;		
+ -    text-align: center;		
+ -    text-decoration: none;		
+ -}		
+ -		
+ -/* Add a hover effect if you want */		
+ -.fa:hover {		
+ -    opacity: 0.6;		
+ -}		
+ -		
+ -/* Set a specific color for each brand */		
+ -		
+ -/* Facebook */		
+ -.fa-facebook {		
+ -    background: #0,0,0,0.0;		
+ -    color: white;		
+ -}		
+ -		
+ -/* Twitter */		
+ -.fa-twitter {		
+ -    background: #0,0,0,0.0;		
+ -    color: white;		
+ -}  		
+ -		
+ -/* Facebook */		
+ -.fa-google-plus {		
+ -    background: #0,0,0,0.0; 		
+ -    color: white;		
+ -} 		
+ -		
+ -.banner-p{		
+ -	display: flex;		
+ -	flex-direction: column;		
+ -	justify-content: center;		
+ -	align-items: center;		
+ -	background: #000000 url("../../static/images/car.jpg");;			
+ -	background-size: cover;		
+ -	background-repeat: no-repeat;		
+ -	height: 500px;		
+ -	width: 100%;		
+ -	background-position: center;			
+ -}		
+ -.banner-p > * {		
+ -	display: block;		
+ -	background-color: rgba(0,0,0,0.5);		
+ -	color: #FFF;		
+ -	margin: 0;		
+ -	padding: 0;		
+ -}		
+ -.banner-p h2 {		
+ -	font-size: 25px;		
+ -}		
+ -		
+ -#intro{		
+ -	height: 40vh;		
+ -}		
+ -		
+ -/* Button */		
+ -		
+ -			input[type="button"],		
+ -			input[type="submit"],		
+ -			input[type="reset"],		
+ -			button, 		
+ -			.button {		
+ -				font-size: 1.1;		
+ -				padding: 0.65em 1.5em 0.65em 1.5em;		
+ -		
+ -			}		
+ -		
+ -				input[type="button"].big,		
+ -				input[type="submit"].big,		
+ -				input[type="reset"].big,		
+ -				button.big,		
+ -				.button.big {		
+ -					font-size: 15px;		
+ -					padding: 0.75em 1.5em 0.75em 1.5em;		
+ -				}		
+ -		
+ -		
+ -/* Button */		
+ -		
+ -	input[type="button"],		
+ -	input[type="submit"],		
+ -	input[type="reset"],		
+ -	button,		
+ -	.button {		
+ -		-webkit-appearance: none;		
+ -		display: inline-block;		
+ -		text-decoration: none;				
+ -		cursor: pointer;		
+ -		border: 0; 		
+ -		border-radius: 10px;		
+ -		background: #20AADE;		
+ -		color: #fff !important;		
+ -		font-weight: 700;		
+ -		outline: 0;		
+ -		-moz-transition: background-color .25s ease-in-out;		
+ -		-webkit-transition: background-color .25s ease-in-out;		
+ -		-ms-transition: background-color .25s ease-in-out;		
+ -		transition: background-color .25s ease-in-out;		
+ -	}		
+ -		
+ -		input[type="button"]:hover,		
+ -		input[type="submit"]:hover,		
+ -		input[type="reset"]:hover,		
+ -		button:hover,		
+ -		.button:hover {		
+ -			background: #3CB6C2;		
+ -		}		
+ -		
+ -		input[type="button"]:active,		
+ -		input[type="submit"]:active,		
+ -		input[type="reset"]:active,		
+ -		button:active,		
+ -		.button:active {		
+ -			background: #25C9D9;		
+ -		}		
+ -		
+ -		input[type="button"].alt,		
+ -		input[type="submit"].alt,		
+ -		input[type="reset"].alt,		
+ -		button.alt,		
+ -		.button.alt {		
+ -			background: #252122;		
+ -		}		
+ -		
+ -			input[type="button"].alt:hover,		
+ -			input[type="submit"].alt:hover,		
+ -			input[type="reset"].alt:hover,		
+ -			button.alt:hover,		
+ -			.button.alt:hover {		
+ -				background: #353132;		
+ -			}		
+ -		
+ -			input[type="button"].alt:active,		
+ -			input[type="submit"].alt:active,		
+ -			input[type="reset"].alt:active,		
+ -			button.alt:active,		
+ -			.button.alt:active {		
+ -				background: #151112;		
+ -			}		
+ -		
+ -		input[type="button"].icon:before,		
+ -		input[type="submit"].icon:before,		
+ -		input[type="reset"].icon:before,		
+ -		button.icon:before,		
+ -		.button.icon:before {		
+ -			opacity: 0.35;		
+ -			position: relative;		
+ -			top: 0.05em;		
+ -			margin-right: 0.75em;		
+ -		}		
+ -		
+ -input[type="button"].alt2,		
+ -		input[type="submit"].alt2,		
+ -		input[type="reset"].alt2,		
+ -		button.alt2,		
+ -		.button.alt2 {		
+ -			background: #252122;		
+ -		
+ -		
+ -		}		
+ -		
+ -			input[type="button"].alt2:hover,		
+ -			input[type="submit"].alt2:hover,		
+ -			input[type="reset"].alt2:hover,		
+ -			button.alt2:hover,		
+ -			.button.alt2:hover {		
+ -				background: #353132;		
+ -			}		
+ -		
+ -			input[type="button"].alt2:active,		
+ -			input[type="submit"].alt2:active,		
+ -			input[type="reset"].alt2:active,		
+ -			button.alt2:active,		
+ -			.button.alt2:active {		
+ -				background: #151112;		
+ -			}		
+ -		
+ -		input[type="button"].icon:before,		
+ -		input[type="submit"].icon:before,		
+ -		input[type="reset"].icon:before,		
+ -		button.icon:before,		
+ -		.button.icon:before {		
+ -			opacity: 0.35;		
+ -			position: relative;		
+ -			top: 0.05em;		
+ -			margin-right: 0.75em;		
+ -		}		
+ -		
+ -		
+ -/* A darle Stylos nene */		
+ -		
+ -/*		
+ -.hido{		
+ -	visibility: hidden;		
+ -	display: none;		
+ -	padding-top: 6%;		
+ -}		
+ -		
+ -.py-5 {		
+ -	width:100%;		
+ -    padding-top: 2rem!important;		
+ -    padding-bottom: 2rem!important;		
+ -}		
+ -		
+ -		
+ -		
+ -.FooterTitle{		
+ -	color: white;		
+ -}		
+ -		
+ -.FooterUl{		
+ -	list-style-type: none;		
+ -}		
+ -		
+ -.NoPadding{		
+ -	padding: 0;		
+ -}		
+ -		
+ -.FooterLinks a{		
+ -	text-decoration: none;		
+ -	color: white;		
+ -}		
+ -		
+ -		
+ -		
+ -.FooterLinks a:hover{		
+ -	text-decoration: none;		
+ -	color: white;		
+ -}*/		
+ -		
+ -.footer-distributed{		
+ -	background-color: #292c2f;		
+ -	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);		
+ -	box-sizing: border-box;		
+ -	width: 100%;		
+ -	text-align: left;		
+ -	font: normal 16px sans-serif;		
+ -		
+ -	padding: 45px 50px;		
+ -	margin-top: 80px;		
+ -}		
+ -		
+ -.footer-distributed .footer-left p{		
+ -	color:  #8f9296;		
+ -	font-size: 14px;		
+ -	margin: 0;		
+ -}		
+ -		
+ -/* Footer links */		
+ -		
+ -.footer-distributed p.footer-links{		
+ -	font-size:18px;		
+ -	font-weight: bold;		
+ -	color:  #ffffff;		
+ -	margin: 0 0 10px;		
+ -	padding: 0;		
+ -}		
+ -		
+ -.footer-distributed p.footer-links a{		
+ -	display:inline-block;		
+ -	line-height: 1.8;		
+ -	text-decoration: none;		
+ -	color:  inherit;		
+ -}		
+ -		
+ -.footer-distributed .footer-right{		
+ -	float: right;		
+ -	margin-top: 6px;		
+ -	max-width: 180px;		
+ -}		
+ -		
+ -.footer-distributed .footer-right a{		
+ -	display: inline-block;		
+ -	width: 35px;		
+ -	height: 35px;		
+ -	background-color:  #0,0,0;		
+ -	border-radius: 2px;		
+ -		
+ -	font-size: 20px;		
+ -	color: #ffffff;		
+ -	text-align: center;		
+ -	line-height: 35px;		
+ -		
+ -	margin-left: 3px;		
+ -}		
+ -		
+ -@media (max-width: 800px) {		
+ -		
+ -	.footer-basic-centered{		
+ -		padding: 35px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-company-motto{		
+ -		font-size: 18px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-company-name{		
+ -		font-size: 12px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-links{		
+ -		font-size: 14px;		
+ -		padding: 25px 0 20px;		
+ -	}		
+ -		
+ -	.footer-basic-centered .footer-links a{		
+ -		line-height: 1.8;		
+ -	}		
+ -} 

@@ -141,6 +141,11 @@ input[type="button"],
   text-align: center;
   text-decoration: none !important;
 }
+
+.hido{
+	visibility: hidden;
+	display: none;
+}
 @-webkit-keyframes glowing {
   0% { background-color: #c6a500; -webkit-box-shadow: 0 0 3px #c6a500; }
   50% { background-color: #ffd400; -webkit-box-shadow: 0 0 40px #ffd400; }

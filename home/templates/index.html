@@ -17,7 +17,7 @@
         
         <title>TSKMobility</title>
     </head>
-    <body>
+    <body background="../static/images/CarroAmarillo.png">
         <header>
             <nav class="black">
                 <div class="container">
@@ -33,63 +33,62 @@
         </header>
         <main>
             <section>
-                <div id="index-banner" class="parallax-container">
-                    <div class="section">
-                        <div class="container">
-                            <div id='inicio'>
-                                <p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataforma como Uber.
+                <div class="section">
+                    <div class="container">
+                        <div id='inicio'>
+                            <p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataforma como Uber.
                                 Nuestro trabajo se centra en darle el mejor uso al automóvil de nuestros socios y así generar ganancias mensuales para ellos,
-                                al mismo tiempo que generamos ingresos para nuestros choferes.</p>
-                                <p>
-                                    Somos actualmente una PYME en crecimiento, contamos con un año y medio de experiencia con socios satisfechos.
-                                    Contamos actualmente con 5 activos trabajando con 5 autos activos en el área metropolitana.
-                                </p>
-                            </div>
-                            
+                            al mismo tiempo que generamos ingresos para nuestros choferes.</p>
+                            <p>
+                                Somos actualmente una PYME en crecimiento, contamos con un año y medio de experiencia con socios satisfechos.
+                                Contamos actualmente con 5 activos trabajando con 5 autos activos en el área metropolitana.
+                            </p>
                         </div>
                         
-                        <div class="container BotonesPresentacion">
-                            <div id='calc'>
-                                <a id="car" onclick='ncalc()' style="font-size:24px" class="fa"></a>
-                                <div class="row">
-                                    <div class="col s12 m6 l6">
-                                        <label  for="id_name" align="left">Marca:</label>
-                                        <input autocomplete="off" class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
-                                        <br>
-                                        <label  for="id_comment">Modelo:</label>
-                                        <input autocomplete="off" class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
-                                    </div>
-                                    <div class="col s12 m6 l6">
-                                        <label  for="id_phone">Año:</label>
-                                        <input class=" form-control" type="text" name="phone" maxlength="4" id="id_phone" required />
-                                        <br>
-                                        <br>
-                                        <label  for="id_address">Km:</label>
-                                        <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
-                                    </div>
-                                    <div class="col s12 m12 l12">
-                                        <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
-                                        <br>
-                                    </div>
+                    </div>
+                    
+                    <div class="container BotonesPresentacion">
+                        <div id='calc'>
+                            <a id="car" onclick='ncalc()' style="font-size:24px" class="fa"></a>
+                            <div class="row">
+                                <div class="col s12 m6 l6">
+                                    <label  for="id_name" align="left">Marca:</label>
+                                    <input autocomplete="off" class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
                                 </div>
-                                <div class="row s12 m6 l4">
-                                    <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
-                                        $ MXN
-                                    </label>
+                                <div class="col s12 m6 l6">
+                                    <label  for="id_comment">Modelo:</label>
+                                    <input autocomplete="off" class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
                                 </div>
-                                <div class ="row">
-                                    <div class="col s12 m6 l4 offset-l5 offset-m5 offset-s6  ">
-                                        <div class="buttonshido hido" id="EnvioDeDatos">
-                                            <a href="#modal1" class="modal-trigger letra-modal"  >Enviar datos</a>
-                                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6 l6">
+                                    <label  for="id_phone">Año:</label>
+                                    <input class=" form-control" type="text" name="phone" maxlength="4" id="id_phone" required />                                    
+                                </div>
+                                <div class="col s12 m6 l6">                                    
+                                    <label  for="id_address">Km:</label>
+                                    <input class=" form-control" type="text" name="address" maxlength="100" id="id_address" required />
+                                </div>
+                                <div class="col s12 m12 l12">
+                                    <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row s12 m6 l4">
+                                <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
+                                    $ MXN
+                                </label>
+                            </div>
+                            <div class ="row">
+                                <div class="col s12 m6 l4 xl5 offset-xl5 offset-l4 offset-m4 offset-s1  ">
+                                    <div class="buttonshido hido" id="EnvioDeDatos">
+                                        <a href="#modal1" class="modal-trigger letra-modal"  >Continua</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="parallax">
-                        <img src="../static/images/CarroAmarillo.png">
-                    </div>
+
                 </div>
             </section>
         </main>
@@ -217,7 +216,6 @@ document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
 let h =document.getElementById("EnvioDeDatos");
 h.classList.remove("hido");
 }
-
 </script>
 </body>
 </html>

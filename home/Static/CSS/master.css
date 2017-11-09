@@ -6,6 +6,7 @@ a:hover{color:rgba(230,218,59,0.9) !important;
 	}
 body{background-color:#101010;
 	font-size:18px;
+    background-repeat: no-repeat;
 	font-family:'Oswald', sans-serif;
 	display:flex;
 	flex-direction:column;
@@ -41,7 +42,7 @@ main{
 	padding-top:3rem;
 		padding-bottom:3rem;
 		width:100%;
-		margin: 200px 0px 0px 0px;
+		margin: 100px 0px 0px 0px;
 		align-self:flex-end}
 .section.container{align-self:center}
 .section-header{font-size:5rem;font-weight:bold}

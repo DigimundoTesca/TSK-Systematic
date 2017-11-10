@@ -53,11 +53,19 @@
                             <div class="row">
                                 <div class="col s12 m6 l6">
                                     <label  for="id_name" align="left">Marca:</label>
-                                    <input autocomplete="off" class="form-control" type="text" name="name" maxlength="50" id="id_name" required />
+                                    <select class="select_marca">
+                                        {% for mar in marca_obj %}
+                                        <option value="">{{mar.name}}</option>      
+                                        {% endfor %}
+                                    </select>                                    
                                 </div>
                                 <div class="col s12 m6 l6">
                                     <label  for="id_comment">Modelo:</label>
-                                    <input autocomplete="off" class="form-control" type="text" name="comment" maxlength="40" id="id_comment" required />
+                                    <select class="select_modelo">
+                                        {% for mod in modelo_obj %}
+                                        <option value="">{{mod.name}}</option>      
+                                        {% endfor %}
+                                    </select>                                    
                                 </div>
                             </div>
                             <div class="row">
@@ -165,14 +173,42 @@
 <script type="text/javascript" charset="utf-8" async>
 $(function(){
 var lista_marca = JSON.parse(('{{ marca | safe }}'));
+var lista_modelos = JSON.parse(('{{ modelo | safe }}'));
 var lista_obj = []
 for (var i=0; i<lista_marca.length; i++){
 lista_obj[lista_marca[i]]=null;
 }
-$('#id_name').autocomplete({
+
+$('.select_marca').material_select();
+$('.select_modelo').material_select();
+
+
+$('.select_marca').on('change',function(){
+    
+    console.log($(this).value)    
+});
+
+$('.select_modelo').material_select();
+
+
+/** $('#id_name').autocomplete({
 data: lista_obj,
 limit: 6,
+onAutocomplete: function(val){
+    var lista_mod = [];    
+    for (var i=0; i<lista_modelos.length; i++){        
+        if (lista_modelos[i]['marca_sel']==val){
+            lista_mod[lista_modelos[i]['name_sel']]=null;            
+        }   
+    }
+
+    $('#id_comment').autocomplete({
+        data: lista_mod,
+        limit: 6,
+    });
+},
 });
+**/
 $('.parallax').parallax();
 $('.modal').modal();
 });
@@ -199,6 +235,11 @@ let Modelo = document.getElementById('id_comment').value;
 //Cambiar por tipoUber
 let Año = document.getElementById('id_phone').value;
 let KM = document.getElementById('id_address').value;
+//Valores de 
+let costo_ux = 1000;
+let costo_uxl = 2000;
+let costo_ub = 4000;
+
 //año Actual
 let Actual = (new Date()).getFullYear()
 //Valor Inicial

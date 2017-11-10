@@ -11,7 +11,6 @@ def index(request):
 
     marca_a=marca.objects.all()
     modelo_a=modelo.objects.all()
-
     list_Marca= []
     list_Modelo=[]
     countmarc = 0;
@@ -21,16 +20,22 @@ def index(request):
         name = marc.name.replace('\'','')
         list_Marca.append(name)
 
-    for mod in modelo_a:
-        name = mod.name.replace('\'','')
-        list_Modelo.append(name)
 
+    for mod in modelo_a: 
+        name = mod.name.replace('\'','')         
+        obj_mod = {
+            'name_sel': name,
+            'marca_sel': mod.marca.name.replace('\'',''),
+        }
+        list_Modelo.append(obj_mod)
 
     marca_json = json.dumps(list_Marca)
     modelo_json = json.dumps(list_Modelo)
 
     context={
         'title': "Home",
+        'marca_obj': marca_a,
+        'modelo_obj': modelo_a,
         'marca': marca_json,
         'modelo': modelo_json,
     }

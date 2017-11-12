@@ -2,7 +2,14 @@ import smtplib
 
 from django.shortcuts import render
 from home.models import marca, modelo
-from django.core.mail import send_mail
+# from django.core.mail import send_mail
+from collection.forms import ContactForm
+from django.core.mail import EmailMessage
+from django.shortcuts import redirect
+from django.template import Context
+from django.template.loader import get_template
+
+
 
 import json
 
@@ -39,9 +46,14 @@ def index(request):
         'marca': marca_json,
         'modelo': modelo_json,
     }
+    def contact(request):
+    form_class = ContactForm    
+    return render(request, 'contact.html', {
+        'form': form_class,
+    })
 
 
-    fromaddr = 'tescauber@gmail.com'
+    """fromaddr = 'tescauber@gmail.com'
     toaddrs = 'a.g.tornell@outlook.com'
     msg = 'Why,Oh why!'
     username = 'tescauber@gmail.com'
@@ -52,4 +64,47 @@ def index(request):
     server.login(username, password)
     server.sendmail(fromaddr, toaddrs, msg)
     server.quit()
-    return render(request, template, context)
+    return render(request, template, context)"""
+
+    def contact(request):
+    form_class = ContactForm
+
+    # new logic!
+    if request.method == 'POST':
+        form = form_class(data=request.POST)
+
+        if form.is_valid():
+            contact_name = request.POST.get(
+                'contact_name'
+            , '')
+            contact_email = request.POST.get(
+                'contact_email'
+            , '')
+            form_content = request.POST.get('content', '')
+
+            # Email the profile with the 
+            # contact information
+            template = 
+                get_template('contact_template.txt')
+            context = Context({
+                'contact_name': contact_name,
+                'contact_email': contact_email,
+                'form_content': form_content,
+            })
+            content = template.render(context)
+
+            email = EmailMessage(
+                "New contact form submission",
+                content,
+                "Your website" +'',
+                ['youremail@gmail.com'],
+                headers = {'Reply-To': contact_email }
+            )
+            email.send()
+            return redirect('contact')
+
+    return render(request, 'contact.html', {
+        'form': form_class,
+    })
+
+    """https://hellowebbooks.com/news/tutorial-setting-up-a-contact-form-with-django/"""

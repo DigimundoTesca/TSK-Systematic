@@ -102,7 +102,7 @@
         <!--Seccion Modale -->
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="input-field col s12">
                         <input id="textarea1" type="text" class="validate">
                         <label for="first_name">Nombre Completo</label>
@@ -129,7 +129,12 @@
                         <input id="textarea3" type="text" class="validate">
                         <label for="email">¿A qué hora nos podemos comunicar contigo?</label>
                     </div>
-                </div>
+                </div> -->
+                <form role="form" action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </form>
         <div class="modal-footer">

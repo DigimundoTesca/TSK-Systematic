@@ -2,13 +2,13 @@ import smtplib
 
 from django.shortcuts import render
 from home.models import marca, modelo
-# from django.core.mail import send_mail
+from django.core.mail import send_mail
 from collection.forms import ContactForm
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template import Context
 from django.template.loader import get_template
-
+from forms import ContactForm
 
 
 import json
@@ -66,7 +66,7 @@ def index(request):
     server.quit()
     return render(request, template, context)"""
 
-    def contact(request):
+    """def contact(request):
     form_class = ContactForm
 
     # new logic!
@@ -107,4 +107,24 @@ def index(request):
         'form': form_class,
     })
 
-    """https://hellowebbooks.com/news/tutorial-setting-up-a-contact-form-with-django/"""
+    https://hellowebbooks.com/news/tutorial-setting-up-a-contact-form-with-django/"""
+
+    def ContactForm(request):
+        if request.method == 'POST':
+            contact_name = request.POST['contact_name']
+            contact_email = request.POST['contact_email']
+            contact_phone = request.POST['contact_phone']
+            contact_zone = request.POST['contact_zone']
+            contact_comment = request.POST['contact_comment']
+
+            print contact_name
+            print contact_email
+            print contact_phone
+            print contact_zone
+            print contact_comment
+
+        form = ContactForm()
+        context = {
+        'form' : form
+        }
+        return render (request, 'formulario.html', context )

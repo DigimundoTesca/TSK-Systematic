@@ -62,9 +62,7 @@
                                 <div class="col s12 m6 l6">
                                     <label  for="id_comment">Modelo:</label>
                                     <select class="select_modelo" id="id_comment">
-                                        {% for mod in modelo_obj %}
-                                            <option value="">{{mod.name}}</option>
-                                        {% endfor %}
+                                        
                                     </select>
                                 </div>
                             </div>
@@ -101,45 +99,14 @@
         </main>
         <!--Seccion Modale -->
         <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <!-- <div class="row">
-                    <div class="input-field col s12">
-                        <input id="textarea1" type="text" class="validate">
-                        <label for="first_name">Nombre Completo</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="textarea2" type="text" class="validate">
-                        <label for="email">Zona de la ciudad</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="" type="tel" maxlength="10" class="validate">
-                        <label for="email">Teléfono o Whatsapp</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="textarea3" type="text" class="validate">
-                        <label for="email">¿A qué hora nos podemos comunicar contigo?</label>
-                    </div>
-                </div> -->
+            <div class="modal-content">                
                 <form role="form" action="" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit">Submit</button>
                 </form>
             </div>
-        </form>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-        </div>
+        </form>        
     </div>
 </div>
 </div>
@@ -176,20 +143,45 @@
 <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
 <script type="text/javascript" charset="utf-8" async>
 $(function(){
-var lista_marca = JSON.parse(('{{ marca | safe }}'));
-var lista_modelos = JSON.parse(('{{ modelo | safe }}'));
-var lista_obj = []
-for (var i=0; i<lista_marca.length; i++){
-lista_obj[lista_marca[i]]=null;
-}
-$('.select_marca').material_select();
-$('.select_modelo').material_select();
-$('.select_marca').on('change',function(){
-e.options[e.selectedIndex].value;
+    var lista_marca = JSON.parse(('{{ marca | safe }}')); 
+    var lista_modelo = JSON.parse(('{{ modelo | safe }}')); 
+    var lista_obj = [] 
+    var lista_mod = []
+    for (var i=0; i<lista_marca.length; i++){
+        lista_obj[lista_marca[i]]=null; 
+    }
+    var form_marca = $(".select_marca").find(":selected").text()
+    var form_modelo = $(".select_modelo").find(":selected").text()
+    var form_año = $("#idYe").val()
+    var form_km = $("#idKM").val()
+    var form_resultado =$("#MuestraTotal").val()
+
+
+    $('.select_marca').material_select();    
+    $('.select_modelo').material_select();
+
+    $('.select_marca').on('change',function(){        
+        var marca_sel = $(this).find(":selected").text()                
+        $('.select_modelo').material_select('destroy')
+        $('.select_modelo').empty()
+        for (var i=0; i<lista_modelo.length; i++){            
+            if(lista_modelo[i].marca_sel==marca_sel){                
+                
+                $('.select_modelo').append($('<option>', {
+                    value: lista_modelo[i].name_sel,
+                    text: lista_modelo[i].name_sel
+                }));                
+            }
+        }                
+        $('.select_modelo').material_select();
+    });
+
+
+    $('.parallax').parallax();
+    $('.modal').modal();
+
 });
-$('.parallax').parallax();
-$('.modal').modal();
-});
+
 var inicio = document.getElementById('inicio')
 inicio.style.visibility='hidden';
 inicio.style.height='0px';
@@ -208,8 +200,8 @@ inicio.style.height='0px';
 }
 function calcular(){
 //Variables del formulario
-let Marca = document.getElementById('id_name').value;
-let Modelo = document.getElementById('id_comment').value;
+let Marca = $(".select_marca").find(":selected").text()
+let Modelo = $(".select_modelo").find(":selected").text()
 //Cambiar por tipoUber
 let Año = document.getElementById('idYe').value;
 let KM = document.getElementById('idKM').value;
@@ -233,6 +225,8 @@ Total = 0.0;
 document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
 let h =document.getElementById("EnvioDeDatos");
 h.classList.remove("hido");
+console.log(Marca)
+$(".modal-content").append("<p>"+Marca+" "+Modelo+" "+Año+" "+KM+" "+ Total + "$ MXN"+"</p>");
 }
 </script>
 </body>

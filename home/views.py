@@ -26,7 +26,7 @@ def index(request):
 
         fromaddr = 'tescauber@gmail.com'
         toaddrs = 'a.g.tornell@outlook.com'
-        msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment
+        msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment +" "+ Marca +" "+ Modelo +" "+ Año +" "+ KM +" "+ Total
         username = 'tescauber@gmail.com'
         password = 'yosoytesca123'
         server = smtplib.SMTP('smtp.gmail.com:587')
@@ -71,62 +71,3 @@ def index(request):
     }
     
     return render(request,template,context)
-
-
-    """fromaddr = 'tescauber@gmail.com'
-    toaddrs = 'a.g.tornell@outlook.com'
-    msg = 'Why,Oh why!'
-    username = 'tescauber@gmail.com'
-    password = 'yosoytesca123'
-    server = smtplib.SMTP('smtp.gmail.com:587')
-    server.ehlo()
-    server.starttls()
-    server.login(username, password)
-    server.sendmail(fromaddr, toaddrs, msg)
-    server.quit()
-    return render(request, template, context)"""
-
-    """def contact(request):
-    form_class = ContactForm
-
-    # new logic!
-    if request.method == 'POST':
-        form = form_class(data=request.POST)
-
-        if form.is_valid():
-            contact_name = request.POST.get(
-                'contact_name'
-            , '')
-            contact_email = request.POST.get(
-                'contact_email'
-            , '')
-            form_content = request.POST.get('content', '')
-
-            # Email the profile with the 
-            # contact information
-            template = 
-                get_template('contact_template.txt')
-            context = Context({
-                'contact_name': contact_name,
-                'contact_email': contact_email,
-                'form_content': form_content,
-            })
-            content = template.render(context)
-
-            email = EmailMessage(
-                "New contact form submission",
-                content,
-                "Your website" +'',
-                ['youremail@gmail.com'],
-                headers = {'Reply-To': contact_email }
-            )
-            email.send()
-            return redirect('contact')
-
-    return render(request, 'contact.html', {
-        'form': form_class,
-    })
-
-    https://hellowebbooks.com/news/tutorial-setting-up-a-contact-form-with-django/"""
-
-    

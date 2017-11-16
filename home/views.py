@@ -26,7 +26,7 @@ def index(request):
 
         fromaddr = 'tescauber@gmail.com'
         toaddrs = 'a.g.tornell@outlook.com'
-        msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment +" "+ Marca +" "+ Modelo +" "+ Año +" "+ KM +" "+ Total
+        msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment 
         username = 'tescauber@gmail.com'
         password = 'yosoytesca123'
         server = smtplib.SMTP('smtp.gmail.com:587')
@@ -53,6 +53,7 @@ def index(request):
         obj_mod = {
             'name_sel': name,
             'marca_sel': mod.marca.name.replace('\'',''),
+            'tipo_uber': mod.tipouber,
         }
         list_Modelo.append(obj_mod)
 

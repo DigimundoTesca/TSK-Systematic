@@ -111,7 +111,7 @@ input[type="button"],
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: rgba(0,0,0,0.5);
+			background: rgba(0,0,0,0.5) !important;
 		}
 
 		input[type="button"]:active,
@@ -119,8 +119,9 @@ input[type="button"],
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: rgba(0,0,0,0.5);
+			background: rgba(0,0,0,0.5) !important;
 		}
+
 #MuestraTotal{
 	font-size: 6rem;
 	color: white;
@@ -304,4 +305,12 @@ body, html {
 }
 #form input[type=text]:focus{
 	border: 3px solid #555;
+}
+
+.tabs .a{
+	color: yellow;
+}
+
+.tabs{
+	background: rgba(0,0,0,0.5) !important;
 }

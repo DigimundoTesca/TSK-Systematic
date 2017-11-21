@@ -44,25 +44,17 @@
                         </div>
                     </div>
                     <div class="container BotonesPresentacion">
-                        <div class="row">
-                            <div class="col s12">
-                                <ul class="tabs">
-                                    <li class="tab col s1"><a href="#test1">a</a></li>
-                                    <li class="tab col s1"><a class="active" href="#test2">b</a></li>
-                                    <li class="tab col s1 disabled"><a href="#test3">c</a></li>
-                                    <li class="tab col s1"><a href="#test4">d</a></li>
-                                    <li class="tab col s1"><a href="#test1">e</a></li>
-                                    <li class="tab col s1"><a class="active" href="#test2">f</a></li>
-                                    <li class="tab col s1 disabled"><a href="#test3">g</a></li>
-                                    <li class="tab col s1"><a href="#test4">h</a></li>
-                                    <li class="tab col s1"><a href="#test1">i</a></li>
-                                    <li class="tab col s1"><a class="active" href="#test2">j</a></li>
+                        <div class="row" class="carbutbg">
+                            <div class="contenido col s5 m5 l5 xl5">
+                                <ul id="tabs-swipe-demo" class="tabs">
+                                    <li class="tab col s3"><a href=".calctab-1" style="font-size: 30px;" class="material-icons">directions_car</a></li>
                                 </ul>
                             </div>
+                            <div class="col s1 m1 l1 xl1">
+                                <button class="add_btn material-icons"> add </button>
+                            </div>
                         </div>
-                        <a class="material-icons">directions_car</a>
-                        <a class="material-icons">add</a>
-                        <div id='calc'>
+                        <div id='calc' class='calctab-1'>
                             <div class="row">
                                 <div class="col s12 m6 l6">
                                     <label  for="id_name" align="left">Marca:</label>
@@ -74,8 +66,7 @@
                                 </div>
                                 <div class="col s12 m6 l6">
                                     <label  for="id_comment">Modelo:</label>
-                                    <select class="select_modelo" id="id_comment">
-                                        
+                                    <select class="select_modelo" id="id_comment">                                        
                                     </select>
                                 </div>
                             </div>
@@ -96,12 +87,14 @@
                                     <label  for="idKM">Km:</label>
                                     <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
                                 </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row s12 m6 l4">
                                 <div class="col s12 m12 l12">
                                     <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
                                     <br>
                                 </div>
-                            </div>
-                            <div class="row s12 m6 l4">
                                 <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
                                     $ MXN
                                 </label>
@@ -186,16 +179,6 @@ $('.select_marca').on('change',function(){
 var marca_sel = $(this).find(":selected").text()
 $('.select_modelo').material_select('destroy')
 $('.select_modelo').empty()
-$('#pagination').materializePagination({
-align: 'left',
-lastPage:  10,
-firstPage:  1,
-urlParameter: 'page',
-useUrlParameter: true,
-onClickCallback: function(requestedPage){
-console.log('Requested page is '+ requestedPage);
-}
-});
 for (var i=0; i<lista_modelo.length; i++){
     if(lista_modelo[i].marca_sel==marca_sel){
     $('.select_modelo').append($('<option>', {
@@ -263,6 +246,18 @@ for (var i=0; i<lista_modelo.length; i++){
             console.log(Marca)
             $(".modal-content").append("<p>"+Marca+" "+Modelo+" "+Año+" "+KM+" "+ Total + "$ MXN"+"</p>");
             }
+            </script>
+            <script type="text/javascript">
+            $(document).ready(function(){
+            $('ul.tabs').tabs();
+            var a = 1;
+            $('.add_btn').click(function(){
+            if(a<5){
+            a+=1;
+            $('.tabs').append('<li class="tab col s2 m2 l2 xl2"><a href=".calctab-'+a+'" style="font-size: 30px" class="material-icons">directions_car</a></li>')
+            }
+            });
+            });
             </script>
         </body>
     </html>

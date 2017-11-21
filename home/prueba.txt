@@ -1,0 +1,26 @@
+		<div class="row">
+			<div class="contenido col s11">
+				<ul id="tabs-swipe-demo" class="tabs">
+					<li class="tab col s3"><a href="#test-swipe-1">Test 1</a></li>					
+				</ul>
+				<div id="test-swipe-1" class="active col s12 blue">Test 1</div>				
+			</div>
+			<div class="col s1">
+				<button class="add_btn material-icons"> add </button>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('ul.tabs').tabs();
+			var a = 1;
+			$('.add_btn').click(function(){				
+				if(a<10){
+					a+=1;								
+					$('ul').append('<li class="tab col s3"><a href="#test-swipe-'+a+'">Test '+a+'</a></li>')
+					$('.contenido').append('<div id="test-swipe-'+a+'" class="active col s12 blue">Test '+a+'</div>')
+				}
+			});
+		});
+		</script>

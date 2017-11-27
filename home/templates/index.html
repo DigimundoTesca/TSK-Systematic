@@ -1,432 +1,459 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-        <meta charset="utf-8">
-        <!-- Icon -->
-        <link rel="icon" href="../static/images/tesca-ojo.png">
-        <!--Materialize.css-->
-        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/>
-        <link rel="stylesheet" href="../static/css/master.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <title>TSKMobility</title>
-    </head>
-    <body class="bgimage">
-        <header>
-            <nav class="black">
-                <div class="container">
-                    <div class="nav-wrapper">
-                        <a href="#" class="brand-logo">TSKMobility</a>
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a onclick="topo()">Quienes somos</a></li>
-                            <li><a onclick="boto()">Descubre cuánto puedes ganar</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <div class="section">
-                    <div class="container">
-                        <div id='inicio'>
-                            <p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataforma como Uber.
-                                Nuestro trabajo se centra en darle el mejor uso al automóvil de nuestros socios y así generar ganancias mensuales para ellos,
-                            al mismo tiempo que generamos ingresos para nuestros choferes.</p>
-                            <p>
-                                Somos actualmente una PYME en crecimiento, contamos con un año y medio de experiencia con socios satisfechos.
-                                Contamos actualmente con 5 activos trabajando con 5 autos activos en el área metropolitana.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container BotonesPresentacion">
-                        <div class="row" class="carbutbg">
-                            <div class="contenido col s5 m5 l5 xl5">
-                                <ul id="tabs-swipe-demo" class="tabs">
-                                    <li class="tab"><a href="#calctab-1" style="font-size: 30px;" class="material-icons">directions_car</a></li>
-                                    <li class="tab"><a href="#calctab-2" style="font-size: 30px;" class="material-icons">directions_car</a></li>
-                                    <li class="tab"><a href="#calctab-3" style="font-size: 30px;" class="material-icons">directions_car</a></li>
-                                    <li class="tab"><a href="#calctab-4" style="font-size: 30px;" class="material-icons">directions_car</a></li>
-                                    <li class="tab"><a href="#calctab-5" style="font-size: 30px;" class="material-icons">directions_car</a></li>
-                                </ul>
-                            </div>
-                            <div class="col s1 m1 l1 xl1">
-                                <button class="add_btn material-icons buttonshido"> add </button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="slider-calc carousel carousel-slider">
-                                <div id="calctab-1" class='carousel-item'>
-                                    <div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_name" align="left">Marca:</label>
-                                                <select class="select_marca" id="id_name">
-                                                    {% for mar in marca_obj %}
-                                                        <option value="">{{mar.name}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_comment">Modelo:</label>
-                                                <select class="select_modelo" id="id_comment">
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idYe">Año:</label>
-                                                <select class="year">
-                                                    <option value="2012">2012</option>
-                                                    <option value="2013">2013</option>
-                                                    <option value="2014">2014</option>
-                                                    <option value="2015">2015</option>
-                                                    <option value="2016">2016</option>
-                                                    <option value="2017">2017</option>
-                                                    <option value="2018">2018</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idKM">Km:</label>
-                                                <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>                            
-                                <div id="calctab-2" class='carousel-item'>
-                                    <div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_name" align="left">Marca:</label>
-                                                <select class="select_marca" id="id_name">
-                                                    {% for mar in marca_obj %}
-                                                        <option value="">{{mar.name}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_comment">Modelo:</label>
-                                                <select class="select_modelo" id="id_comment">
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idYe">Año:</label>
-                                                <select class="year">
-                                                    <option value="2012">2012</option>
-                                                    <option value="2013">2013</option>
-                                                    <option value="2014">2014</option>
-                                                    <option value="2015">2015</option>
-                                                    <option value="2016">2016</option>
-                                                    <option value="2017">2017</option>
-                                                    <option value="2018">2018</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idKM">Km:</label>
-                                                <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>                            
-                                <div id="calctab-3" class='carousel-item'>
-                                    <div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_name" align="left">Marca:</label>
-                                                <select class="select_marca" id="id_name">
-                                                    {% for mar in marca_obj %}
-                                                        <option value="">{{mar.name}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_comment">Modelo:</label>
-                                                <select class="select_modelo" id="id_comment">
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idYe">Año:</label>
-                                                <select class="year">
-                                                    <option value="2012">2012</option>
-                                                    <option value="2013">2013</option>
-                                                    <option value="2014">2014</option>
-                                                    <option value="2015">2015</option>
-                                                    <option value="2016">2016</option>
-                                                    <option value="2017">2017</option>
-                                                    <option value="2018">2018</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idKM">Km:</label>
-                                                <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>                            
-                                <div id="calctab-4" class='carousel-item'>
-                                    <div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_name" align="left">Marca:</label>
-                                                <select class="select_marca" id="id_name">
-                                                    {% for mar in marca_obj %}
-                                                        <option value="">{{mar.name}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_comment">Modelo:</label>
-                                                <select class="select_modelo" id="id_comment">
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idYe">Año:</label>
-                                                <select class="year">
-                                                    <option value="2012">2012</option>
-                                                    <option value="2013">2013</option>
-                                                    <option value="2014">2014</option>
-                                                    <option value="2015">2015</option>
-                                                    <option value="2016">2016</option>
-                                                    <option value="2017">2017</option>
-                                                    <option value="2018">2018</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idKM">Km:</label>
-                                                <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>                            
-                                <div id="calctab-5" class='carousel-item'>
-                                    <div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_name" align="left">Marca:</label>
-                                                <select class="select_marca" id="id_name">
-                                                    {% for mar in marca_obj %}
-                                                        <option value="">{{mar.name}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="id_comment">Modelo:</label>
-                                                <select class="select_modelo" id="id_comment">
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idYe">Año:</label>
-                                                <select class="year">
-                                                    <option value="2012">2012</option>
-                                                    <option value="2013">2013</option>
-                                                    <option value="2014">2014</option>
-                                                    <option value="2015">2015</option>
-                                                    <option value="2016">2016</option>
-                                                    <option value="2017">2017</option>
-                                                    <option value="2018">2018</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s12 m6 l6">
-                                                <label  for="idKM">Km:</label>
-                                                <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>                         
-                            </div>
-                        </div>
-                        <div>
-                            <div class="row s12 m6 l4">
-                                <div class="col s12 m12 l12">
-                                    <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
-                                    <br>
-                                </div>
-                                <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
-                                    $ MXN
-                                </label>
-                                <label id="tipoUber" style="text-align: right">
-                                    Tipo de Uber:
-                                </label>
-                            </div>
-                            <div class ="row">
-                                <div class="col s12 m6 l4 xl5 offset-xl5 offset-l4 offset-m4 offset-s1  ">
-                                    <div class="buttonshido hido" id="EnvioDeDatos">
-                                        <a href="#modal1" class="modal-trigger letra-modal"  >Continua</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!--Seccion Modale -->
-        <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <form role="form" action="" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" id="submit">Enviar</button>
-                </form>
+
+<head>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+  <!-- Icon -->
+  <link rel="icon" href="../static/images/tesca-ojo.png">
+  <!--Materialize.css-->
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    media="screen,projection" />
+  <link rel="stylesheet" href="../static/css/master.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <title>TSKMobility</title>
+</head>
+
+<body class="bgimage">
+  <header>
+    <nav class="black">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">TSKMobility</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a onclick="topo()">Quienes somos</a>
+            </li>
+            <li>
+              <a onclick="boto()">Descubre cuánto puedes ganar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="section">
+        <div class="container">
+          <div id='inicio'>
+            <p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataforma
+              como Uber. Nuestro trabajo se centra en darle el mejor uso al automóvil de nuestros socios y así generar ganancias
+              mensuales para ellos, al mismo tiempo que generamos ingresos para nuestros choferes.</p>
+            <p>
+              Somos actualmente una PYME en crecimiento, contamos con un año y medio de experiencia con socios satisfechos. Contamos actualmente
+              con 5 activos trabajando con 5 autos activos en el área metropolitana.
+            </p>
+          </div>
+        </div>
+        <div class="container BotonesPresentacion">
+          <div class="row" class="carbutbg">
+            <div id="tab_bar" class="contenido col s1 m1 l1 xl1">
+              <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
+                <li id="tab-1" class="tab">
+                  <a href="#calctab-1" style="font-size: 25px;" class="material-icons s-tab1">directions_car</a>
+                </li>
+                <li id="tab-2" class="tab">
+                  <a href="#calctab-2" style="font-size: 25px;" class="material-icons s-tab2">directions_car</a>
+                </li>
+                <li id="tab-3" class="tab">
+                  <a href="#calctab-3" style="font-size: 25px;" class="material-icons s-tab3">directions_car</a>
+                </li>
+                <li id="tab-4" class="tab">
+                  <a href="#calctab-4" style="font-size: 25px;" class="material-icons s-tab4">directions_car</a>
+                </li>
+                <li id="tab-5" class="tab">
+                  <a href="#calctab-5" style="font-size: 25px;" class="material-icons s-tab5">directions_car</a>
+                </li>
+              </ul>
             </div>
-        </form>
+            <div class="col s1 m1 l1 xl1">
+              <button class="add_btn material-icons buttonshido"> add </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="slider-calc">
+              <div id="calctab-1" class='col s12'>
+                <div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="id_name" align="left">Marca:</label>
+                      <select class="select_marca" id="id_name1">
+                        {% for mar in marca_obj %}
+                        <option value="">{{mar.name}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="id_comment">Modelo:</label>
+                      <select class="select_modelo" id="id_comment1">
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="idYe">Año:</label>
+                      <select class="year" id="year1">
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="idKM" id="idKM1">Km:</label>
+                      <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="calctab-2" class='col s12'>
+                <div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="id_name" align="left">Marca:</label>
+                      <select class="select_marca" id="id_name">
+                        {% for mar in marca_obj %}
+                        <option value="">{{mar.name}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="id_comment">Modelo:</label>
+                      <select class="select_modelo" id="id_comment">
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="idYe">Año:</label>
+                      <select class="year">
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="idKM">Km:</label>
+                      <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="calctab-3" class='col s12'>
+                <div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="id_name" align="left">Marca:</label>
+                      <select class="select_marca" id="id_name">
+                        {% for mar in marca_obj %}
+                        <option value="">{{mar.name}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="id_comment">Modelo:</label>
+                      <select class="select_modelo" id="id_comment">
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="idYe">Año:</label>
+                      <select class="year">
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="idKM">Km:</label>
+                      <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="calctab-4" class='col s12'>
+                <div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="id_name" align="left">Marca:</label>
+                      <select class="select_marca" id="id_name">
+                        {% for mar in marca_obj %}
+                        <option value="">{{mar.name}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="id_comment">Modelo:</label>
+                      <select class="select_modelo" id="id_comment">
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="idYe">Año:</label>
+                      <select class="year">
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="idKM">Km:</label>
+                      <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="calctab-5" class='col s12'>
+                <div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="id_name" align="left">Marca:</label>
+                      <select class="select_marca" id="id_name">
+                        {% for mar in marca_obj %}
+                        <option value="">{{mar.name}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="id_comment">Modelo:</label>
+                      <select class="select_modelo" id="id_comment">
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <label for="idYe">Año:</label>
+                      <select class="year">
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                      </select>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <label for="idKM">Km:</label>
+                      <input class=" form-control" type="text" name="address" maxlength="100" id="idKM" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="row s12 m6 l4">
+              <div class="col s12 m12 l12">
+                <a onclick='calcular()' class="button big">CALCULA CUANTO PUEDES GANAR</a>
+                <br>
+              </div>
+              <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
+                $ MXN
+              </label>
+              <label id="tipoUber" style="text-align: right">
+                Tipo de Uber:
+              </label>
+            </div>
+            <div class="row">
+              <div class="col s12 m6 l4 xl5 offset-xl5 offset-l4 offset-m4 offset-s1  ">
+                <div class="buttonshido hido" id="EnvioDeDatos">
+                  <a href="#modal1" class="modal-trigger letra-modal">Continua</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Seccion Modale -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <form role="form" action="" method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit" id="submit">Enviar</button>
+      </form>
     </div>
-</div>
-</div>
-<!-- Fin Seccion Modale -->
-<footer class="page-footer black">
-<div class="container">
-    <div class="row">
+    </form>
+  </div>
+  </div>
+  </div>
+  <!-- Fin Seccion Modale -->
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
         <div class="col s10">
-            <div class="center">
-                <p class="grey-text text-lighten-4">Una empresa de <a href="http://www.tescacorporation.com">Tesca Corporation</a></p>
-                <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
-            </div>
+          <div class="center">
+            <p class="grey-text text-lighten-4">Una empresa de
+              <a href="http://www.tescacorporation.com">Tesca Corporation</a>
+            </p>
+            <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+          </div>
         </div>
         <div class col s2>
-            <div class="right">
-                <a href="mailto:name@email.com">Contacto Socios</a> </br>
-                <a href="mailto:name@email.com">Contacto Choferes</a> </br>
-                <a>55-00-00-00-00</a> </br>
-                <a href="https://www.facebook.com/people/Mobility-Tsk/100015704463990">Facebook</a>
-            </div>
+          <div class="right">
+            <a href="mailto:name@email.com">Contacto Socios</a>
+            </br>
+            <a href="mailto:name@email.com">Contacto Choferes</a>
+            </br>
+            <a>55-00-00-00-00</a>
+            </br>
+            <a href="https://www.facebook.com/people/Mobility-Tsk/100015704463990">Facebook</a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="footer-copyright">
-    <div class="container">
+    <div class="footer-copyright">
+      <div class="container">
         © 2017 TSKMobility.
         <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
+      </div>
     </div>
-</div>
-</footer>
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
-<script type="text/javascript" charset="utf-8" async>
-$(function(){
-var lista_marca = JSON.parse(('{{ marca | safe }}'));
-var lista_modelo = JSON.parse(('{{ modelo | safe }}'));
-var lista_obj = []
-var lista_mod = []
-for (var i=0; i<lista_marca.length; i++){
-    lista_obj[lista_marca[i]]=null;
-    }
-    if ($('#tabs-swipe-demo').length) {
-    $('#tabs-swipe-demo').tabs({ 'swipeable': true });
-    }
-    
-    $('.carousel.carousel-slider').carousel({fullWidth: true});
-    $('.carousel').carousel();
-    var form_marca = $(".select_marca").find(":selected").text()
-    var form_modelo = $(".select_modelo").find(":selected").text()
-    var form_año = $("#idYe").find(":selected").text()
-    var form_km = $("#idKM").val()
-    var form_resultado =$("#MuestraTotal").val()
-    $('.select_marca').material_select();
-    $('.select_modelo').material_select();
-    $('.year').material_select();
-    $('.select_marca').on('change',function(){
-    var marca_sel = $(this).find(":selected").text()
-    $('.select_modelo').material_select('destroy')
-    $('.select_modelo').empty()
-    for (var i=0; i<lista_modelo.length; i++){
-        if(lista_modelo[i].marca_sel==marca_sel){
-        $('.select_modelo').append($('<option>', {
-            value: lista_modelo[i].name_sel,
-            text: lista_modelo[i].name_sel
+  </footer>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+  <script type="text/javascript" charset="utf-8" async>
+    $(function () {
+      var lista_marca = JSON.parse(('{{ marca | safe }}'));
+      var lista_modelo = JSON.parse(('{{ modelo | safe }}'));
+      var lista_obj = []
+      var lista_mod = []
+      for (var i = 0; i < lista_marca.length; i++) {
+        lista_obj[lista_marca[i]] = null;
+      }
+
+      var form_marca = $(".select_marca").find(":selected").text()
+      var form_modelo = $(".select_modelo").find(":selected").text()
+      var form_año = $("#idYe").find(":selected").text()
+      var form_km = $("#idKM").val()
+      var form_resultado = $("#MuestraTotal").val()
+      $('.select_marca').material_select();
+      $('.select_modelo').material_select();
+      $('.year').material_select();
+      $('.select_marca').on('change', function () {
+        var marca_sel = $(this).find(":selected").text()
+        $('.select_modelo').material_select('destroy')
+        $('.select_modelo').empty()
+        for (var i = 0; i < lista_modelo.length; i++) {
+          if (lista_modelo[i].marca_sel == marca_sel) {
+            $('.select_modelo').append($('<option>', {
+              value: lista_modelo[i].name_sel,
+              text: lista_modelo[i].name_sel
             }));
-            }
-            }
-            $('.select_modelo').material_select();
-            });
-            $('.select_modelo').on('change',function(){
-            var modelo_sel = $(this).find(":selected").text()
-            for (var i=0; i<lista_modelo.length; i++){
-                if(lista_modelo[i].name_sel==modelo_sel){
-                document.getElementById("tipoUber").innerHTML=lista_modelo[i].tipo_uber
-                }
-                }
-                });
-                $('.parallax').parallax();
-                $('.modal').modal();
-                });
-                var inicio = document.getElementById('inicio')
-                inicio.style.visibility='hidden';
-                inicio.style.height='0px';
-                var calc = document.getElementById('calc')
-                function topo() {
-                inicio.style.visibility='visible';
-                inicio.style.height='100px';
-                calc.style.visibility='hidden';
-                calc.style.height='0px';
-                }
-                function boto() {
-                calc.style.visibility='visible';
-                calc.style.height='auto';
-                inicio.style.visibility='hidden';
-                inicio.style.height='0px';
-                }
-                function calcular(){
-                    //Variables del formulario
-                    let Marca = $(".select_marca").find(":selected").text()
-                    let Modelo = $(".select_modelo").find(":selected").text()
-                    //Cambiar por tipoUber
-                    let Año = $(".year").find(":selected").text();
-                    let KM = document.getElementById('idKM').value;
-                    //Valores de
-                    let costo_ux = 4800;
-                    let costo_ub = 7200;
-                    let costo_uxl = 9000;
-                    var aee = $('#tipoUber').innerHTML
+          }
+        }
+        $('.select_modelo').material_select();
+      });
+      $('.select_modelo').on('change', function () {
+        var modelo_sel = $(this).find(":selected").text()
+        for (var i = 0; i < lista_modelo.length; i++) {
+          if (lista_modelo[i].name_sel == modelo_sel) {
+            document.getElementById("tipoUber").innerHTML = lista_modelo[i].tipo_uber
+          }
+        }
+      });
+      $('.parallax').parallax();
+      $('.modal').modal();
+    });
+    var inicio = document.getElementById('inicio')
+    inicio.style.visibility = 'hidden';
+    inicio.style.height = '0px';
+    var calc = document.getElementById('calc')
+    function topo() {
+      inicio.style.visibility = 'visible';
+      inicio.style.height = '100px';
+      calc.style.visibility = 'hidden';
+      calc.style.height = '0px';
+    }
+    function boto() {
+      calc.style.visibility = 'visible';
+      calc.style.height = 'auto';
+      inicio.style.visibility = 'hidden';
+      inicio.style.height = '0px';
+    }
+    function calcular() {
+      //Variables del formulario
+      let Marca = $(".select_marca").find(":selected").text()
+      let Modelo = $(".select_modelo").find(":selected").text()
+      //Cambiar por tipoUber
+      let Año = $(".year").find(":selected").text();
+      let KM = document.getElementById('idKM').value;
+      //Valores de
+      let costo_ux = 4800;
+      let costo_ub = 7200;
+      let costo_uxl = 9000;      
+      //año Actual
+      let Actual = (new Date()).getFullYear()
+      //Valor Inicial
+      const ValorBase = 4800;
+      let DifA = 0;
+      DifA = Actual - Año;
+      let Total = 0;
+      let MuA = (5 * 80 - (2 * DifA));
+      let MuK = (10 * (KM / 20000));
+      Total = parseInt(ValorBase + MuA + MuK);
 
-                    console.log(aee);
+      if (KM == '' || Año == '') {
+        Total = 0.0;
+      }
 
-                    //año Actual
-                    let Actual = (new Date()).getFullYear()
-                    //Valor Inicial
-                    const ValorBase = 4800;
-                    let DifA = 0;
-                    DifA = Actual - Año;
-                    let Total = 0;
-                    let MuA = (5*80-(2 * DifA));
-                    let MuK = (10*(KM/20000));
-                    Total = parseInt(ValorBase + MuA + MuK);
+      document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
+      let h = document.getElementById("EnvioDeDatos");
+      h.classList.remove("hido");
+      $(".modal-content").append("<p>" + Marca + " " + Modelo + " " + Año + " " + KM + " " + Total + "$ MXN" + "</p>");
+    }
+  </script>
+  <script type="text/javascript">
+      $(document).ready(function () {      
 
-                    if (KM == '' || Año == ''){
-                        Total = 0.0;
-                    }
+        $('ul.tabs').tabs({'swipeable':true});
 
-                    document.getElementById("MuestraTotal").innerHTML = Total + "$ MXN";
-                    let h =document.getElementById("EnvioDeDatos");
-                    h.classList.remove("hido");                    
-                    $(".modal-content").append("<p>"+Marca+" "+Modelo+" "+Año+" "+KM+" "+ Total + "$ MXN"+"</p>");
-                }
-                </script>
-                <script type="text/javascript">
-                $(document).ready(function(){
-                
-                var a = 1;
-                $('.add_btn').click(function(){
-                if(a<5){
-                a+=1;
-                $('.tabs').append('<li class="tab col s2 m2 l2 xl2"><a href="#calctab-'+a+'" style="font-size: 30px" class="material-icons">directions_car</a></li>')
-                }
-                });
-                });
-                </script>
-        </body>
-    </html>
+        $('.s-tab1').show();
+        $('.s-tab2').hide();
+        $('.s-tab3').hide();
+        $('.s-tab4').hide();
+        $('.s-tab5').hide();
+        var count = 1;
+        $('.add_btn').click(function () {
+          if (count < 5) {
+            count += 1;
+            col_w_a=count-1;
+            col_w= col_w_a+1;
+            $('.s-tab' + count).show('slide');
+            $('ul.tabs').tabs('select_tab', 'calctab-'+count);     
+            $('#tab_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
+            $('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
+          }
+        });
+
+      });
+  </script>
+</body>
+
+</html>

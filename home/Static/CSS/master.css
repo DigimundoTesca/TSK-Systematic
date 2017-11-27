@@ -162,9 +162,9 @@ input[type="button"],
 }
 
 @-o-keyframes glowing {
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #ffd400; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #c6a500; }
+  0% { background-color: rgb(223, 220, 86); -webkit-box-shadow: 0 0 3px #c6a500; }
+  50% { background-color: rgb(223, 220, 86); -webkit-box-shadow: 0 0 40px #ffd400; }
+  100% { background-color: rgb(223, 220, 86); -webkit-box-shadow: 0 0 3px #c6a500; }
 }
 
 @keyframes glowing {
@@ -312,10 +312,9 @@ body, html {
 }
 
 .tabs{
-	background: rgba(0,0,0,0.5) !important;
+	background: rgba(0, 0, 0, 0.5) !important;
+	overflow-x: hidden !important;
 }
 
-.carousel{
-	height: 200px !important;
-}
+
 

@@ -18,22 +18,24 @@ def index(request):
     form = ContactForm()
 
     if request.method == 'POST':
-        contact_name = request.POST['contact_name']
-        contact_email = request.POST['contact_email']
-        contact_phone = request.POST['contact_phone']
-        contact_zone = request.POST['contact_zone']
-        contact_comment = request.POST['contact_comment']
+        contact_name = request.POST.get('contact_name')
+        contact_email = request.POST.get('contact_email')
+        contact_phone = request.POST.get('contact_phone')
+        contact_zone = request.POST.get('contact_zone')
+        contact_comment = request.POST.get('contact_comment')
+        datosfinales = request.POST.get('datosfinales')
 
         fromaddr = 'tescauber@gmail.com'
         toaddrs = 'a.g.tornell@outlook.com'
-        msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment 
+        msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment + "\n" + str(datosfinales)
+        print(msg)
         username = 'tescauber@gmail.com'
         password = 'yosoytesca123'
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.ehlo()
         server.starttls()
-        server.login(username, password)
-        server.sendmail(fromaddr, toaddrs, msg)
+        server.login(username, password)        
+        server.sendmail(fromaddr, toaddrs, str(msg))
         server.quit()
 
     marca_a=marca.objects.all()

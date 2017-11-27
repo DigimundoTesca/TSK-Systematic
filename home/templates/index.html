@@ -97,7 +97,6 @@
 													<div class="col s12 m6 l6">
 														<label for="idYe">Año:</label>
 														<select class="year" id="year1">
-															<option value="2012">2012</option>
 															<option value="2013">2013</option>
 															<option value="2014">2014</option>
 															<option value="2015">2015</option>
@@ -133,8 +132,7 @@
 												<div class="row">
 													<div class="col s12 m6 l6">
 														<label for="idYe">Año:</label>
-														<select class="year" id="year2">
-															<option value="2012">2012</option>
+														<select class="year" id="year2">															
 															<option value="2013">2013</option>
 															<option value="2014">2014</option>
 															<option value="2015">2015</option>
@@ -171,7 +169,6 @@
 													<div class="col s12 m6 l6">
 														<label for="idYe">Año:</label>
 														<select class="year" id="year3">
-															<option value="2012">2012</option>
 															<option value="2013">2013</option>
 															<option value="2014">2014</option>
 															<option value="2015">2015</option>
@@ -181,7 +178,7 @@
 														</select>
 													</div>
 													<div class="col s12 m6 l6">
-														<label for="idKM3" id="idKM3">Km:</label>
+														<label for="idKM3" id="idKM">Km:</label>
 														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM3" required />
 													</div>
 												</div>
@@ -208,7 +205,6 @@
 													<div class="col s12 m6 l6">
 														<label for="idYe">Año:</label>
 														<select class="year" id="year4">
-															<option value="2012">2012</option>
 															<option value="2013">2013</option>
 															<option value="2014">2014</option>
 															<option value="2015">2015</option>
@@ -218,7 +214,7 @@
 														</select>
 													</div>
 													<div class="col s12 m6 l6">
-														<label for="idKM4" id="idKM4">Km:</label>
+														<label for="idKM4" id="idKM">Km:</label>
 														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM4" required />
 													</div>
 												</div>
@@ -245,7 +241,6 @@
 													<div class="col s12 m6 l6">
 														<label for="idYe">Año:</label>
 														<select class="year" id="year5">
-															<option value="">2012</option>
 															<option value="">2013</option>
 															<option value="">2014</option>
 															<option value="">2015</option>
@@ -255,7 +250,7 @@
 														</select>
 													</div>
 													<div class="col s12 m6 l6">
-														<label for="idKM5" id="idKM5">Km:</label>
+														<label for="idKM5" id="idKM">Km:</label>
 														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM5" required />
 													</div>
 												</div>
@@ -370,19 +365,17 @@
 	}
 	function calcperlements(año,km,tipouber){
 		//Valor Inicial
-	let ValorBase = 4800;
-		switch(tipouber){
-		case "UXL":
-		ValorBase = 7200;
-			break;
-		case "UB":
+		console.log(tipouber);
+		var ValorBase = 4800;
+		if(tipouber === ('UB')){
+			ValorBase = 7200;
+		}
+		if(tipouber === ('UXL')){
 			ValorBase = 9000;
-			break;
-	}
-	//Valores de
-	let costo_ux = 4800;
-	let costo_ub = 7200;
-	let costo_uxl = 9000;
+		}
+		if(tipouber === ('US')){
+			ValorBase = 10000;
+		}
 	//año Actual
 	let Actual = (new Date()).getFullYear()
 	
@@ -398,9 +391,10 @@
 	
 	return Total;
 	}
-	function calcular() {
 	var datosfinales = [];
-	var marca1 = $('#id_name1').find(":selected").text();
+
+	function calcular() {
+		var marca1 = $('#id_name1').find(":selected").text();
 		var modelo1 = $('#id_comment1').find(":selected").text();
 		var año1 = $('#year1').find(":selected").text();
 		var km1 = $('#idKM1').val();
@@ -420,11 +414,13 @@
 		var modelo5 = $('#id_comment5').find(":selected").text();
 		var año5 = $('#year5').find(":selected").text();
 		var km5 = $('#idKM5').val();
-		var tpuber = tiposdeuber[0];
-	datosfinales.push(marca1, marca2, marca3, marca4, marca5,
-						modelo1, modelo2, modelo3, modelo4, modelo5,
-						año1, año2, año3, año4, año5,
-						km1, km2, km3, km4, km5);	
+		var tpuber = tiposdeuber;
+		datosfinales.push(marca1, modelo1, año1, km1,
+			marca2, modelo2, año2, km2,
+			marca3, modelo3, año3, km3,
+			marca4, modelo4, año4, km4,
+			marca5, modelo5, año5, km5,
+			);	
 		var T1 = calcperlements(año1,km1,tpuber[0]);
 		var T2 = calcperlements(año2,km2,tpuber[1]);
 		var T3 = calcperlements(año3,km3,tpuber[2]);
@@ -434,8 +430,9 @@
 		SumaTotal = T1 + T2 + T3 + T4 + T5;
 		
 		$('#MuestraTotal').html(SumaTotal + "$ MXN");
-	let h = document.getElementById("EnvioDeDatos");
-	h.classList.remove("hido");
+		let h = document.getElementById("EnvioDeDatos");
+		h.classList.remove("hido");
+	}
 
 	$('#submit_all').click(function(){
 		var c_name = $('#id_contact_name').val();
@@ -444,14 +441,12 @@
 		var c_zone = $('#id_contact_zone').val();
 		var c_comment = $('#id_contact_comment').val();
 
-		console.log(datosfinales);
-
 		$.ajax({
 			url:"{% url 'home:index' %}",
 			type: 'POST',
 			data: {
 				csrfmiddlewaretoken: '{{csrf_token}}',
-				'datosfinales':datosfinales,
+				'datosfinales':JSON.stringify({ coches:datosfinales }),
 				'contact_name':c_name,
 				'contact_email':c_email,
 				'contact_phone':c_whats,
@@ -463,9 +458,8 @@
 				console.log('Funcionooooo!!!!');
 			},
 		});
-	})
+	});
 	
-	}
 	</script>
 	<script type="text/javascript">
 	$(document).ready(function () {
@@ -493,9 +487,10 @@
 		var tiposdeuber = [];
 		var lista_modelo = JSON.parse(('{{ modelo | safe }}'));
 		$('#id_name1').on('change', function () {
-	var marca_sel = $(this).find(":selected").text()
-	$('#id_comment1').material_select('destroy')
-	$('#id_comment1').empty()
+		var marca_sel = $(this).find(":selected").text()
+		$('#id_comment1').material_select('destroy')
+		$('#id_comment1').empty()
+
 	for (var i = 0; i < lista_modelo.length; i++) {
 	if (lista_modelo[i].marca_sel == marca_sel) {
 	$('#id_comment1').append($('<option>', {
@@ -536,7 +531,7 @@
 			if (lista_modelo[i].name_sel == modelo_sel) {
 				tiposdeuber[1] = lista_modelo[i].tipo_uber
 				document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-										+ tiposdeuber[0] + "<br>" + tiposdeuber[1];
+										+ tiposdeuber[0] + "   " + tiposdeuber[1];
 			}
 			}
 			});
@@ -560,7 +555,7 @@
 				if (lista_modelo[i].name_sel == modelo_sel) {
 				tiposdeuber[2] = lista_modelo[i].tipo_uber
 				document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-											+ tiposdeuber[0] + "<br>" + tiposdeuber[1] + "<br>"
+											+ tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
 											+ tiposdeuber[2];
 				}
 				}
@@ -585,8 +580,8 @@
 					if (lista_modelo[i].name_sel == modelo_sel) {
 					tiposdeuber[3] = lista_modelo[i].tipo_uber
 					document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-												+ tiposdeuber[0] + "<br>" + tiposdeuber[1] + "<br>"
-												+ tiposdeuber[2] + "<br>" +tiposdeuber[3];
+												+ tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+												+ tiposdeuber[2] + "   " +tiposdeuber[3];
 					}
 					}
 					});
@@ -610,8 +605,8 @@
 						if (lista_modelo[i].name_sel == modelo_sel) {
 							tiposdeuber[4] = lista_modelo[i].tipo_uber
 							document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-													+ tiposdeuber[0] + "<br>" + tiposdeuber[1] + "<br>"
-													+ tiposdeuber[2] + "<br>" +tiposdeuber[3] + "<br>"
+													+ tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+													+ tiposdeuber[2] + "   " +tiposdeuber[3] + "   "
 													+ tiposdeuber[4] ;
 						}
 						}

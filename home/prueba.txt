@@ -24,3 +24,21 @@
 			});
 		});
 		</script>
+
+		"""json_object = json.load(datosfinales)
+
+        data_array = []
+        for i in range(0,4):
+            obj = {
+                'marca': datosfinales[i],
+                'modelo': datosfinales[i+1],
+                'año': datosfinales[i+2],
+                'km': datosfinales[i+3]
+            }
+            data_array.append(obj)
+
+
+
+        for data in data_array:
+            mesg_coches="Coche 1: " + data['marca']
+            print(mesg_coches)"""

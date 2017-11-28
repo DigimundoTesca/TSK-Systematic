@@ -1,618 +1,616 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<!--Let browser know website is optimized for mobile-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		<meta charset="utf-8">
-		<!-- Icon -->
-		<link rel="icon" href="../static/images/tesca-ojo.png">
-		<!--Materialize.css-->
-		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
-			media="screen,projection" />
-			<link rel="stylesheet" href="../static/css/master.css">
-			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-			<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-				crossorigin="anonymous">
-				<link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
-				<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-				<title>TSKMobility</title>
-			</head>
-			<body class="bgimage">
-				<header>
-					<nav class="black">
-						<div class="container">
-							<div class="nav-wrapper">
-								<a href="#" class="brand-logo">TSKMobility</a>
-								<ul id="nav-mobile" class="right hide-on-med-and-down">
-									<li>
-										<a onclick="topo()">Quienes somos</a>
-									</li>
-									<li>
-										<a onclick="boto()">Descubre cuánto puedes ganar</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</nav>
-				</header>
-				<main>
-					<section>
-						<div class="section">
-							<div class="container">
-								<div id='inicio'>
-									<p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataforma
-										como Uber. Nuestro trabajo se centra en darle el mejor uso al automóvil de nuestros socios y así generar ganancias
-									mensuales para ellos, al mismo tiempo que generamos ingresos para nuestros choferes.</p>
-									<p>
-										Somos actualmente una PYME en crecimiento, contamos con un año y medio de experiencia con socios satisfechos. Contamos actualmente
-										con 5 activos trabajando con 5 autos activos en el área metropolitana.
-									</p>
-								</div>
-							</div>
-							<div class="container BotonesPresentacion">
-								<div class="row" class="carbutbg">
-									<div id="tab_bar" class="contenido col s12 m1 l1 xl1">
-										<ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
-											<li id="tab-1" class="tab">
-												<a href="#calctab-1" style="font-size: 25px;" class="material-icons s-tab1">directions_car</a>
-											</li>
-											<li id="tab-2" class="tab">
-												<a href="#calctab-2" style="font-size: 25px;" class="material-icons s-tab2">directions_car</a>
-											</li>
-											<li id="tab-3" class="tab">
-												<a href="#calctab-3" style="font-size: 25px;" class="material-icons s-tab3">directions_car</a>
-											</li>
-											<li id="tab-4" class="tab">
-												<a href="#calctab-4" style="font-size: 25px;" class="material-icons s-tab4">directions_car</a>
-											</li>
-											<li id="tab-5" class="tab">
-												<a href="#calctab-5" style="font-size: 25px;" class="material-icons s-tab5">directions_car</a>
-											</li>
-										</ul>
-									</div>
-									<div class="col s1 m1 l1 xl1">
-										<button class="add_btn material-icons buttonshido"> add </button>
-									</div>
-								</div>
-								<div class="row">
-									<div class="slider-calc">
-										<div id="calctab-1" class='col s12'>
-											<div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_name1" align="left">Marca:</label>
-														<select class="select_marca" id="id_name1">
-															{% for mar in marca_obj %}
-																<option value="">{{mar.name}}</option>
-															{% endfor %}
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_comment1">Modelo:</label>
-														<select class="select_modelo" id="id_comment1">
-														</select>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="idYe">Año:</label>
-														<select class="year" id="year1">
-															<option value="2013">2013</option>
-															<option value="2014">2014</option>
-															<option value="2015">2015</option>
-															<option value="2016">2016</option>
-															<option value="2017">2017</option>
-															<option value="2018">2018</option>
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="idKM1" id="idKM">Km:</label>
-														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM1" required />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="calctab-2" class='col s12'>
-											<div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_name2" align="left">Marca:</label>
-														<select class="select_marca" id="id_name2">
-															{% for mar in marca_obj %}
-																<option value="">{{mar.name}}</option>
-															{% endfor %}
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_comment2">Modelo:</label>
-														<select class="select_modelo" id="id_comment2">
-														</select>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="idYe">Año:</label>
-														<select class="year" id="year2">															
-															<option value="2013">2013</option>
-															<option value="2014">2014</option>
-															<option value="2015">2015</option>
-															<option value="2016">2016</option>
-															<option value="2017">2017</option>
-															<option value="2018">2018</option>
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="idKM2" id="idKM">Km:</label>
-														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM2" required />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="calctab-3" class='col s12 m12 l12 xl12'>
-											<div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_name3" align="left">Marca:</label>
-														<select class="select_marca" id="id_name3">
-															{% for mar in marca_obj %}
-																<option value="">{{mar.name}}</option>
-															{% endfor %}
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_comment3">Modelo:</label>
-														<select class="select_modelo" id="id_comment3">
-														</select>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="idYe">Año:</label>
-														<select class="year" id="year3">
-															<option value="2013">2013</option>
-															<option value="2014">2014</option>
-															<option value="2015">2015</option>
-															<option value="2016">2016</option>
-															<option value="2017">2017</option>
-															<option value="2018">2018</option>
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="idKM3" id="idKM">Km:</label>
-														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM3" required />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="calctab-4" class='col s12'>
-											<div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_name4" align="left">Marca:</label>
-														<select class="select_marca" id="id_name4">
-															{% for mar in marca_obj %}
-																<option value="">{{mar.name}}</option>
-															{% endfor %}
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_comment4">Modelo:</label>
-														<select class="select_modelo" id="id_comment4">
-														</select>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="idYe">Año:</label>
-														<select class="year" id="year4">
-															<option value="2013">2013</option>
-															<option value="2014">2014</option>
-															<option value="2015">2015</option>
-															<option value="2016">2016</option>
-															<option value="2017">2017</option>
-															<option value="2018">2018</option>
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="idKM4" id="idKM">Km:</label>
-														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM4" required />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="calctab-5" class='col s12'>
-											<div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="id_name5" align="left">Marca:</label>
-														<select class="select_marca" id="id_name5">
-															{% for mar in marca_obj %}
-																<option value="">{{mar.name}}</option>
-															{% endfor %}
-														</select>
-													</div>
-													<div class="col s12 m6 l6">
-														<label for="id_comment5">Modelo:</label>
-														<select class="select_modelo" id="id_comment5">
-														</select>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col s12 m6 l6 xl6">
-														<label for="idYe">Año:</label>
-														<select class="year" id="year5">
-															<option value="">2013</option>
-															<option value="">2014</option>
-															<option value="">2015</option>
-															<option value="">2016</option>
-															<option value="">2017</option>
-															<option value="">2018</option>
-														</select>
-													</div>
-													<div class="col s12 m6 l6 xl6">
-														<label for="idKM5" id="idKM">Km:</label>
-														<input class=" form-control" type="text" name="address" maxlength="100" id="idKM5" required />
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div>
-									<div class="row s12 m6 l4">
-										<div class="col s12 m12 l12 xl2">
-											<a onclick='calcular()' id="BotonMetamorfico" class="button big buttonshido">CALCULA CUANTO PUEDES GANAR</a>
-											<br>
-										</div>
-										<label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
-											$ MXN
-										</label>
-										<label id="tipoUber" style="text-align: right">
-											Tipo de Uber:
-										</label>
-									</div>
-									<div class="row">
-										<div class="col s12 m6 l4 xl5 offset-xl5 offset-l4 offset-m4 offset-s1  ">
-											<div class="buttonshido hido" id="EnvioDeDatos">
-												<a href="#modal1" class="modal-trigger letra-modal">Continua</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-				</main>
-				<!--Seccion Modale -->
-				<div id="modal1" class="modal modal-fixed-footer">
-					<div class="modal-content">
-						<form role="form" action="" method="post">
-							{% csrf_token %}
-							<p><label for="id_contact_name">Contact name:</label> <input type="text" name="contact_name" maxlength="30" required id="id_contact_name" /></p>
-							<p><label for="id_contact_email">Contact email:</label> <input type="text" name="contact_email" maxlength="50" required id="id_contact_email" /></p>
-							<p><label for="id_contact_phone">Contact phone:</label> <input type="text" name="contact_phone" maxlength="10" required id="id_contact_phone" /></p>
-							<p><label for="id_contact_zone">Contact zone:</label> <input type="text" name="contact_zone" maxlength="40" required id="id_contact_zone" /></p>
-							<p><label for="id_contact_comment">Contact comment:</label> <input type="text" name="contact_comment" maxlength="50" required id="id_contact_comment" /></p>
-						</form>
-							<button id="submit_all">Enviar</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- Fin Seccion Modale -->
-	<footer class="page-footer black">
-		<div class="container">
-			<div class="row">
-				<div class="col s10">
-					<div class="center">
-						<p class="grey-text text-lighten-4">Una empresa de
-							<a href="http://www.tescacorporation.com">Tesca Corporation</a>
-						</p>
-						<img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
-					</div>
-				</div>
-				<div class col s2>
-					<div class="right">
-						<a href="mailto:name@email.com">Contacto Socios</a>
-						</br>
-						<a href="mailto:name@email.com">Contacto Choferes</a>
-						</br>
-						<a>55-00-00-00-00</a>
-						</br>
-						<a href="https://www.facebook.com/people/Mobility-Tsk/100015704463990">Facebook</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				© 2017 TSKMobility.
-				<a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
-			</div>
-		</div>
-	</footer>
-	<!--Import jQuery before materialize.js-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
-	<script type="text/javascript" charset="utf-8" async>
-	$(function () {
-	var form_resultado = $("#MuestraTotal").val()
-	$('.select_marca').material_select();
-	$('.select_modelo').material_select();
-	$('.year').material_select();
-	
-	
-	$('.parallax').parallax();
-	$('.modal').modal();
-	});
-	var inicio = document.getElementById('inicio')
-	inicio.style.visibility = 'hidden';
-	inicio.style.height = '0px';
-	var calc = document.getElementById('calc')
-	function topo() {
-	inicio.style.visibility = 'visible';
-	inicio.style.height = '100px';
-	calc.style.visibility = 'hidden';
-	calc.style.height = '0px';
-	}
-	function boto() {
-	calc.style.visibility = 'visible';
-	calc.style.height = 'auto';
-	inicio.style.visibility = 'hidden';
-	inicio.style.height = '0px';
-	}
-	function calcperlements(año,km,tipouber){
-		//Valor Inicial
-		console.log(tipouber);
-		var ValorBase = 4800;
-		if(tipouber === ('UB')){
-			ValorBase = 7200;
-		}
-		if(tipouber === ('UXL')){
-			ValorBase = 9000;
-		}
-		if(tipouber === ('US')){
-			ValorBase = 10000;
-		}
-	//año Actual
-	let Actual = (new Date()).getFullYear()
-	
-	let DifA = 0;
-	DifA = Actual - año;
-	let Total = 0;
-	let MuA = (5 * 80 - (2 * DifA));
-	let MuK = (10 * (km / 20000));
-	Total = parseInt(ValorBase + MuA + MuK);
-	if (km == '' || año == '') {
-	Total = 0.0;
-	}
-	
-	return Total;
-	}
-	var datosfinales = [];
-
-	function calcular() {
-        var botonMetapod = document.getElementById('BotonMetamorfico')
-        botonMetapod.classList.remove('buttonshido')
-		var marca1 = $('#id_name1').find(":selected").text();
-		var modelo1 = $('#id_comment1').find(":selected").text();
-		var año1 = $('#year1').find(":selected").text();
-		var km1 = $('#idKM1').val();
-		var marca2 = $('#id_name2').find(":selected").text();
-		var modelo2 = $('#id_comment2').find(":selected").text();
-		var año2 = $('#year2').find(":selected").text();
-		var km2 = $('#idKM2').val();
-		var marca3 = $('#id_name3').find(":selected").text();
-		var modelo3 = $('#id_comment3').find(":selected").text();
-		var año3 = $('#year3').find(":selected").text();
-		var km3 = $('#idKM3').val();
-		var marca4 = $('#id_name4').find(":selected").text();
-		var modelo4 = $('#id_comment4').find(":selected").text();
-		var año4 = $('#year4').find(":selected").text();
-		var km4 = $('#idKM4').val();
-		var marca5 = $('#id_name5').find(":selected").text();
-		var modelo5 = $('#id_comment5').find(":selected").text();
-		var año5 = $('#year5').find(":selected").text();
-		var km5 = $('#idKM5').val();
-		var tpuber = tiposdeuber;
-		datosfinales.push(marca1, modelo1, año1, km1,
-			marca2, modelo2, año2, km2,
-			marca3, modelo3, año3, km3,
-			marca4, modelo4, año4, km4,
-			marca5, modelo5, año5, km5,
-			);	
-		var T1 = calcperlements(año1,km1,tpuber[0]);
-		var T2 = calcperlements(año2,km2,tpuber[1]);
-		var T3 = calcperlements(año3,km3,tpuber[2]);
-		var T4 = calcperlements(año4,km4,tpuber[3]);
-		var T5 = calcperlements(año5,km5,tpuber[4]);
-		var SumaTotal = 0;
-		SumaTotal = T1 + T2 + T3 + T4 + T5;
-		
-		$('#MuestraTotal').html(SumaTotal + "$ MXN");
-		let h = document.getElementById("EnvioDeDatos");
-		h.classList.remove("hido");
-	}
-
-	$('#submit_all').click(function(){
-		var c_name = $('#id_contact_name').val();
-		var c_email = $('#id_contact_email').val();
-		var c_whats = $('#id_contact_phone').val();
-		var c_zone = $('#id_contact_zone').val();
-		var c_comment = $('#id_contact_comment').val();
-
-		$.ajax({
-			url:"{% url 'home:index' %}",
-			type: 'POST',
-			data: {
-				csrfmiddlewaretoken: '{{csrf_token}}',
-				'datosfinales':JSON.stringify({ coches:datosfinales }),
-				'contact_name':c_name,
-				'contact_email':c_email,
-				'contact_phone':c_whats,
-				'contact_zone':c_zone,
-				'contact_comment':c_comment,
-			},			
-			datatype: 'jsonp',
-			success: function(){
-				console.log('Funcionooooo!!!!');
-			},
-		});
-	});
-	
-	</script>
-	<script type="text/javascript">
-	$(document).ready(function () {
-	$('ul.tabs').tabs({'swipeable':true});
-	$('.s-tab1').show();
-	$('.s-tab2').hide();
-	$('.s-tab3').hide();
-	$('.s-tab4').hide();
-	$('.s-tab5').hide();
-	var count = 1;
-	$('.add_btn').click(function () {
-	if (count < 5) {
-	count += 1;
-	col_w_a=count-1;
-	col_w= col_w_a+1;
-	$('.s-tab' + count).show('slide');
-	$('ul.tabs').tabs('select_tab', 'calctab-'+count);
-	$('#tab_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
-	$('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
-	}
-	});
-	});
-	</script>
-	<script type="text/javascript">
-		var tiposdeuber = [];
-		var lista_modelo = JSON.parse(('{{ modelo | safe }}'));
-		$('#id_name1').on('change', function () {
-		var marca_sel = $(this).find(":selected").text()
-		$('#id_comment1').material_select('destroy')
-		$('#id_comment1').empty()
-
-	for (var i = 0; i < lista_modelo.length; i++) {
-	if (lista_modelo[i].marca_sel == marca_sel) {
-	$('#id_comment1').append($('<option>', {
-		value: lista_modelo[i].name_sel,
-		text: lista_modelo[i].name_sel
-		}));
-		}
-		}
-		$('#id_comment1').material_select();
-		});
-			$('#id_comment1').on('change', function () {
-		var modelo_sel = $(this).find(":selected").text()
-		for (var i = 0; i < lista_modelo.length; i++) {
-		if (lista_modelo[i].name_sel == modelo_sel) {
-		tiposdeuber[0] = lista_modelo[i].tipo_uber
-		document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-									+ tiposdeuber[0];
-		}
-		}
-		});
-			$('#id_name2').on('change', function () {
-		var marca_sel = $(this).find(":selected").text()
-		$('#id_comment2').material_select('destroy')
-		$('#id_comment2').empty()
-		for (var i = 0; i < lista_modelo.length; i++) {
-		if (lista_modelo[i].marca_sel == marca_sel) {
-		$('#id_comment2').append($('<option>', {
-			value: lista_modelo[i].name_sel,
-			text: lista_modelo[i].name_sel
-			}));
-			}
-			}
-			$('#id_comment2').material_select();
-			});
-				$('#id_comment2').on('change', function () {
-			var modelo_sel = $(this).find(":selected").text()
-			for (var i = 0; i < lista_modelo.length; i++) {
-			if (lista_modelo[i].name_sel == modelo_sel) {
-				tiposdeuber[1] = lista_modelo[i].tipo_uber
-				document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-										+ tiposdeuber[0] + "   " + tiposdeuber[1];
-			}
-			}
-			});
-				$('#id_name3').on('change', function () {
-			var marca_sel = $(this).find(":selected").text()
-			$('#id_comment3').material_select('destroy')
-			$('#id_comment3').empty()
-			for (var i = 0; i < lista_modelo.length; i++) {
-			if (lista_modelo[i].marca_sel == marca_sel) {
-			$('#id_comment3').append($('<option>', {
-				value: lista_modelo[i].name_sel,
-				text: lista_modelo[i].name_sel
-				}));
-				}
-				}
-				$('#id_comment3').material_select();
-				});
-					$('#id_comment3').on('change', function () {
-				var modelo_sel = $(this).find(":selected").text()
-				for (var i = 0; i < lista_modelo.length; i++) {
-				if (lista_modelo[i].name_sel == modelo_sel) {
-				tiposdeuber[2] = lista_modelo[i].tipo_uber
-				document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-											+ tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
-											+ tiposdeuber[2];
-				}
-				}
-				});
-					$('#id_name4').on('change', function () {
-				var marca_sel = $(this).find(":selected").text()
-				$('#id_comment4').material_select('destroy')
-				$('#id_comment4').empty()
-				for (var i = 0; i < lista_modelo.length; i++) {
-				if (lista_modelo[i].marca_sel == marca_sel) {
-				$('#id_comment4').append($('<option>', {
-					value: lista_modelo[i].name_sel,
-					text: lista_modelo[i].name_sel
-					}));
-					}
-					}
-					$('#id_comment4').material_select();
-					});
-						$('#id_comment4').on('change', function () {
-					var modelo_sel = $(this).find(":selected").text()
-					for (var i = 0; i < lista_modelo.length; i++) {
-					if (lista_modelo[i].name_sel == modelo_sel) {
-					tiposdeuber[3] = lista_modelo[i].tipo_uber
-					document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-												+ tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
-												+ tiposdeuber[2] + "   " +tiposdeuber[3];
-					}
-					}
-					});
-						$('#id_name5').on('change', function () {
-					var marca_sel = $(this).find(":selected").text()
-					$('#id_comment5').material_select('destroy')
-					$('#id_comment5').empty()
-					for (var i = 0; i < lista_modelo.length; i++) {
-					if (lista_modelo[i].marca_sel == marca_sel) {
-					$('#id_comment5').append($('<option>', {
-						value: lista_modelo[i].name_sel,
-						text: lista_modelo[i].name_sel
-						}));
-						}
-						}
-						$('#id_comment5').material_select();
-						});
-							$('#id_comment5').on('change', function () {
-						var modelo_sel = $(this).find(":selected").text()
-						for (var i = 0; i < lista_modelo.length; i++) {
-						if (lista_modelo[i].name_sel == modelo_sel) {
-							tiposdeuber[4] = lista_modelo[i].tipo_uber
-							document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-													+ tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
-													+ tiposdeuber[2] + "   " +tiposdeuber[3] + "   "
-													+ tiposdeuber[4] ;
-						}
-						}
-						});
-						</script>
-					</body>
-				</html>
+    <head>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta charset="utf-8">
+        <!-- Icon -->
+        <link rel="icon" href="../static/images/tesca-ojo.png">
+        <!--Materialize.css-->
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+            media="screen,projection" />
+            <link rel="stylesheet" href="../static/css/master.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                crossorigin="anonymous">
+                <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
+                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                <title>TSKMobility</title>
+            </head>
+            <body class="bgimage">
+                <header>
+                    <nav class="black">
+                        <div class="container">
+                            <div class="nav-wrapper">
+                                <a href="#" class="brand-logo">TSKMobility</a>
+                                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                    <li>
+                                        <a onclick="topo()">Quienes somos</a>
+                                    </li>
+                                    <li>
+                                        <a onclick="boto()">Descubre cuánto puedes ganar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <main>
+                    <section>
+                        <div class="section">
+                            <div class="container">
+                                <div id='inicio'>
+                                    <p>TSK Life is moving es una agencia encargada de trabajar automóviles como servicio de transporte en plataforma
+                                        como Uber. Nuestro trabajo se centra en darle el mejor uso al automóvil de nuestros socios y así generar ganancias
+                                    mensuales para ellos, al mismo tiempo que generamos ingresos para nuestros choferes.</p>
+                                    <p>
+                                        Somos actualmente una PYME en crecimiento, contamos con un año y medio de experiencia con socios satisfechos. Contamos actualmente
+                                        con 5 activos trabajando con 5 autos activos en el área metropolitana.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="pantallaCalculadora">
+                                <div class="container BotonesPresentacion">
+                                    <div class="row" class="carbutbg">
+                                        <div id="tab_bar" class="contenido col s12 m1 l1 xl1">
+                                            <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
+                                                <li id="tab-1" class="tab">
+                                                    <a href="#calctab-1" style="font-size: 25px;" class="material-icons s-tab1">directions_car</a>
+                                                </li>
+                                                <li id="tab-2" class="tab">
+                                                    <a href="#calctab-2" style="font-size: 25px;" class="material-icons s-tab2">directions_car</a>
+                                                </li>
+                                                <li id="tab-3" class="tab">
+                                                    <a href="#calctab-3" style="font-size: 25px;" class="material-icons s-tab3">directions_car</a>
+                                                </li>
+                                                <li id="tab-4" class="tab">
+                                                    <a href="#calctab-4" style="font-size: 25px;" class="material-icons s-tab4">directions_car</a>
+                                                </li>
+                                                <li id="tab-5" class="tab">
+                                                    <a href="#calctab-5" style="font-size: 25px;" class="material-icons s-tab5">directions_car</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col s1 m1 l1 xl1">
+                                            <button class="add_btn material-icons buttonshido"> add </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="slider-calc">
+                                            <div id="calctab-1" class='col s12'>
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_name1" align="left">Marca:</label>
+                                                            <select class="select_marca" id="id_name1">
+                                                                {% for mar in marca_obj %}
+                                                                    <option value="">{{mar.name}}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_comment1">Modelo:</label>
+                                                            <select class="select_modelo" id="id_comment1">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6 scrollable">
+                                                            <label for="idYe">Año:</label>
+                                                            <select class="year" id="year1">
+                                                                <option value="2013">2013</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2018">2018</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="idKM1" id="idKM">Km:</label>
+                                                            <input class=" form-control" type="text" name="address" maxlength="100" id="idKM1" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="calctab-2" class='col s12'>
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_name2" align="left">Marca:</label>
+                                                            <select class="select_marca" id="id_name2">
+                                                                {% for mar in marca_obj %}
+                                                                    <option value="">{{mar.name}}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_comment2">Modelo:</label>
+                                                            <select class="select_modelo" id="id_comment2">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6 scrollable">
+                                                            <label for="idYe">Año:</label>
+                                                            <select class="year" id="year2">
+                                                                <option value="2013">2013</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2018">2018</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="idKM2" id="idKM">Km:</label>
+                                                            <input class=" form-control" type="text" name="address" maxlength="100" id="idKM2" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="calctab-3" class='col s12 m12 l12 xl12'>
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_name3" align="left">Marca:</label>
+                                                            <select class="select_marca" id="id_name3">
+                                                                {% for mar in marca_obj %}
+                                                                    <option value="">{{mar.name}}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_comment3">Modelo:</label>
+                                                            <select class="select_modelo" id="id_comment3">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6 scrollable">
+                                                            <label for="idYe">Año:</label>
+                                                            <select class="year" id="year3">
+                                                                <option value="2013">2013</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2018">2018</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="idKM3" id="idKM">Km:</label>
+                                                            <input class=" form-control" type="text" name="address" maxlength="100" id="idKM3" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="calctab-4" class='col s12'>
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_name4" align="left">Marca:</label>
+                                                            <select class="select_marca" id="id_name4">
+                                                                {% for mar in marca_obj %}
+                                                                    <option value="">{{mar.name}}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_comment4">Modelo:</label>
+                                                            <select class="select_modelo" id="id_comment4">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6 scrollable">
+                                                            <label for="idYe">Año:</label>
+                                                            <select class="year" id="year4">
+                                                                <option value="2013">2013</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2018">2018</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="idKM4" id="idKM">Km:</label>
+                                                            <input class=" form-control" type="text" name="address" maxlength="100" id="idKM4" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="calctab-5" class='col s12'>
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="id_name5" align="left">Marca:</label>
+                                                            <select class="select_marca" id="id_name5">
+                                                                {% for mar in marca_obj %}
+                                                                    <option value="">{{mar.name}}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6">
+                                                            <label for="id_comment5">Modelo:</label>
+                                                            <select class="select_modelo" id="id_comment5">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="idYe">Año:</label>
+                                                            <select class="year" id="year5 scrollable">
+                                                                <option value="">2013</option>
+                                                                <option value="">2014</option>
+                                                                <option value="">2015</option>
+                                                                <option value="">2016</option>
+                                                                <option value="">2017</option>
+                                                                <option value="">2018</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col s12 m6 l6 xl6">
+                                                            <label for="idKM5" id="idKM">Km:</label>
+                                                            <input class=" form-control" type="text" name="address" maxlength="100" id="idKM5" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="row s12 m6 l4">
+                                            <div class="col s12 m12 l12 xl2">
+                                                <a onclick='calcular()' id="BotonMetamorfico" class="button big buttonshido">CALCULA CUANTO PUEDES GANAR</a>
+                                                <br>
+                                            </div>
+                                            <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
+                                                $ MXN
+                                            </label>
+                                            <label id="tipoUber" style="text-align: right">
+                                                Tipo de Uber:
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s12 m6 l4 xl5 offset-xl5 offset-l4 offset-m4 offset-s1  ">
+                                                <div class="buttonshido hido" id="EnvioDeDatos">
+                                                    <a href="#modal1" class="modal-trigger letra-modal">Continua</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <!--Seccion Modale -->
+                <div id="modal1" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        <form role="form" action="" method="post">
+                            {% csrf_token %}
+                            <p><label for="id_contact_name">Contact name:</label> <input type="text" name="contact_name" maxlength="30" required id="id_contact_name" /></p>
+                            <p><label for="id_contact_email">Contact email:</label> <input type="text" name="contact_email" maxlength="50" required id="id_contact_email" /></p>
+                            <p><label for="id_contact_phone">Contact phone:</label> <input type="text" name="contact_phone" maxlength="10" required id="id_contact_phone" /></p>
+                            <p><label for="id_contact_zone">Contact zone:</label> <input type="text" name="contact_zone" maxlength="40" required id="id_contact_zone" /></p>
+                            <p><label for="id_contact_comment">Contact comment:</label> <input type="text" name="contact_comment" maxlength="50" required id="id_contact_comment" /></p>
+                        </form>
+                        <button id="submit_all">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Seccion Modale -->
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col s10">
+                    <div class="center">
+                        <p class="grey-text text-lighten-4">Una empresa de
+                            <a href="http://www.tescacorporation.com">Tesca Corporation</a>
+                        </p>
+                        <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+                    </div>
+                </div>
+                <div class col s2>
+                    <div class="right">
+                        <a href="mailto:name@email.com">Contacto Socios</a>
+                        </br>
+                        <a href="mailto:name@email.com">Contacto Choferes</a>
+                        </br>
+                        <a>55-00-00-00-00</a>
+                        </br>
+                        <a href="https://www.facebook.com/people/Mobility-Tsk/100015704463990">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 TSKMobility.
+                <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
+            </div>
+        </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+    <script type="text/javascript" charset="utf-8" async>
+    $(function () {
+    var form_resultado = $("#MuestraTotal").val()
+    $('.select_marca').material_select();
+    $('.select_modelo').material_select();
+    $('.year').material_select();
+    
+    
+    $('.parallax').parallax();
+    $('.modal').modal();
+    });
+    var inicio = document.getElementById('inicio')
+    inicio.style.visibility = 'hidden';
+    inicio.style.height = '0px';
+    var pantallaCalculadora = document.getElementById('pantallaCalculadora')
+    function topo() {
+    inicio.style.visibility = 'visible';
+    inicio.style.height = '100px';
+    pantallaCalculadora.style.visibility = 'hidden';
+    pantallaCalculadora.style.height = '0px';
+    }
+    function boto() {
+    pantallaCalculadora.style.visibility = 'visible';
+    pantallaCalculadora.style.height = 'auto';
+    inicio.style.visibility = 'hidden';
+    inicio.style.height = '0px';
+    }
+    function calcperlements(año,km,tipouber){
+        //Valor Inicial
+        console.log(tipouber);
+        var ValorBase = 4800;
+        if(tipouber === ('UB')){
+            ValorBase = 7200;
+        }
+        if(tipouber === ('UXL')){
+            ValorBase = 9000;
+        }
+        if(tipouber === ('US')){
+            ValorBase = 10000;
+        }
+    //año Actual
+    let Actual = (new Date()).getFullYear()
+    
+    let DifA = 0;
+    DifA = Actual - año;
+    let Total = 0;
+    let MuA = (5 * 80 - (2 * DifA));
+    let MuK = (10 * (km / 20000));
+    Total = parseInt(ValorBase + MuA + MuK);
+    if (km == '' || año == '') {
+    Total = 0.0;
+    }
+    
+    return Total;
+    }
+    var datosfinales = [];
+    function calcular() {
+    var botonMetapod = document.getElementById('BotonMetamorfico')
+    botonMetapod.classList.remove('buttonshido')
+        var marca1 = $('#id_name1').find(":selected").text();
+        var modelo1 = $('#id_comment1').find(":selected").text();
+        var año1 = $('#year1').find(":selected").text();
+        var km1 = $('#idKM1').val();
+        var marca2 = $('#id_name2').find(":selected").text();
+        var modelo2 = $('#id_comment2').find(":selected").text();
+        var año2 = $('#year2').find(":selected").text();
+        var km2 = $('#idKM2').val();
+        var marca3 = $('#id_name3').find(":selected").text();
+        var modelo3 = $('#id_comment3').find(":selected").text();
+        var año3 = $('#year3').find(":selected").text();
+        var km3 = $('#idKM3').val();
+        var marca4 = $('#id_name4').find(":selected").text();
+        var modelo4 = $('#id_comment4').find(":selected").text();
+        var año4 = $('#year4').find(":selected").text();
+        var km4 = $('#idKM4').val();
+        var marca5 = $('#id_name5').find(":selected").text();
+        var modelo5 = $('#id_comment5').find(":selected").text();
+        var año5 = $('#year5').find(":selected").text();
+        var km5 = $('#idKM5').val();
+        var tpuber = tiposdeuber;
+        datosfinales.push(marca1, modelo1, año1, km1,
+            marca2, modelo2, año2, km2,
+            marca3, modelo3, año3, km3,
+            marca4, modelo4, año4, km4,
+            marca5, modelo5, año5, km5,
+                );
+        var T1 = calcperlements(año1,km1,tpuber[0]);
+        var T2 = calcperlements(año2,km2,tpuber[1]);
+        var T3 = calcperlements(año3,km3,tpuber[2]);
+        var T4 = calcperlements(año4,km4,tpuber[3]);
+        var T5 = calcperlements(año5,km5,tpuber[4]);
+        var SumaTotal = 0;
+        SumaTotal = T1 + T2 + T3 + T4 + T5;
+        
+        $('#MuestraTotal').html(SumaTotal + "$ MXN");
+        let h = document.getElementById("EnvioDeDatos");
+        h.classList.remove("hido");
+    }
+    $('#submit_all').click(function(){
+        var c_name = $('#id_contact_name').val();
+        var c_email = $('#id_contact_email').val();
+        var c_whats = $('#id_contact_phone').val();
+        var c_zone = $('#id_contact_zone').val();
+        var c_comment = $('#id_contact_comment').val();
+        $.ajax({
+            url:"{% url 'home:index' %}",
+            type: 'POST',
+            data: {
+                csrfmiddlewaretoken: '{{csrf_token}}',
+                'datosfinales':JSON.stringify({ coches:datosfinales }),
+                'contact_name':c_name,
+                'contact_email':c_email,
+                'contact_phone':c_whats,
+                'contact_zone':c_zone,
+                'contact_comment':c_comment,
+                        },
+            datatype: 'jsonp',
+            success: function(){
+                console.log('Funcionooooo!!!!');
+            },
+        });
+    });
+    
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+    $('ul.tabs').tabs({'swipeable':true});
+    $('.s-tab1').show();
+    $('.s-tab2').hide();
+    $('.s-tab3').hide();
+    $('.s-tab4').hide();
+    $('.s-tab5').hide();
+    var count = 1;
+    $('.add_btn').click(function () {
+    if (count < 5) {
+    count += 1;
+    col_w_a=count-1;
+    col_w= col_w_a+1;
+    $('.s-tab' + count).show('slide');
+    $('ul.tabs').tabs('select_tab', 'calctab-'+count);
+    $('#tab_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
+    $('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
+    }
+    });
+    });
+    </script>
+    <script type="text/javascript">
+        var tiposdeuber = [];
+        var lista_modelo = JSON.parse(('{{ modelo | safe }}'));
+        $('#id_name1').on('change', function () {
+        var marca_sel = $(this).find(":selected").text()
+        $('#id_comment1').material_select('destroy')
+        $('#id_comment1').empty()
+    for (var i = 0; i < lista_modelo.length; i++) {
+    if (lista_modelo[i].marca_sel == marca_sel) {
+    $('#id_comment1').append($('<option>', {
+            value: lista_modelo[i].name_sel,
+            text: lista_modelo[i].name_sel
+            }));
+            }
+            }
+            $('#id_comment1').material_select();
+            });
+                $('#id_comment1').on('change', function () {
+            var modelo_sel = $(this).find(":selected").text()
+            for (var i = 0; i < lista_modelo.length; i++) {
+            if (lista_modelo[i].name_sel == modelo_sel) {
+            tiposdeuber[0] = lista_modelo[i].tipo_uber
+            document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                                        + tiposdeuber[0];
+            }
+            }
+            });
+                $('#id_name2').on('change', function () {
+            var marca_sel = $(this).find(":selected").text()
+            $('#id_comment2').material_select('destroy')
+            $('#id_comment2').empty()
+            for (var i = 0; i < lista_modelo.length; i++) {
+            if (lista_modelo[i].marca_sel == marca_sel) {
+            $('#id_comment2').append($('<option>', {
+                    value: lista_modelo[i].name_sel,
+                    text: lista_modelo[i].name_sel
+                    }));
+                    }
+                    }
+                    $('#id_comment2').material_select();
+                    });
+                        $('#id_comment2').on('change', function () {
+                    var modelo_sel = $(this).find(":selected").text()
+                    for (var i = 0; i < lista_modelo.length; i++) {
+                    if (lista_modelo[i].name_sel == modelo_sel) {
+                        tiposdeuber[1] = lista_modelo[i].tipo_uber
+                        document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                                                + tiposdeuber[0] + "   " + tiposdeuber[1];
+                    }
+                    }
+                    });
+                        $('#id_name3').on('change', function () {
+                    var marca_sel = $(this).find(":selected").text()
+                    $('#id_comment3').material_select('destroy')
+                    $('#id_comment3').empty()
+                    for (var i = 0; i < lista_modelo.length; i++) {
+                    if (lista_modelo[i].marca_sel == marca_sel) {
+                    $('#id_comment3').append($('<option>', {
+                            value: lista_modelo[i].name_sel,
+                            text: lista_modelo[i].name_sel
+                            }));
+                            }
+                            }
+                            $('#id_comment3').material_select();
+                            });
+                                $('#id_comment3').on('change', function () {
+                            var modelo_sel = $(this).find(":selected").text()
+                            for (var i = 0; i < lista_modelo.length; i++) {
+                            if (lista_modelo[i].name_sel == modelo_sel) {
+                            tiposdeuber[2] = lista_modelo[i].tipo_uber
+                            document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                                                        + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+                                                        + tiposdeuber[2];
+                            }
+                            }
+                            });
+                                $('#id_name4').on('change', function () {
+                            var marca_sel = $(this).find(":selected").text()
+                            $('#id_comment4').material_select('destroy')
+                            $('#id_comment4').empty()
+                            for (var i = 0; i < lista_modelo.length; i++) {
+                            if (lista_modelo[i].marca_sel == marca_sel) {
+                            $('#id_comment4').append($('<option>', {
+                                    value: lista_modelo[i].name_sel,
+                                    text: lista_modelo[i].name_sel
+                                    }));
+                                    }
+                                    }
+                                    $('#id_comment4').material_select();
+                                    });
+                                        $('#id_comment4').on('change', function () {
+                                    var modelo_sel = $(this).find(":selected").text()
+                                    for (var i = 0; i < lista_modelo.length; i++) {
+                                    if (lista_modelo[i].name_sel == modelo_sel) {
+                                    tiposdeuber[3] = lista_modelo[i].tipo_uber
+                                    document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                                                                + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+                                                                + tiposdeuber[2] + "   " +tiposdeuber[3];
+                                    }
+                                    }
+                                    });
+                                        $('#id_name5').on('change', function () {
+                                    var marca_sel = $(this).find(":selected").text()
+                                    $('#id_comment5').material_select('destroy')
+                                    $('#id_comment5').empty()
+                                    for (var i = 0; i < lista_modelo.length; i++) {
+                                    if (lista_modelo[i].marca_sel == marca_sel) {
+                                    $('#id_comment5').append($('<option>', {
+                                            value: lista_modelo[i].name_sel,
+                                            text: lista_modelo[i].name_sel
+                                            }));
+                                            }
+                                            }
+                                            $('#id_comment5').material_select();
+                                            });
+                                                $('#id_comment5').on('change', function () {
+                                            var modelo_sel = $(this).find(":selected").text()
+                                            for (var i = 0; i < lista_modelo.length; i++) {
+                                            if (lista_modelo[i].name_sel == modelo_sel) {
+                                                tiposdeuber[4] = lista_modelo[i].tipo_uber
+                                                document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                                                                        + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+                                                                        + tiposdeuber[2] + "   " +tiposdeuber[3] + "   "
+                                                                        + tiposdeuber[4] ;
+                                            }
+                                            }
+                                            });
+                        </script>
+                    </body>
+                </html>

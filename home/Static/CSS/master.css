@@ -318,12 +318,21 @@ body, html {
 
 
 #modal1{
-	width: 60%
+	width: 30%
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media screen and (max-width: 736px) {
+	.slider-calc{
+    height:400px;
+    }
+    .carousel{
+	overflow: initial;
+} 
 }
+
+.scrollable{
+   overflow: auto;
+ }
+ .scrollable select{
+   border: none;
+ }

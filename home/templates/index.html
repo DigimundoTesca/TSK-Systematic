@@ -239,9 +239,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col s12 m6 l6 xl6">
+                                                        <div class="col s12 m6 l6 xl6 scrollable">
                                                             <label for="idYe">Año:</label>
-                                                            <select class="year" id="year5 scrollable">
+                                                            <select class="year" id="year5">
                                                                 <option value="">2013</option>
                                                                 <option value="">2014</option>
                                                                 <option value="">2015</option>
@@ -268,46 +268,46 @@
                                             <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
                                                 $ MXN
                                             </label>
-                                            <div class= "row">
+                                            <div class= "row" id="">
                                                 <div class="col m2">
                                                     <label id="tipoUber" style="text-align: right">
                                                         Tipo de Uber:
                                                     </label>                                                    
                                                 </div>
-                                                <div class="col m2">Carro 1: + "<br>" +
-                                                    <label id="Mmarca1"></label> + "<br>" +
-                                                    <label id="Mmodelo1"></label> + "<br>" +
-                                                    <label id="Maño1"></label> + "<br>" +
-                                                    <label id="Mkm1"></label> + "<br>" +
+                                                <div class="col m2" id="id_carro1">Carro 1: <br>
+                                                    <label id="Mmarca1"></label> <br>
+                                                    <label id="Mmodelo1"></label> <br>
+                                                    <label id="Maño1"></label> <br>
+                                                    <label id="Mkm1"></label> <br>
                                                     <label id="MT1"></label>
                                                 </div>
-                                                <div class="col m2">Carro 2: 
-                                                    <label id="Mmarca2"></label> + "<br>" +
-                                                    <label id="Mmodelo2">C</label> + "<br>" +
-                                                    <label id="Maño2"></label> + "<br>" +
-                                                    <label id="Mkm2"></label> + "<br>" +
-                                                    <label id="MT2"></label> + "<br>" +
+                                                <div class="col m2" id="id_carro2">Carro 2: <br>
+                                                    <label id="Mmarca2" id="carr1"></label> <br>
+                                                    <label id="Mmodelo2"></label> <br>
+                                                    <label id="Maño2"></label> <br>
+                                                    <label id="Mkm2"></label> <br>
+                                                    <label id="MT2"></label> <br>
                                                 </div>
-                                                <div class="col m2"> Carro2: 
-                                                    <label id="Mmarca3"></label> + "<br>" +
-                                                    <label id="Mmodelo3"></label> + "<br>" +
-                                                    <label id="Maño3"></label> + "<br>" +
-                                                    <label id="Mkm3"></label> + "<br>" +
-                                                    <label id="MT3"></label> + "<br>" +
+                                                <div class="col m2" id="id_carro3"> Carro3: <br>
+                                                    <label id="Mmarca3"></label> <br>
+                                                    <label id="Mmodelo3"></label> <br>
+                                                    <label id="Maño3"></label> <br>
+                                                    <label id="Mkm3"></label> <br>
+                                                    <label id="MT3"></label> <br>
                                                 </div>
-                                                <div class="col m2"> Carro2: 
-                                                    <label id="Mmarca4"></label> + "<br>" +
-                                                    <label id="Mmodelo4"></label> + "<br>" +
-                                                    <label id="Maño4"></label> + "<br>" +
-                                                    <label id="Mkm4"></label> + "<br>" +
-                                                    <label id="MT4"></label> + "<br>" +
+                                                <div class="col m2" id="id_carro4"> Carro4: <br>
+                                                    <label id="Mmarca4"></label> <br> 
+                                                    <label id="Mmodelo4"></label> <br>
+                                                    <label id="Maño4"></label> <br>
+                                                    <label id="Mkm4"></label> <br>
+                                                    <label id="MT4"></label> <br>
                                                 </div>
-                                                <div class="col m2"> Carro2: 
-                                                    <label id="Mmarca5"></label> + "<br>" +
-                                                    <label id="Mmodelo5"></label> + "<br>" +
-                                                    <label id="Maño5"></label> + "<br>" +
-                                                    <label id="Mkm5"></label> + "<br>" +
-                                                    <label id="MT5"></label> + "<br>" +
+                                                <div class="col m2" id="id_carro5"> Carro5: <br>
+                                                    <label id="Mmarca5"></label> <br>
+                                                    <label id="Mmodelo5"></label> <br>
+                                                    <label id="Maño5"></label> <br>
+                                                    <label id="Mkm5"></label> <br>
+                                                    <label id="MT5"></label> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,11 +329,11 @@
                     <div class="modal-content">
                         <form role="form" action="" method="post">
                             {% csrf_token %}
-                            <p><label for="id_contact_name">Contact name:</label> <input type="text" name="contact_name" maxlength="30" required id="id_contact_name" /></p>
-                            <p><label for="id_contact_email">Contact email:</label> <input type="text" name="contact_email" maxlength="50" required id="id_contact_email" /></p>
-                            <p><label for="id_contact_phone">Contact phone:</label> <input type="text" name="contact_phone" maxlength="10" required id="id_contact_phone" /></p>
-                            <p><label for="id_contact_zone">Contact zone:</label> <input type="text" name="contact_zone" maxlength="40" required id="id_contact_zone" /></p>
-                            <p><label for="id_contact_comment">Contact comment:</label> <input type="text" name="contact_comment" maxlength="50" required id="id_contact_comment" /></p>
+                            <p><label for="id_contact_name">Nombre:</label> <input type="text" name="contact_name" maxlength="30" required id="id_contact_name" /></p>
+                            <p><label for="id_contact_email">Correo:</label> <input type="text" name="contact_email" maxlength="50" required id="id_contact_email" /></p>
+                            <p><label for="id_contact_phone">Whatsapp:</label> <input type="text" name="contact_phone" maxlength="10" required id="id_contact_phone" /></p>
+                            <p><label for="id_contact_zone">Zona de la ciudad:</label> <input type="text" name="contact_zone" maxlength="40" required id="id_contact_zone" /></p>
+                            <p><label for="id_contact_comment">¿A qué hora nos podemos comunicar contigo?:</label> <input type="text" name="contact_comment" maxlength="50" required id="id_contact_comment" /></p>
                         </form>
                         <button id="submit_all">Enviar</button>
                     </div>
@@ -457,13 +457,6 @@
         var año5 = $('#year5').find(":selected").text();
         var km5 = $('#idKM5').val();
         var tpuber = tiposdeuber;
-        datosfinales.push(marca1, modelo1, año1, km1,
-            marca2, modelo2, año2, km2,
-            marca3, modelo3, año3, km3,
-            marca4, modelo4, año4, km4,
-            marca5, modelo5, año5, km5,
-                );
-        //Poner los 25 elemntos
         document.getElementById("Mmarca1").innerHTML=marca1;
         document.getElementById("Mmodelo1").innerHTML=modelo1;
         document.getElementById("Maño1").innerHTML=año1;
@@ -481,7 +474,7 @@
         document.getElementById("Maño4").innerHTML=año4;
         document.getElementById("Mkm4").innerHTML=km4;
         document.getElementById("Mmarca5").innerHTML=marca5;
-        document.getElementById("Mmodelo1").innerHTML=modelo5;
+        document.getElementById("Mmodelo5").innerHTML=modelo5;
         document.getElementById("Maño5").innerHTML=año5;
         document.getElementById("Mkm5").innerHTML=km5;
 
@@ -498,6 +491,12 @@
         document.getElementById("MT4").innerHTML=T4;
         document.getElementById("MT5").innerHTML=T5;
         
+        datosfinales.push(marca1, modelo1, año1, km1, T1,
+            marca2, modelo2, año2, km2, T2,
+            marca3, modelo3, año3, km3, T3,
+            marca4, modelo4, año4, km4, T4,
+            marca5, modelo5, año5, km5, T5
+                );
         $('#MuestraTotal').html(SumaTotal + "$ MXN");
         let h = document.getElementById("EnvioDeDatos");
         h.classList.remove("hido");
@@ -514,8 +513,8 @@
             type: 'POST',
             data: {
                 csrfmiddlewaretoken: '{{csrf_token}}',
-                'datosfinales':JSON.stringify({ coches:datosfinales }),
-                'contact_name':c_name,
+                'datosfinales':JSON.stringify(datosfinales),
+                'contact_name': c_name,
                 'contact_email':c_email,
                 'contact_phone':c_whats,
                 'contact_zone':c_zone,
@@ -547,6 +546,16 @@
     $('ul.tabs').tabs('select_tab', 'calctab-'+count);
     $('#tab_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
     $('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
+    var carro1 = $('$id_carro1').;
+    var carro2 = $('$id_carro2').;
+    var carro3 = $('$id_carro3').;
+    var carro4 = $('$id_carro4').;
+    var carro5 = $('$id_carro5').;
+    document.getElementById("").innerHTML=carro1;
+    document.getElementById("").innerHTML=carro2;
+    document.getElementById("").innerHTML=carro3;
+    document.getElementById("").innerHTML=carro4;
+    document.getElementById("").innerHTML=carro5;
     }
     });
     });

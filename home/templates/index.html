@@ -268,9 +268,48 @@
                                             <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
                                                 $ MXN
                                             </label>
-                                            <label id="tipoUber" style="text-align: right">
-                                                Tipo de Uber:
-                                            </label>
+                                            <div class= "row">
+                                                <div class="col m2">
+                                                    <label id="tipoUber" style="text-align: right">
+                                                        Tipo de Uber:
+                                                    </label>                                                    
+                                                </div>
+                                                <div class="col m2">Carro 1: + "<br>" +
+                                                    <label id="Mmarca1"></label> + "<br>" +
+                                                    <label id="Mmodelo1"></label> + "<br>" +
+                                                    <label id="Maño1"></label> + "<br>" +
+                                                    <label id="Mkm1"></label> + "<br>" +
+                                                    <label id="MT1"></label>
+                                                </div>
+                                                <div class="col m2">Carro 2: 
+                                                    <label id="Mmarca2"></label> + "<br>" +
+                                                    <label id="Mmodelo2">C</label> + "<br>" +
+                                                    <label id="Maño2"></label> + "<br>" +
+                                                    <label id="Mkm2"></label> + "<br>" +
+                                                    <label id="MT2"></label> + "<br>" +
+                                                </div>
+                                                <div class="col m2"> Carro2: 
+                                                    <label id="Mmarca3"></label> + "<br>" +
+                                                    <label id="Mmodelo3"></label> + "<br>" +
+                                                    <label id="Maño3"></label> + "<br>" +
+                                                    <label id="Mkm3"></label> + "<br>" +
+                                                    <label id="MT3"></label> + "<br>" +
+                                                </div>
+                                                <div class="col m2"> Carro2: 
+                                                    <label id="Mmarca4"></label> + "<br>" +
+                                                    <label id="Mmodelo4"></label> + "<br>" +
+                                                    <label id="Maño4"></label> + "<br>" +
+                                                    <label id="Mkm4"></label> + "<br>" +
+                                                    <label id="MT4"></label> + "<br>" +
+                                                </div>
+                                                <div class="col m2"> Carro2: 
+                                                    <label id="Mmarca5"></label> + "<br>" +
+                                                    <label id="Mmodelo5"></label> + "<br>" +
+                                                    <label id="Maño5"></label> + "<br>" +
+                                                    <label id="Mkm5"></label> + "<br>" +
+                                                    <label id="MT5"></label> + "<br>" +
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="col s12 m6 l4 xl5 offset-xl5 offset-l4 offset-m4 offset-s1  ">
@@ -424,6 +463,28 @@
             marca4, modelo4, año4, km4,
             marca5, modelo5, año5, km5,
                 );
+        //Poner los 25 elemntos
+        document.getElementById("Mmarca1").innerHTML=marca1;
+        document.getElementById("Mmodelo1").innerHTML=modelo1;
+        document.getElementById("Maño1").innerHTML=año1;
+        document.getElementById("Mkm1").innerHTML=km1;
+        document.getElementById("Mmarca2").innerHTML=marca2;
+        document.getElementById("Mmodelo2").innerHTML=modelo2;
+        document.getElementById("Maño2").innerHTML=año2;
+        document.getElementById("Mkm2").innerHTML=km2;
+        document.getElementById("Mmarca3").innerHTML=marca3;
+        document.getElementById("Mmodelo3").innerHTML=modelo3;
+        document.getElementById("Maño3").innerHTML=año3;
+        document.getElementById("Mkm3").innerHTML=km3;
+        document.getElementById("Mmarca4").innerHTML=marca4;
+        document.getElementById("Mmodelo4").innerHTML=modelo4;
+        document.getElementById("Maño4").innerHTML=año4;
+        document.getElementById("Mkm4").innerHTML=km4;
+        document.getElementById("Mmarca5").innerHTML=marca5;
+        document.getElementById("Mmodelo1").innerHTML=modelo5;
+        document.getElementById("Maño5").innerHTML=año5;
+        document.getElementById("Mkm5").innerHTML=km5;
+
         var T1 = calcperlements(año1,km1,tpuber[0]);
         var T2 = calcperlements(año2,km2,tpuber[1]);
         var T3 = calcperlements(año3,km3,tpuber[2]);
@@ -431,10 +492,16 @@
         var T5 = calcperlements(año5,km5,tpuber[4]);
         var SumaTotal = 0;
         SumaTotal = T1 + T2 + T3 + T4 + T5;
+        document.getElementById("MT1").innerHTML=T1;
+        document.getElementById("MT2").innerHTML=T2;
+        document.getElementById("MT3").innerHTML=T3;
+        document.getElementById("MT4").innerHTML=T4;
+        document.getElementById("MT5").innerHTML=T5;
         
         $('#MuestraTotal').html(SumaTotal + "$ MXN");
         let h = document.getElementById("EnvioDeDatos");
         h.classList.remove("hido");
+
     }
     $('#submit_all').click(function(){
         var c_name = $('#id_contact_name').val();

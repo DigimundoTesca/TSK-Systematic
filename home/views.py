@@ -74,3 +74,31 @@ def index(request):
     }
     
     return render(request,template,context)
+
+new_context = {
+'title': base.title,
+'consult': base.description,
+'url': get_current_site(request).domain,
+}
+template = get_template('correo_tsk.html')
+html_content = template.render(new_context)
+tskmobility.save()
+save_document(base)
+save_images(base)
+emails = User.objects.filter(speciality='BV').filter(rol='TC')
+try:
+    for user_speciality in emails:
+        sendmailform(request, user_speciality.email, html_content)
+except Exception as e:
+     print('ERROR: ' + e.args)
+return redirect('home:calculadora')
+
+def sendmailform(request, email_user, html_content):
+        fromaddr = "tescauber@gmail.com"
+        toaddr = email_user
+        msg = MIMEMultipart()
+        msg['From'] = fromaddr
+        msg['To'] = toaddr
+        msg['Subject'] = "Nueva petición de vehículos"
+        body = html_content
+        msg.attach(MIMEText(body, 'html'))

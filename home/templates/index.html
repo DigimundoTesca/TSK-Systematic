@@ -268,7 +268,7 @@
                                             <label style="text-align: center" class="col s12 m12 l12" id="MuestraTotal">
                                                 $ MXN
                                             </label>
-                                            <div class= "row" id="">
+                                            <div class= "row" id="descripcion_bar">
                                                 <div class="col m2">
                                                     <label id="tipoUber" style="text-align: right">
                                                         Tipo de Uber:
@@ -551,11 +551,14 @@
     var carro3 = $('$id_carro3').;
     var carro4 = $('$id_carro4').;
     var carro5 = $('$id_carro5').;
-    document.getElementById("").innerHTML=carro1;
-    document.getElementById("").innerHTML=carro2;
-    document.getElementById("").innerHTML=carro3;
-    document.getElementById("").innerHTML=carro4;
-    document.getElementById("").innerHTML=carro5;
+    document.getElementById("id_carro1").innerHTML=carro1; //Agregar campos para función de la descripción
+    document.getElementById("id_carro2").innerHTML=carro2;
+    document.getElementById("id_carro3").innerHTML=carro3;
+    document.getElementById("id_carro4").innerHTML=carro4;
+    document.getElementById("id_carro5").innerHTML=carro5;
+    $('.add_btn').click(function () {
+    $('#descripcion_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
+    $('#descripcion_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
     }
     });
     });

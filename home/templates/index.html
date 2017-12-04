@@ -281,28 +281,28 @@
                                                     <label id="Mkm1"></label> <br>
                                                     <label id="MT1"></label>
                                                 </div>
-                                                <div class="col m2" id="id_carro2">Carro 2: <br>
+                                                <div class="col m2 hideBotonProp" id="id_carro2">Carro 2: <br>
                                                     <label id="Mmarca2" id="carr1"></label> <br>
                                                     <label id="Mmodelo2"></label> <br>
                                                     <label id="Maño2"></label> <br>
                                                     <label id="Mkm2"></label> <br>
                                                     <label id="MT2"></label> <br>
                                                 </div>
-                                                <div class="col m2" id="id_carro3"> Carro3: <br>
+                                                <div class="col m2 hideBotonProp" id="id_carro3"> Carro3: <br>
                                                     <label id="Mmarca3"></label> <br>
                                                     <label id="Mmodelo3"></label> <br>
                                                     <label id="Maño3"></label> <br>
                                                     <label id="Mkm3"></label> <br>
                                                     <label id="MT3"></label> <br>
                                                 </div>
-                                                <div class="col m2" id="id_carro4"> Carro4: <br>
+                                                <div class="col m2 hideBotonProp" id="id_carro4"> Carro4: <br>
                                                     <label id="Mmarca4"></label> <br> 
                                                     <label id="Mmodelo4"></label> <br>
                                                     <label id="Maño4"></label> <br>
                                                     <label id="Mkm4"></label> <br>
                                                     <label id="MT4"></label> <br>
                                                 </div>
-                                                <div class="col m2" id="id_carro5"> Carro5: <br>
+                                                <div class="col m2 hideBotonProp" id="id_carro5"> Carro5: <br>
                                                     <label id="Mmarca5"></label> <br>
                                                     <label id="Mmodelo5"></label> <br>
                                                     <label id="Maño5"></label> <br>
@@ -538,6 +538,7 @@
     $('.s-tab5').hide();
     var count = 1;
     $('.add_btn').click(function () {
+
     if (count < 5) {
     count += 1;
     col_w_a=count-1;
@@ -545,20 +546,9 @@
     $('.s-tab' + count).show('slide');
     $('ul.tabs').tabs('select_tab', 'calctab-'+count);
     $('#tab_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
-    $('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
-    var carro1 = $('$id_carro1').;
-    var carro2 = $('$id_carro2').;
-    var carro3 = $('$id_carro3').;
-    var carro4 = $('$id_carro4').;
-    var carro5 = $('$id_carro5').;
-    document.getElementById("id_carro1").innerHTML=carro1; //Agregar campos para función de la descripción
-    document.getElementById("id_carro2").innerHTML=carro2;
-    document.getElementById("id_carro3").innerHTML=carro3;
-    document.getElementById("id_carro4").innerHTML=carro4;
-    document.getElementById("id_carro5").innerHTML=carro5;
-    $('.add_btn').click(function () {
-    $('#descripcion_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
-    $('#descripcion_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
+    $('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');   
+    $('#id_carro'+ count).removeClass('hideBotonProp');
+
     }
     });
     });

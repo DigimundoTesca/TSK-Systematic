@@ -336,3 +336,8 @@ body, html {
  .scrollable select{
    border: none;
  }
+
+ .hideBotonProp{
+ 	visibility: hidden;
+ 	display: none;
+ }

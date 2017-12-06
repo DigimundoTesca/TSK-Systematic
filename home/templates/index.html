@@ -13,9 +13,10 @@
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
                 crossorigin="anonymous">
-                <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
-                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-                <title>TSKMobility</title>
+            <link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <link href="https://cdn.jsdelivr.net/sweetalert2/4.2.4/sweetalert2.min.css" rel="stylesheet"/>
+            <title>TSKMobility</title>
             </head>
             <body class="bgimage">
                 <header>
@@ -272,7 +273,7 @@
                                                 <div class="col m2">
                                                     <label id="tipoUber" style="text-align: right">
                                                         Tipo de Uber:
-                                                    </label>                                                    
+                                                    </label>
                                                 </div>
                                                 <div class="col m2" id="id_carro1">Carro 1: <br>
                                                     <label id="Mmarca1"></label> <br>
@@ -296,7 +297,7 @@
                                                     <label id="MT3"></label> <br>
                                                 </div>
                                                 <div class="col m2 hideBotonProp" id="id_carro4"> Carro4: <br>
-                                                    <label id="Mmarca4"></label> <br> 
+                                                    <label id="Mmarca4"></label> <br>
                                                     <label id="Mmodelo4"></label> <br>
                                                     <label id="Maño4"></label> <br>
                                                     <label id="Mkm4"></label> <br>
@@ -335,107 +336,107 @@
                             <p><label for="id_contact_zone">Zona de la ciudad:</label> <input type="text" name="contact_zone" maxlength="40" required id="id_contact_zone" /></p>
                             <p><label for="id_contact_comment">¿A qué hora nos podemos comunicar contigo?:</label> <input type="text" name="contact_comment" maxlength="50" required id="id_contact_comment" /></p>
                         </form>
-                        <button id="submit_all">Enviar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Seccion Modale -->
-    <footer class="page-footer black">
-        <div class="container">
-            <div class="row">
-                <div class="col s10">
-                    <div class="center">
-                        <p class="grey-text text-lighten-4">Una empresa de
-                            <a href="http://www.tescacorporation.com">Tesca Corporation</a>
-                        </p>
-                        <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
-                    </div>
-                </div>
-                <div class col s2>
-                    <div class="right">
-                        <a href="mailto:name@email.com">Contacto Socios</a>
-                        </br>
-                        <a href="mailto:name@email.com">Contacto Choferes</a>
-                        </br>
-                        <a>55-00-00-00-00</a>
-                        </br>
-                        <a href="https://www.facebook.com/people/Mobility-Tsk/100015704463990">Facebook</a>
+                        <button id="submit_all" class='gracias' href="swal" >Enviar</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <!-- Fin Seccion Modale -->
+        <footer class="page-footer black">
             <div class="container">
-                © 2017 TSKMobility.
-                <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
+                <div class="row">
+                    <div class="col s10">
+                        <div class="center">
+                            <p class="grey-text text-lighten-4">Una empresa de
+                                <a href="http://www.tescacorporation.com">Tesca Corporation</a>
+                            </p>
+                            <img src="../static/images/tesca-ojo.png" alt="Ojo de Tesca Logo" height="80">
+                        </div>
+                    </div>
+                    <div class col s2>
+                        <div class="right">
+                            <a href="mailto:name@email.com">Contacto Socios</a>
+                            </br>
+                            <a href="mailto:name@email.com">Contacto Choferes</a>
+                            </br>
+                            <a>55-00-00-00-00</a>
+                            </br>
+                            <a href="https://www.facebook.com/people/Mobility-Tsk/100015704463990">Facebook</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
-    <script type="text/javascript" charset="utf-8" async>
-    $(function () {
-    var form_resultado = $("#MuestraTotal").val()
-    $('.select_marca').material_select();
-    $('.select_modelo').material_select();
-    $('.year').material_select();
-    
-    
-    $('.parallax').parallax();
-    $('.modal').modal();
-    });
-    var inicio = document.getElementById('inicio')
-    inicio.style.visibility = 'hidden';
-    inicio.style.height = '0px';
-    var pantallaCalculadora = document.getElementById('pantallaCalculadora')
-    function topo() {
-    inicio.style.visibility = 'visible';
-    inicio.style.height = '100px';
-    pantallaCalculadora.style.visibility = 'hidden';
-    pantallaCalculadora.style.height = '0px';
-    }
-    function boto() {
-    pantallaCalculadora.style.visibility = 'visible';
-    pantallaCalculadora.style.height = 'auto';
-    inicio.style.visibility = 'hidden';
-    inicio.style.height = '0px';
-    }
-    function calcperlements(año,km,tipouber){
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2017 TSKMobility.
+                    <a class="right" href="http://www.digimundo.com.mx">Made with ♥ by Digimundo</a>
+                </div>
+            </div>
+        </footer>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+        <script src="https://cdn.jsdelivr.net/sweetalert2/4.2.4/sweetalert2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" async>
+        $(function () {
+        var form_resultado = $("#MuestraTotal").val()
+        $('.select_marca').material_select();
+        $('.select_modelo').material_select();
+        $('.year').material_select();
+        
+        
+        $('.parallax').parallax();
+        $('.modal').modal();
+        });
+        var inicio = document.getElementById('inicio')
+        inicio.style.visibility = 'hidden';
+        inicio.style.height = '0px';
+        var pantallaCalculadora = document.getElementById('pantallaCalculadora')
+        function topo() {
+        inicio.style.visibility = 'visible';
+        inicio.style.height = '100px';
+        pantallaCalculadora.style.visibility = 'hidden';
+        pantallaCalculadora.style.height = '0px';
+        }
+        function boto() {
+        pantallaCalculadora.style.visibility = 'visible';
+        pantallaCalculadora.style.height = 'auto';
+        inicio.style.visibility = 'hidden';
+        inicio.style.height = '0px';
+        }
+        function calcperlements(año,km,tipouber){
         //Valor Inicial
         console.log(tipouber);
         var ValorBase = 4800;
         if(tipouber === ('UB')){
-            ValorBase = 7200;
+        ValorBase = 7200;
         }
         if(tipouber === ('UXL')){
-            ValorBase = 9000;
+        ValorBase = 9000;
         }
         if(tipouber === ('US')){
-            ValorBase = 10000;
+        ValorBase = 10000;
         }
-    //año Actual
-    let Actual = (new Date()).getFullYear()
-    
-    let DifA = 0;
-    DifA = Actual - año;
-    let Total = 0;
-    let MuA = (5 * 80 - (2 * DifA));
-    let MuK = (10 * (km / 20000));
-    Total = parseInt(ValorBase + MuA + MuK);
-    if (km == '' || año == '') {
-    Total = 0.0;
-    }
-    
-    return Total;
-    }
-    var datosfinales = [];
-    function calcular() {
-    var botonMetapod = document.getElementById('BotonMetamorfico')
-    botonMetapod.classList.remove('buttonshido')
+        //año Actual
+        let Actual = (new Date()).getFullYear()
+        
+        let DifA = 0;
+        DifA = Actual - año;
+        let Total = 0;
+        let MuA = (5 * 80 - (2 * DifA));
+        let MuK = (10 * (km / 20000));
+        Total = parseInt(ValorBase + MuA + MuK);
+        if (km == '' || año == '') {
+        Total = 0.0;
+        }
+        
+        return Total;
+        }
+        var datosfinales = [];
+        function calcular() {
+        var botonMetapod = document.getElementById('BotonMetamorfico')
+        botonMetapod.classList.remove('buttonshido')
         var marca1 = $('#id_name1').find(":selected").text();
         var modelo1 = $('#id_comment1').find(":selected").text();
         var año1 = $('#year1').find(":selected").text();
@@ -477,7 +478,6 @@
         document.getElementById("Mmodelo5").innerHTML=modelo5;
         document.getElementById("Maño5").innerHTML=año5;
         document.getElementById("Mkm5").innerHTML=km5;
-
         var T1 = calcperlements(año1,km1,tpuber[0]);
         var T2 = calcperlements(año2,km2,tpuber[1]);
         var T3 = calcperlements(año3,km3,tpuber[2]);
@@ -492,77 +492,89 @@
         document.getElementById("MT5").innerHTML=T5;
         
         datosfinales.push(marca1, modelo1, año1, km1, T1,
-            marca2, modelo2, año2, km2, T2,
-            marca3, modelo3, año3, km3, T3,
-            marca4, modelo4, año4, km4, T4,
-            marca5, modelo5, año5, km5, T5
-                );
+        marca2, modelo2, año2, km2, T2,
+        marca3, modelo3, año3, km3, T3,
+        marca4, modelo4, año4, km4, T4,
+        marca5, modelo5, año5, km5, T5
+        );
         $('#MuestraTotal').html(SumaTotal + "$ MXN");
         let h = document.getElementById("EnvioDeDatos");
         h.classList.remove("hido");
-
-    }
-    $('#submit_all').click(function(){
+        }
+        $('#submit_all').click(function(){
         var c_name = $('#id_contact_name').val();
         var c_email = $('#id_contact_email').val();
         var c_whats = $('#id_contact_phone').val();
         var c_zone = $('#id_contact_zone').val();
         var c_comment = $('#id_contact_comment').val();
         $.ajax({
-            url:"{% url 'home:index' %}",
-            type: 'POST',
-            data: {
-                csrfmiddlewaretoken: '{{csrf_token}}',
-                'datosfinales':JSON.stringify(datosfinales),
-                'contact_name': c_name,
-                'contact_email':c_email,
-                'contact_phone':c_whats,
-                'contact_zone':c_zone,
-                'contact_comment':c_comment,
-                        },
-            datatype: 'jsonp',
-            success: function(){
-                console.log('Funcionooooo!!!!');
-            },
+        url:"{% url 'home:index' %}",
+        type: 'POST',
+        data: {
+        csrfmiddlewaretoken: '{{csrf_token}}',
+        'datosfinales':JSON.stringify(datosfinales),
+        'contact_name': c_name,
+        'contact_email':c_email,
+        'contact_phone':c_whats,
+        'contact_zone':c_zone,
+        'contact_comment':c_comment,
+        },
+        datatype: 'jsonp',
+        success: function(){
+        console.log('Funciono!');
+        },
         });
-    });
-    
-    </script>
-    <script type="text/javascript">
-    $(document).ready(function () {
-    $('ul.tabs').tabs({'swipeable':true});
-    $('.s-tab1').show();
-    $('.s-tab2').hide();
-    $('.s-tab3').hide();
-    $('.s-tab4').hide();
-    $('.s-tab5').hide();
-    var count = 1;
-    $('.add_btn').click(function () {
-
-    if (count < 5) {
-    count += 1;
-    col_w_a=count-1;
-    col_w= col_w_a+1;
-    $('.s-tab' + count).show('slide');
-    $('ul.tabs').tabs('select_tab', 'calctab-'+count);
-    $('#tab_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
-    $('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');   
-    $('#id_carro'+ count).removeClass('hideBotonProp');
-
-    }
-    });
-    });
-    </script>
-    <script type="text/javascript">
+        });
+        $('.gracias').click(function (){
+            swal({
+              title: 'Gracias por mandarnos tus datos',
+              text: 'Nos comunicaremos contigo en breve',
+              timer: 4000,
+              onOpen: () => {
+                swal.showLoading()
+              }
+            }).then((result) => {
+              if (result.dismiss === 'timer') {
+                console.log('I was closed by the timer')
+              }
+            })
+            location.reload();
+        });
+         
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+        $('ul.tabs').tabs({'swipeable':true});
+        $('.s-tab1').show();
+        $('.s-tab2').hide();
+        $('.s-tab3').hide();
+        $('.s-tab4').hide();
+        $('.s-tab5').hide();
+        var count = 1;
+        $('.add_btn').click(function () {
+        if (count < 5) {
+        count += 1;
+        col_w_a=count-1;
+        col_w= col_w_a+1;
+        $('.s-tab' + count).show('slide');
+        $('ul.tabs').tabs('select_tab', 'calctab-'+count);
+        $('#tab_bar').removeClass('s'+ col_w_a+'m' + col_w_a +' l' + col_w_a +' xl' + col_w_a +'');
+        $('#tab_bar').addClass('s' + col_w +' m' + col_w +' l' + col_w +' xl' + col_w +'');
+        $('#id_carro'+ count).removeClass('hideBotonProp');
+        }
+        });
+        });
+        </script>
+        <script type="text/javascript">
         var tiposdeuber = [];
         var lista_modelo = JSON.parse(('{{ modelo | safe }}'));
         $('#id_name1').on('change', function () {
         var marca_sel = $(this).find(":selected").text()
         $('#id_comment1').material_select('destroy')
         $('#id_comment1').empty()
-    for (var i = 0; i < lista_modelo.length; i++) {
-    if (lista_modelo[i].marca_sel == marca_sel) {
-    $('#id_comment1').append($('<option>', {
+        for (var i = 0; i < lista_modelo.length; i++) {
+        if (lista_modelo[i].marca_sel == marca_sel) {
+        $('#id_comment1').append($('<option>', {
             value: lista_modelo[i].name_sel,
             text: lista_modelo[i].name_sel
             }));
@@ -570,116 +582,116 @@
             }
             $('#id_comment1').material_select();
             });
-                $('#id_comment1').on('change', function () {
+            $('#id_comment1').on('change', function () {
             var modelo_sel = $(this).find(":selected").text()
             for (var i = 0; i < lista_modelo.length; i++) {
             if (lista_modelo[i].name_sel == modelo_sel) {
             tiposdeuber[0] = lista_modelo[i].tipo_uber
             document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-                                        + tiposdeuber[0];
+            + tiposdeuber[0];
             }
             }
             });
-                $('#id_name2').on('change', function () {
+            $('#id_name2').on('change', function () {
             var marca_sel = $(this).find(":selected").text()
             $('#id_comment2').material_select('destroy')
             $('#id_comment2').empty()
             for (var i = 0; i < lista_modelo.length; i++) {
             if (lista_modelo[i].marca_sel == marca_sel) {
             $('#id_comment2').append($('<option>', {
+                value: lista_modelo[i].name_sel,
+                text: lista_modelo[i].name_sel
+                }));
+                }
+                }
+                $('#id_comment2').material_select();
+                });
+                $('#id_comment2').on('change', function () {
+                var modelo_sel = $(this).find(":selected").text()
+                for (var i = 0; i < lista_modelo.length; i++) {
+                if (lista_modelo[i].name_sel == modelo_sel) {
+                tiposdeuber[1] = lista_modelo[i].tipo_uber
+                document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                + tiposdeuber[0] + "   " + tiposdeuber[1];
+                }
+                }
+                });
+                $('#id_name3').on('change', function () {
+                var marca_sel = $(this).find(":selected").text()
+                $('#id_comment3').material_select('destroy')
+                $('#id_comment3').empty()
+                for (var i = 0; i < lista_modelo.length; i++) {
+                if (lista_modelo[i].marca_sel == marca_sel) {
+                $('#id_comment3').append($('<option>', {
                     value: lista_modelo[i].name_sel,
                     text: lista_modelo[i].name_sel
                     }));
                     }
                     }
-                    $('#id_comment2').material_select();
+                    $('#id_comment3').material_select();
                     });
-                        $('#id_comment2').on('change', function () {
+                    $('#id_comment3').on('change', function () {
                     var modelo_sel = $(this).find(":selected").text()
                     for (var i = 0; i < lista_modelo.length; i++) {
                     if (lista_modelo[i].name_sel == modelo_sel) {
-                        tiposdeuber[1] = lista_modelo[i].tipo_uber
-                        document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-                                                + tiposdeuber[0] + "   " + tiposdeuber[1];
+                    tiposdeuber[2] = lista_modelo[i].tipo_uber
+                    document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                    + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+                    + tiposdeuber[2];
                     }
                     }
                     });
-                        $('#id_name3').on('change', function () {
+                    $('#id_name4').on('change', function () {
                     var marca_sel = $(this).find(":selected").text()
-                    $('#id_comment3').material_select('destroy')
-                    $('#id_comment3').empty()
+                    $('#id_comment4').material_select('destroy')
+                    $('#id_comment4').empty()
                     for (var i = 0; i < lista_modelo.length; i++) {
                     if (lista_modelo[i].marca_sel == marca_sel) {
-                    $('#id_comment3').append($('<option>', {
+                    $('#id_comment4').append($('<option>', {
+                        value: lista_modelo[i].name_sel,
+                        text: lista_modelo[i].name_sel
+                        }));
+                        }
+                        }
+                        $('#id_comment4').material_select();
+                        });
+                        $('#id_comment4').on('change', function () {
+                        var modelo_sel = $(this).find(":selected").text()
+                        for (var i = 0; i < lista_modelo.length; i++) {
+                        if (lista_modelo[i].name_sel == modelo_sel) {
+                        tiposdeuber[3] = lista_modelo[i].tipo_uber
+                        document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
+                        + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+                        + tiposdeuber[2] + "   " +tiposdeuber[3];
+                        }
+                        }
+                        });
+                        $('#id_name5').on('change', function () {
+                        var marca_sel = $(this).find(":selected").text()
+                        $('#id_comment5').material_select('destroy')
+                        $('#id_comment5').empty()
+                        for (var i = 0; i < lista_modelo.length; i++) {
+                        if (lista_modelo[i].marca_sel == marca_sel) {
+                        $('#id_comment5').append($('<option>', {
                             value: lista_modelo[i].name_sel,
                             text: lista_modelo[i].name_sel
                             }));
                             }
                             }
-                            $('#id_comment3').material_select();
+                            $('#id_comment5').material_select();
                             });
-                                $('#id_comment3').on('change', function () {
+                            $('#id_comment5').on('change', function () {
                             var modelo_sel = $(this).find(":selected").text()
                             for (var i = 0; i < lista_modelo.length; i++) {
                             if (lista_modelo[i].name_sel == modelo_sel) {
-                            tiposdeuber[2] = lista_modelo[i].tipo_uber
+                            tiposdeuber[4] = lista_modelo[i].tipo_uber
                             document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-                                                        + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
-                                                        + tiposdeuber[2];
+                            + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
+                            + tiposdeuber[2] + "   " +tiposdeuber[3] + "   "
+                            + tiposdeuber[4] ;
                             }
                             }
                             });
-                                $('#id_name4').on('change', function () {
-                            var marca_sel = $(this).find(":selected").text()
-                            $('#id_comment4').material_select('destroy')
-                            $('#id_comment4').empty()
-                            for (var i = 0; i < lista_modelo.length; i++) {
-                            if (lista_modelo[i].marca_sel == marca_sel) {
-                            $('#id_comment4').append($('<option>', {
-                                    value: lista_modelo[i].name_sel,
-                                    text: lista_modelo[i].name_sel
-                                    }));
-                                    }
-                                    }
-                                    $('#id_comment4').material_select();
-                                    });
-                                        $('#id_comment4').on('change', function () {
-                                    var modelo_sel = $(this).find(":selected").text()
-                                    for (var i = 0; i < lista_modelo.length; i++) {
-                                    if (lista_modelo[i].name_sel == modelo_sel) {
-                                    tiposdeuber[3] = lista_modelo[i].tipo_uber
-                                    document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-                                                                + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
-                                                                + tiposdeuber[2] + "   " +tiposdeuber[3];
-                                    }
-                                    }
-                                    });
-                                        $('#id_name5').on('change', function () {
-                                    var marca_sel = $(this).find(":selected").text()
-                                    $('#id_comment5').material_select('destroy')
-                                    $('#id_comment5').empty()
-                                    for (var i = 0; i < lista_modelo.length; i++) {
-                                    if (lista_modelo[i].marca_sel == marca_sel) {
-                                    $('#id_comment5').append($('<option>', {
-                                            value: lista_modelo[i].name_sel,
-                                            text: lista_modelo[i].name_sel
-                                            }));
-                                            }
-                                            }
-                                            $('#id_comment5').material_select();
-                                            });
-                                                $('#id_comment5').on('change', function () {
-                                            var modelo_sel = $(this).find(":selected").text()
-                                            for (var i = 0; i < lista_modelo.length; i++) {
-                                            if (lista_modelo[i].name_sel == modelo_sel) {
-                                                tiposdeuber[4] = lista_modelo[i].tipo_uber
-                                                document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
-                                                                        + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
-                                                                        + tiposdeuber[2] + "   " +tiposdeuber[3] + "   "
-                                                                        + tiposdeuber[4] ;
-                                            }
-                                            }
-                                            });
-                        </script>
-                    </body>
-                </html>
+                            </script>
+                        </body>
+                    </html>

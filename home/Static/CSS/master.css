@@ -327,7 +327,23 @@ body, html {
     }
     .carousel{
 	overflow: initial;
-} 
+	}
+	#modal1{
+	width: 100%
+	}
+	#inicio{
+		height:500px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+	#modal1{
+	width: 50%
+	}
+	#inicio{
+		height:500px;
+	}
 }
 
 .scrollable{

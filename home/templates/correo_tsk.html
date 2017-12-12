@@ -143,293 +143,38 @@
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
         <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-            (Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If this text is not included, email clients will automatically populate it using the text (including image alt text) at the start of the email's body.
         </div>
-        <!-- Visually Hidden Preheader Text : END -->
-
-        <!-- Email Header : BEGIN -->
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
-            <tr>
-                <td style="padding: 20px 0; text-align: center">
-                    <img src="http://placehold.it/200x50" width="200" height="50" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                </td>
-            </tr>
-        </table>
-        <!-- Email Header : END -->
-
-        <!-- Email Body : BEGIN -->
-        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
-
-            <!-- Hero Image, Flush : BEGIN -->
-            <tr>
-                <td bgcolor="#ffffff" align="center">
-                    <img src="http://placehold.it/1200x600" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" class="g-img">
-                </td>
-            </tr>
-            <!-- Hero Image, Flush : END -->
-
-            <!-- 1 Column Text + Button : BEGIN -->
             <tr>
                 <td bgcolor="#ffffff" style="padding: 40px 40px 20px; text-align: center;">
-                    <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal;">Praesent laoreet malesuada&nbsp;cursus.</h1>
+                    <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal;">Los datos del cliente son:</h1>
                 </td>
             </tr>
             <tr>
                 <td bgcolor="#ffffff" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; text-align: center;">
-                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
+                    <p style="margin: 0;">
                     </p>
                     Aqui deberia estar toda la informacion
-                    {{ contact_name }}
-                    {{ contact_email }}
-                    {{ contact_phone }}
-                    {{ contact_zone }}
-                    {{ contact_comment }}
-                    {{ datosfinales }}
+                    <p style="margin: 0;">{{ contact_name }}</p>
+                    <p style="margin: 0;">{{ contact_email }}</p>
+                    <p style="margin: 0;">{{ contact_phone }}</p>
+                    <p style="margin: 0;">{{ contact_zone }}</p>
+                    <p style="margin: 0;">{{ contact_comment }}</p>
+                    <p style="margin: 0;">{{ datosfinales }}</p>
                 </td>
-            </tr>
-            <tr>
-                <td bgcolor="#ffffff" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
-                        <tr>
-                            <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-                                <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ffffff;">A Button</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                    <!-- Button : END -->
-                </td>
-            </tr>            
-            <tr>
-                
-                <td background="http://placehold.it/600x230/222222/666666" bgcolor="#222222" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;">
-                <div>
-                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                            <td valign="middle" style="text-align: center; padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #ffffff;">
-                                <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </td>
-        </tr>
-        
-        <tr>
-            <td bgcolor="#ffffff" align="center" valign="top" style="padding: 10px;">
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <!-- Column : BEGIN -->
-                        <td class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/270" width="270" height="270" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                        <!-- Column : BEGIN -->
-                        <td class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/270" width="270" height="270" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <!-- 2 Even Columns : END -->
-
-        <!-- 3 Even Columns : BEGIN -->
-        <tr>
-            <td bgcolor="#ffffff" align="center" valign="top" style="padding: 10px;">
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <!-- 3 Even Columns : END -->
-
-        <!-- Thumbnail Left, Text Right : BEGIN -->
-        <tr>
-            <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 10px;">
-                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td width="66.66%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 10px; text-align: left;" class="center-on-narrow">
-                                        <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; color: #333333; font-weight: bold;">Class aptent taciti sociosqu</h2>
-                                        <p style="margin: 0 0 10px 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>                                        
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
-                                            <tr>
-                                                <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-                                                    <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
-                                                      <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;A Button&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                  </a>
-                                              </td>
-                                          </tr>
-                                      </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td bgcolor="#ffffff" dir="rtl" align="center" valign="top" width="100%" style="padding: 10px;">
-                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td width="66.66%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 10px; text-align: left;" class="center-on-narrow">
-                                        <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; color: #333333; font-weight: bold;">Class aptent taciti sociosqu</h2>
-                                        <p style="margin: 0 0 10px 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                        <!-- Button : BEGIN -->
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
-                                            <tr>
-                                                <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-                                                    <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
-                                                        <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;A Button&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </table>                                    
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td aria-hidden="true" height="40" style="font-size: 0; line-height: 0;">
-                &nbsp;
-            </td>
-        </tr>
-        <tr>
-            <td bgcolor="#ffffff">
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td style="padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                            Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-
-    </table>
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 12px; line-height: 140%;">
-        <tr>
-            <td style="padding: 40px 10px; width: 100%; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;" class="x-gmail-data-detectors">
-                <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
-                <br><br>
-                Company Name<br>123 Fake Street, SpringField, OR, 97477 US<br>(123) 456-7890
-                <br><br>
-                <unsubscribe style="color: #888888; text-decoration: underline;">unsubscribe</unsubscribe>
-            </td>
+            </tr>         
         </tr>
     </table>
     <table role="presentation" bgcolor="#709f2b" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
         <tr>
             <td valign="top" align="center">
-                <div style="max-width: 600px; margin: auto;" class="email-container">
+                <div style="max-width: 600px; margin: center;" class="email-container">
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                         <tr>
                             <td style="padding: 40px; text-align: left; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #ffffff;">
-                                <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                <p style="margin: 0;" style="text-align: center;">TSKMOBILITY.</p>
+                                <p style="margin: 0;" style="text-align: center;"">una empresa de</p>
+                                <p style="margin: 0;" style="text-align: center;"">TESCA Corporation</p>
                             </td>
                         </tr>
                     </table>

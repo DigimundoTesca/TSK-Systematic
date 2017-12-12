@@ -9,6 +9,9 @@ from django.template import Context
 from django.template.loader import get_template
 from home.forms import ContactForm
 
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 import json
 
 def index(request):
@@ -26,42 +29,36 @@ def index(request):
         datosfinales = request.POST.get('datosfinales')
 
         new_context = {
-            'contact_name': contact_name
-            'contact_email': contact_email
-            'contact_phone': contact_phone
-            'contact_zone': contact_zone
-            'contact_comment': contact_comment
-            'datosfinales': datosfinales
+            'contact_name': contact_name,
+            'contact_email': contact_email,
+            'contact_phone': contact_phone,
+            'contact_zone': contact_zone,
+            'contact_comment': contact_comment,
+            'datosfinales': datosfinales,
             }
+
         template = get_template('correo_tsk.html')
         html_content = template.render(new_context)
 
         fromaddr = 'tescauber@gmail.com'
-        toaddrs = 'a.g.tornell@outlook.com'
-        msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment + "\n" + str(datosfinales)
-        print(msg)
-        #username = 'tescauber@gmail.com'
-        #password = 'yosoytesca123'
-        #server = smtplib.SMTP('smtp.gmail.com:587')
-        #server.ehlo()
-        #server.starttls()
-        #server.login(username, password)        
-        #server.sendmail(fromaddr, toaddrs, str(msg))
-        #server.quit()
-        sendmailform(request, toaddrs, html_content)
+        toaddrs = 'alfredotornell@gmail.com'
+        msga = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment + "\n" + str(datosfinales)
+        print(msga)
 
-    def sendmailform(request, email_user, html_content):
-        if email_user == None:
-            return None
-        else:
-            fromaddr = 'tescauber@gmail.com'
-            toaddrs = 'a.g.tornell@outlook.com'
-            msg = MIMEMultipart()
-            msg['From'] = fromaddr
-            msg['To'] = toaddr
-            msg['Subject'] = "Nuevo Formulario de Vehículos"
-            body = html_content
-            msg.attach(MIMEText(body, 'html'))
+        msg = MIMEMultipart('alternative')
+        msg['From'] = fromaddr
+        msg['To'] = toaddrs
+        msg['Subject'] = "Nuevo Formulario de Vehículos"
+        body = html_content
+        msg.attach(MIMEText(body, 'html'))
+        username = 'tescauber@gmail.com'
+        password = 'yosoytesca123'
+        server = smtplib.SMTP('smtp.gmail.com:587')
+        server.ehlo()
+        server.starttls()
+        server.login(username, password)        
+        server.sendmail(fromaddr, toaddrs, msg.as_string())
+        server.quit()        
 
     marca_a=marca.objects.all()
     modelo_a=modelo.objects.all()
@@ -99,4 +96,15 @@ def index(request):
     }
     
     return render(request,template,context)
+
+def sendmailform(request, email_user, html_content):
+    fromaddr = 'tescauber@gmail.com'
+    toaddrs = 'a.g.tornell@outlook.com'
+    msg = MIMEMultipart()
+    msg['From'] = fromaddr
+    msg['To'] = toaddrs
+    msg['Subject'] = "Nuevo Formulario de Vehículos"
+    body = html_content
+    msg.attach(MIMEText(body, 'html'))
+
 

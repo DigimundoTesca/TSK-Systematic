@@ -25,18 +25,43 @@ def index(request):
         contact_comment = request.POST.get('contact_comment')
         datosfinales = request.POST.get('datosfinales')
 
+        new_context = {
+            'contact_name': contact_name
+            'contact_email': contact_email
+            'contact_phone': contact_phone
+            'contact_zone': contact_zone
+            'contact_comment': contact_comment
+            'datosfinales': datosfinales
+            }
+        template = get_template('correo_tsk.html')
+        html_content = template.render(new_context)
+
         fromaddr = 'tescauber@gmail.com'
         toaddrs = 'a.g.tornell@outlook.com'
         msg = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment + "\n" + str(datosfinales)
         print(msg)
-        username = 'tescauber@gmail.com'
-        password = 'yosoytesca123'
-        server = smtplib.SMTP('smtp.gmail.com:587')
-        server.ehlo()
-        server.starttls()
-        server.login(username, password)        
-        server.sendmail(fromaddr, toaddrs, str(msg))
-        server.quit()
+        #username = 'tescauber@gmail.com'
+        #password = 'yosoytesca123'
+        #server = smtplib.SMTP('smtp.gmail.com:587')
+        #server.ehlo()
+        #server.starttls()
+        #server.login(username, password)        
+        #server.sendmail(fromaddr, toaddrs, str(msg))
+        #server.quit()
+        sendmailform(request, toaddrs, html_content)
+
+    def sendmailform(request, email_user, html_content):
+        if email_user == None:
+            return None
+        else:
+            fromaddr = 'tescauber@gmail.com'
+            toaddrs = 'a.g.tornell@outlook.com'
+            msg = MIMEMultipart()
+            msg['From'] = fromaddr
+            msg['To'] = toaddr
+            msg['Subject'] = "Nuevo Formulario de Vehículos"
+            body = html_content
+            msg.attach(MIMEText(body, 'html'))
 
     marca_a=marca.objects.all()
     modelo_a=modelo.objects.all()

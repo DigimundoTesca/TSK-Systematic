@@ -147,20 +147,26 @@
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
             <tr>
                 <td bgcolor="#ffffff" style="padding: 40px 40px 20px; text-align: center;">
-                    <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal;">Los datos del cliente son:</h1>
+                    <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal;">Se ha hecho una Nueva Solicitud:</h1>
                 </td>
             </tr>
             <tr>
                 <td bgcolor="#ffffff" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; text-align: center;">
-                    <p style="margin: 0;">
-                    </p>
-                    Aqui deberia estar toda la informacion
-                    <p style="margin: 0;">{{ contact_name }}</p>
-                    <p style="margin: 0;">{{ contact_email }}</p>
-                    <p style="margin: 0;">{{ contact_phone }}</p>
-                    <p style="margin: 0;">{{ contact_zone }}</p>
-                    <p style="margin: 0;">{{ contact_comment }}</p>
-                    <p style="margin: 0;">{{ datosfinales }}</p>
+                    <br>
+                    <p style="margin: 0;">Nombre: {{ contact_name }}</p>
+                    <p style="margin: 0;">Email: {{ contact_email }}</p>
+                    <p style="margin: 0;">Telefono: {{ contact_phone }}</p>
+                    <p style="margin: 0;">Zona de la Ciudad: {{ contact_zone }}</p>
+                    <p style="margin: 0;">Horario para Comunicarse: {{ contact_comment }}</p>
+                    {% for carros in  datosfinales %}                    
+                        {% if carros.2 != "" %}      
+                            <p style="margin: 0;">{{carros.0}} </p>                      
+                            <p style="margin: 0;">Marca: {{carros.1}} </p>
+                            <p style="margin: 0;">Modelo: {{carros.2}} </p>                           
+                            <p style="margin: 0;">Año: {{carros.3}} </p>                           
+                            <p style="margin: 0;">Kilometraje: {{carros.4}} </p>                    
+                        {% endif %}
+                    {% endfor %}                    
                 </td>
             </tr>         
         </tr>

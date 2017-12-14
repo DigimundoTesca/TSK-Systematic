@@ -1,5 +1,5 @@
 import smtplib
-
+import json
 from django.shortcuts import render
 from home.models import marca, modelo
 from django.core.mail import send_mail
@@ -26,7 +26,9 @@ def index(request):
         contact_phone = request.POST.get('contact_phone')
         contact_zone = request.POST.get('contact_zone')
         contact_comment = request.POST.get('contact_comment')
-        datosfinales = request.POST.get('datosfinales')
+        datosfinales = request.POST.get('datosfinales')   
+
+        datos_parseados = json.loads(datosfinales);
 
         new_context = {
             'contact_name': contact_name,
@@ -34,16 +36,14 @@ def index(request):
             'contact_phone': contact_phone,
             'contact_zone': contact_zone,
             'contact_comment': contact_comment,
-            'datosfinales': datosfinales,
+            'datosfinales': datos_parseados,            
             }
 
         template = get_template('correo_tsk.html')
         html_content = template.render(new_context)
 
-        fromaddr = 'tescauber@gmail.com'
-        toaddrs = 'alfredotornell@gmail.com'
-        msga = contact_name +" "+ contact_email +" "+ contact_phone +" "+ contact_zone +" "+ contact_comment + "\n" + str(datosfinales)
-        print(msga)
+        fromaddr = 'alfredotornell@gmail.com'
+        toaddrs = 'tescauber@gmail.com'        
 
         msg = MIMEMultipart('alternative')
         msg['From'] = fromaddr
@@ -51,8 +51,8 @@ def index(request):
         msg['Subject'] = "Nuevo Formulario de Vehículos"
         body = html_content
         msg.attach(MIMEText(body, 'html'))
-        username = 'tescauber@gmail.com'
-        password = 'yosoytesca123'
+        username = 'alfredotornell@gmail.com'
+        password = 'Minerva.012'
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.ehlo()
         server.starttls()

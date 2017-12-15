@@ -600,8 +600,11 @@
             });
             $('#id_comment1').on('change', function () {
             var modelo_sel = $(this).find(":selected").text()
+            var marca_sel = $('#id_name1').find(":selected").text()
+            console.log(modelo_sel);
+            console.log(marca_sel);
             for (var i = 0; i < lista_modelo.length; i++) {
-            if (lista_modelo[i].name_sel == modelo_sel) {
+            if (lista_modelo[i].name_sel == modelo_sel & lista_modelo[i].marca_sel==marca_sel) {
             tiposdeuber[0] = lista_modelo[i].tipo_uber
             document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
             + tiposdeuber[0];
@@ -624,8 +627,9 @@
                 });
                 $('#id_comment2').on('change', function () {
                 var modelo_sel = $(this).find(":selected").text()
+                var marca_sel = $('#id_name2').find(":selected").text()
                 for (var i = 0; i < lista_modelo.length; i++) {
-                if (lista_modelo[i].name_sel == modelo_sel) {
+                if (lista_modelo[i].name_sel == modelo_sel & lista_modelo[i].marca_sel==marca_sel) {
                 tiposdeuber[1] = lista_modelo[i].tipo_uber
                 document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
                 + tiposdeuber[0] + "   " + tiposdeuber[1];
@@ -648,8 +652,9 @@
                     });
                     $('#id_comment3').on('change', function () {
                     var modelo_sel = $(this).find(":selected").text()
+                    var marca_sel = $('#id_name3').find(":selected").text()
                     for (var i = 0; i < lista_modelo.length; i++) {
-                    if (lista_modelo[i].name_sel == modelo_sel) {
+                    if (lista_modelo[i].name_sel == modelo_sel & lista_modelo[i].marca_sel==marca_sel) {
                     tiposdeuber[2] = lista_modelo[i].tipo_uber
                     document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
                     + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
@@ -673,8 +678,9 @@
                         });
                         $('#id_comment4').on('change', function () {
                         var modelo_sel = $(this).find(":selected").text()
+                        var marca_sel = $('#id_name4').find(":selected").text()
                         for (var i = 0; i < lista_modelo.length; i++) {
-                        if (lista_modelo[i].name_sel == modelo_sel) {
+                        if (lista_modelo[i].name_sel == modelo_sel & lista_modelo[i].marca_sel==marca_sel) {
                         tiposdeuber[3] = lista_modelo[i].tipo_uber
                         document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
                         + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "
@@ -687,7 +693,7 @@
                         $('#id_comment5').material_select('destroy')
                         $('#id_comment5').empty()
                         for (var i = 0; i < lista_modelo.length; i++) {
-                        if (lista_modelo[i].marca_sel == marca_sel) {
+                        if (lista_modelo[i].marca_sel == marca_sel ) {
                         $('#id_comment5').append($('<option>', {
                             value: lista_modelo[i].name_sel,
                             text: lista_modelo[i].name_sel
@@ -698,8 +704,9 @@
                             });
                             $('#id_comment5').on('change', function () {
                             var modelo_sel = $(this).find(":selected").text()
+                            var marca_sel = $('#id_name5').find(":selected").text()
                             for (var i = 0; i < lista_modelo.length; i++) {
-                            if (lista_modelo[i].name_sel == modelo_sel) {
+                            if (lista_modelo[i].name_sel == modelo_sel & lista_modelo[i].marca_sel==marca_sel) {
                             tiposdeuber[4] = lista_modelo[i].tipo_uber
                             document.getElementById("tipoUber").innerHTML = "Tipo de Uber <br>"
                             + tiposdeuber[0] + "   " + tiposdeuber[1] + "   "

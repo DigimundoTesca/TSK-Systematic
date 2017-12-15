@@ -570,7 +570,7 @@ COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
 
 COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
 1	pbkdf2_sha256$36000$UBYjQtNUWjtd$z0ZGZ99EFLBqNBInbGniZ5J0pAns5UX7vm/HUspoIDw=	2017-11-01 14:59:11.23252-05	t	Rich			drdr_2@hotmail.com	t	t	2017-10-30 17:10:19.953159-05
-2	pbkdf2_sha256$36000$OY7ho9qzuw74$bJ+GtWM+ETolX/Tpd+7D/3Io17rJJrUY2kyP/amcmRY=	2017-11-28 13:16:12.543835-06	t	alfredo.t			a.g.tornell@outlook.com	t	t	2017-11-28 13:15:51.025477-06
+2	pbkdf2_sha256$36000$OY7ho9qzuw74$bJ+GtWM+ETolX/Tpd+7D/3Io17rJJrUY2kyP/amcmRY=	2017-12-14 18:47:41.441023-06	t	alfredo.t			a.g.tornell@outlook.com	t	t	2017-11-28 13:15:51.025477-06
 \.
 
 
@@ -935,6 +935,20 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 338	2017-11-28 15:22:43.723133-06	6428	X3	2	[{"changed": {"fields": ["tipouber"]}}]	3	2
 339	2017-11-28 15:22:57.929768-06	6430	X5	2	[{"changed": {"fields": ["tipouber"]}}]	3	2
 340	2017-11-28 15:23:10.722199-06	6431	X6	2	[{"changed": {"fields": ["tipouber"]}}]	3	2
+341	2017-12-06 13:42:23.065537-06	228	Mercedez	3		2	2
+342	2017-12-06 13:46:24.413619-06	6159	MDX	2	[]	3	2
+343	2017-12-06 13:56:17.150462-06	9032	PRUEBA	1	[{"added": {}}]	3	2
+344	2017-12-06 13:56:57.947126-06	6159	MDX	2	[]	3	2
+345	2017-12-06 13:58:28.466765-06	6154	LX	2	[]	3	2
+346	2017-12-06 14:00:16.005191-06	6159	MDX	2	[]	3	2
+347	2017-12-06 14:02:51.42439-06	6159	MDX	3		3	2
+348	2017-12-06 14:03:19.58261-06	9033	MDX	1	[{"added": {}}]	3	2
+349	2017-12-06 14:04:07.68419-06	9034	MDX1	1	[{"added": {}}]	3	2
+350	2017-12-06 14:05:12.544529-06	9034	MDX1	3		3	2
+351	2017-12-06 14:05:45.652307-06	9033	MDX	3		3	2
+352	2017-12-06 14:05:53.846003-06	9035	MDX	1	[{"added": {}}]	3	2
+353	2017-12-06 14:06:46.303767-06	9035	MD X	2	[{"changed": {"fields": ["name"]}}]	3	2
+354	2017-12-06 15:11:44.920134-06	9032	PRUEBA	3		3	2
 \.
 
 
@@ -993,6 +1007,7 @@ COPY django_session (session_key, session_data, expire_date) FROM stdin;
 9tpnkobi3eguipjxbl20y9bvf2cigc0j	Y2YwNmMyMjg5NzM0MTg0MjQzMjZiMzE2OGQ2MTgzYzA0OTkwNzA2Yjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjYTdlODI1OGZjMWU0NTRiYjJmN2M4YTMyMTQxODE4NzY2YzhjMmE5In0=	2017-11-13 17:32:16.897027-06
 urgfc8rm2nutygoepjzdsk1nbustrh50	Y2YwNmMyMjg5NzM0MTg0MjQzMjZiMzE2OGQ2MTgzYzA0OTkwNzA2Yjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjYTdlODI1OGZjMWU0NTRiYjJmN2M4YTMyMTQxODE4NzY2YzhjMmE5In0=	2017-11-15 13:59:11.436745-06
 te9l8voqkvscn01nrwq1539y4f9w251q	ZDI4OGRlOTU2N2VmNmI1ZDExYzVmM2VlZGFlMzNiZmExNmYwMTI1Mzp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3NjZlNGNlNmI5NjMwYmI3NGE4MDE4NDU5MzA2OWEyMjlhMTJlYTQzIn0=	2017-12-12 13:16:12.591858-06
+uznh98aaq0czdf7b7ot1tztxppmue1lj	ZDI4OGRlOTU2N2VmNmI1ZDExYzVmM2VlZGFlMzNiZmExNmYwMTI1Mzp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3NjZlNGNlNmI5NjMwYmI3NGE4MDE4NDU5MzA2OWEyMjlhMTJlYTQzIn0=	2017-12-28 18:47:41.685141-06
 \.
 
 
@@ -1148,7 +1163,6 @@ COPY home_marca (id, name) FROM stdin;
 147	Nissan
 168	Rover
 189	Subaru
-228	Mercedez
 203	Vauxhall
 210	Volvo
 159	Proton
@@ -1237,19 +1251,16 @@ COPY home_marca (id, name) FROM stdin;
 --
 
 COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
-6124	C	UB	228
 6120	Alhambra	UXL	227
 6371	Seta	UX	16
 6143	Grand Cherokee	UB	100
 6179	Range Over	UB	118
 6122	ATS	UB	26
-6156	M Class	UB	228
 6123	Avanza	UXL	196
 6197	Touareg	UB	227
 6211	CL	UX	1
 6125	Cayenne	UB	158
 6212	CSX	UX	1
-6126	CLS	UB	228
 6213	EL	UX	1
 6127	Commander	UXL	100
 6214	ILX	UX	1
@@ -1262,7 +1273,6 @@ COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
 6362	Rui Ling	UX	14
 6132	Durango	UXL	50
 6363	Warrior	UX	14
-6133	Eclass	UB	228
 6364	407	UX	15
 6365	BN600j	UX	16
 6366	Cafe Racer	UX	16
@@ -1275,7 +1285,6 @@ COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
 6140	G11	UB	93
 6372	TNT	UX	16
 6373	TRE 1130k	UX	16
-6142	GLK	UB	228
 6374	X-150	UX	16
 6375	Zafferano	UX	16
 6376	ZenZero	UX	16
@@ -1343,10 +1352,8 @@ COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
 6184	Routan	UXL	227
 6185	S60	UB	210
 6186	S80	UB	210
-6187	Sclass	UB	228
 6189	Sharan	UXL	227
 6190	Sienna	UXL	196
-6191	Sprinter	UXL	228
 6192	SRX	UB	26
 6195	Terrain	UXL	72
 6196	TL	UB	1
@@ -1355,7 +1362,6 @@ COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
 6200	Transit	UXL	65
 6201	Traverse	UXL	37
 6203	Urban	UXL	147
-6204	Viano	UXL	228
 6205	Voyager	UXL	38
 6206	XC60	UB	210
 6404	4-series Gran Coupe	UX	21
@@ -1388,8 +1394,6 @@ COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
 6150	Land Cruiser	US	196
 6152	LR3	US	118
 6165	Navigator	US	125
-6154	LX	US	123
-6159	MDX	US	1
 6174	Q7	US	10
 6176	QX60	US	93
 6177	QX70	US	93
@@ -1399,6 +1403,7 @@ COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
 6194	Tahoe	US	37
 6210	Yukon	US	72
 6202	Uplander	US	37
+6154	LX	US	123
 6236	GT	UX	4
 6237	GTV	UX	4
 6238	Mito	UX	4
@@ -4147,6 +4152,7 @@ COPY home_modelo (id, name, tipouber, marca_id) FROM stdin;
 7700	Discovery	UB	118
 7469	FX	UB	93
 6427	X1	UB	21
+9035	MD X	US	1
 \.
 
 
@@ -4196,7 +4202,7 @@ SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('django_admin_log_id_seq', 340, true);
+SELECT pg_catalog.setval('django_admin_log_id_seq', 354, true);
 
 
 --
@@ -4224,7 +4230,7 @@ SELECT pg_catalog.setval('home_marca_id_seq', 228, true);
 -- Name: home_modelo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('home_modelo_id_seq', 9031, true);
+SELECT pg_catalog.setval('home_modelo_id_seq', 9035, true);
 
 
 --
